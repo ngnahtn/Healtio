@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SyncViewController" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="syncUserTableView" destination="adL-gL-Gl3" id="knh-Ot-wbD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="adL-gL-Gl3">
+                    <rect key="frame" x="0.0" y="141" width="414" height="721"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CvR-Me-6oT"/>
+                        <outlet property="delegate" destination="-1" id="Phl-WN-Bjy"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCm-rp-rAM">
+                    <rect key="frame" x="0.0" y="93.5" width="414" height="6"/>
+                    <color key="backgroundColor" red="0.90588235294117647" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="1ga-Mq-gTO"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zA-1h-S9z">
+                    <rect key="frame" x="16" y="58" width="382" height="20.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Label">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sync_description"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOF-5r-hxN">
+                    <rect key="frame" x="16" y="114.5" width="382" height="21.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                    <color key="textColor" red="0.13725490196078433" green="0.16078431372549018" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sync_profile"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9zA-1h-S9z" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4sn-zd-U4z"/>
+                <constraint firstItem="adL-gL-Gl3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7vo-h8-942"/>
+                <constraint firstItem="uOF-5r-hxN" firstAttribute="trailing" secondItem="9zA-1h-S9z" secondAttribute="trailing" id="N4O-dA-gfT"/>
+                <constraint firstItem="9zA-1h-S9z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Tnv-kG-4Sj"/>
+                <constraint firstItem="iCm-rp-rAM" firstAttribute="centerX" secondItem="adL-gL-Gl3" secondAttribute="centerX" id="WfG-00-Uv9"/>
+                <constraint firstItem="iCm-rp-rAM" firstAttribute="top" secondItem="9zA-1h-S9z" secondAttribute="bottom" constant="15" id="au4-vL-6lH"/>
+                <constraint firstItem="uOF-5r-hxN" firstAttribute="top" secondItem="iCm-rp-rAM" secondAttribute="bottom" constant="15" id="cPY-g3-g9K"/>
+                <constraint firstItem="adL-gL-Gl3" firstAttribute="top" secondItem="uOF-5r-hxN" secondAttribute="bottom" constant="5" id="fFp-TK-VNK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="adL-gL-Gl3" secondAttribute="bottom" id="lX7-Uq-aH2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="adL-gL-Gl3" secondAttribute="trailing" id="nUi-fm-M2K"/>
+                <constraint firstItem="9zA-1h-S9z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="pit-xA-eEN"/>
+                <constraint firstItem="uOF-5r-hxN" firstAttribute="leading" secondItem="9zA-1h-S9z" secondAttribute="leading" id="zqd-1g-jXB"/>
+                <constraint firstItem="iCm-rp-rAM" firstAttribute="leading" secondItem="adL-gL-Gl3" secondAttribute="leading" id="zwd-i5-Nvt"/>
+            </constraints>
+            <point key="canvasLocation" x="143" y="-47"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

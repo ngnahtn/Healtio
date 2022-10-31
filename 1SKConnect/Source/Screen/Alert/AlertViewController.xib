@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="Ga0-t8-adI" id="ZSL-ec-E9v"/>
+                <outlet property="alertViewHeightConstraint" destination="geB-mg-Pvw" id="x0p-RF-QKq"/>
+                <outlet property="bottomViewBottomConstraint" destination="ZLk-Ng-cCo" id="rwN-N2-4yE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYE-LZ-77A">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="94q-iI-fjH" appends="YES" id="BuH-Q4-kW0"/>
+                    </connections>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfO-2u-ski">
+                    <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga0-t8-adI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="geB-mg-Pvw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Ga0-t8-adI" firstAttribute="top" secondItem="DfO-2u-ski" secondAttribute="top" id="5zc-dL-w1X"/>
+                        <constraint firstAttribute="bottom" secondItem="Ga0-t8-adI" secondAttribute="bottom" id="bvX-7v-3gN"/>
+                        <constraint firstItem="Ga0-t8-adI" firstAttribute="leading" secondItem="DfO-2u-ski" secondAttribute="leading" id="vcg-YS-7I9"/>
+                        <constraint firstAttribute="trailing" secondItem="Ga0-t8-adI" secondAttribute="trailing" id="vfa-nI-5Zr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="oYE-LZ-77A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MEG-H7-CwG"/>
+                <constraint firstAttribute="bottom" secondItem="oYE-LZ-77A" secondAttribute="bottom" id="Xv4-QT-P02"/>
+                <constraint firstAttribute="bottom" secondItem="DfO-2u-ski" secondAttribute="bottom" id="ZLk-Ng-cCo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DfO-2u-ski" secondAttribute="trailing" id="dwF-Rp-9Hb"/>
+                <constraint firstItem="oYE-LZ-77A" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dy4-zk-lvh"/>
+                <constraint firstItem="DfO-2u-ski" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jnQ-cn-QYf"/>
+                <constraint firstItem="oYE-LZ-77A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t8i-v0-GKw"/>
+            </constraints>
+            <point key="canvasLocation" x="47.826086956521742" y="87.723214285714278"/>
+        </view>
+        <tapGestureRecognizer id="94q-iI-fjH">
+            <connections>
+                <action selector="backgroundDidTapped:" destination="-1" id="f4E-qa-egW"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

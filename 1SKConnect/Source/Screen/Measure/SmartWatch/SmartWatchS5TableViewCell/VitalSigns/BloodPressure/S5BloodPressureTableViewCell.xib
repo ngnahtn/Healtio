@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="S5BloodPressureTableViewCell" customModule="_SKConnect" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="444" id="KGk-i7-Jjw" customClass="S5BloodPressureTableViewCell" customModule="_SKConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1032" height="444"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="1032" height="444"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-NT-Edz">
+                        <rect key="frame" x="8" y="0.0" width="1016" height="436"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLr-VP-hAP">
+                                <rect key="frame" x="0.0" y="7" width="1016" height="429"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-aE-7J1">
+                                <rect key="frame" x="0.0" y="7" width="1016" height="429"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-bO-oWF">
+                                        <rect key="frame" x="951" y="-0.5" width="57" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giw-79-QZc">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="40"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                <color key="textColor" name="subTitle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chart" translatesAutoresizingMaskIntoConstraints="NO" id="CQy-o5-3mP">
+                                                <rect key="frame" x="46" y="0.0" width="11" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="11" id="ilI-aa-iJ4"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CQy-o5-3mP" firstAttribute="centerY" secondItem="AFi-bO-oWF" secondAttribute="centerY" id="G2O-BJ-U9O"/>
+                                            <constraint firstAttribute="height" constant="40" id="gAU-or-pIH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5m-lm-wxK">
+                                        <rect key="frame" x="8" y="10" width="39" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" name="title"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="bloodPressure"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AFi-bO-oWF" firstAttribute="centerY" secondItem="I5m-lm-wxK" secondAttribute="centerY" id="9XO-im-yCt"/>
+                                    <constraint firstAttribute="trailing" secondItem="AFi-bO-oWF" secondAttribute="trailing" constant="8" id="aMK-JQ-rOI"/>
+                                    <constraint firstItem="I5m-lm-wxK" firstAttribute="top" secondItem="z1e-aE-7J1" secondAttribute="top" constant="10" id="fMt-JA-VTF"/>
+                                    <constraint firstItem="I5m-lm-wxK" firstAttribute="leading" secondItem="z1e-aE-7J1" secondAttribute="leading" constant="8" id="hOt-yl-jGl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FLr-VP-hAP" firstAttribute="top" secondItem="z1e-aE-7J1" secondAttribute="top" id="0up-p1-A8M"/>
+                            <constraint firstAttribute="trailing" secondItem="z1e-aE-7J1" secondAttribute="trailing" id="3Ns-Pl-L0C"/>
+                            <constraint firstAttribute="bottom" secondItem="z1e-aE-7J1" secondAttribute="bottom" id="7Sm-S2-HEK"/>
+                            <constraint firstItem="FLr-VP-hAP" firstAttribute="bottom" secondItem="z1e-aE-7J1" secondAttribute="bottom" id="KM3-tg-cGe"/>
+                            <constraint firstItem="z1e-aE-7J1" firstAttribute="leading" secondItem="fU8-NT-Edz" secondAttribute="leading" id="PDE-nI-hIy"/>
+                            <constraint firstItem="z1e-aE-7J1" firstAttribute="top" secondItem="fU8-NT-Edz" secondAttribute="top" constant="7" id="XSA-NJ-a2o"/>
+                            <constraint firstItem="FLr-VP-hAP" firstAttribute="trailing" secondItem="z1e-aE-7J1" secondAttribute="trailing" id="gnM-25-OSq"/>
+                            <constraint firstItem="FLr-VP-hAP" firstAttribute="leading" secondItem="z1e-aE-7J1" secondAttribute="leading" id="i5z-5H-gOR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fU8-NT-Edz" secondAttribute="trailing" constant="8" id="4B6-Mk-phX"/>
+                    <constraint firstItem="fU8-NT-Edz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ITA-aZ-d4U"/>
+                    <constraint firstAttribute="bottom" secondItem="fU8-NT-Edz" secondAttribute="bottom" constant="8" id="V9y-Ea-2k6"/>
+                    <constraint firstItem="fU8-NT-Edz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zUR-YB-KNC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bloodPressureLabel" destination="I5m-lm-wxK" id="b7E-c7-z7g"/>
+                <outlet property="chartContentView" destination="z1e-aE-7J1" id="tq7-dR-jjw"/>
+                <outlet property="chartImageView" destination="CQy-o5-3mP" id="2Zf-gY-ALK"/>
+                <outlet property="dateLabel" destination="giw-79-QZc" id="A2B-oE-6Ul"/>
+                <outlet property="shadowView" destination="FLr-VP-hAP" id="DvU-Rl-R3v"/>
+                <outlet property="weakChartStackView" destination="AFi-bO-oWF" id="pkD-IK-mmM"/>
+            </connections>
+            <point key="canvasLocation" x="-33" y="-55"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_chart" width="11" height="14"/>
+        <namedColor name="subTitle">
+            <color red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.13725490196078433" green="0.16078431372549021" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

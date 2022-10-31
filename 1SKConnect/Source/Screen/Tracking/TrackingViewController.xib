@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrackingViewController" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="activitySelectedHidenView" destination="yBp-nF-2Dy" id="7Nl-1d-1Py"/>
+                <outlet property="noDeviceView" destination="P12-w1-4ct" id="Mpb-NU-hoe"/>
+                <outlet property="tableView" destination="0Il-vG-Cnc" id="I2e-EG-IWJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-vG-Cnc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBp-nF-2Dy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="X4q-lN-SZF" appends="YES" id="Nwf-cG-k6v"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P12-w1-4ct">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jak-7o-y1i">
+                            <rect key="frame" x="134" y="246" width="146" height="40"/>
+                            <color key="backgroundColor" name="mainColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Nyb-Nt-ecB"/>
+                                <constraint firstAttribute="width" constant="146" id="uSG-2z-JEw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Liên kết thiết bị">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="linkDevice"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonLinkDeviceDidTapped:" destination="-1" eventType="touchUpInside" id="4YA-Qm-b8R"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_link_2" translatesAutoresizingMaskIntoConstraints="NO" id="P1L-4L-Ihq">
+                            <rect key="frame" x="144" y="110" width="126" height="73"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên kết với thiết bị đo để theo dõi và nhận thông báo về các chỉ số sức khỏe của bạn." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-mJ-HjM">
+                            <rect key="frame" x="23" y="200" width="368" height="33"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                            <color key="textColor" name="subTitle"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="linkFirstDeviceMessage"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="EFw-mJ-HjM" firstAttribute="centerX" secondItem="P12-w1-4ct" secondAttribute="centerX" id="Mxi-h6-WCb"/>
+                        <constraint firstItem="P1L-4L-Ihq" firstAttribute="centerX" secondItem="P12-w1-4ct" secondAttribute="centerX" id="NuH-pC-hJb"/>
+                        <constraint firstItem="EFw-mJ-HjM" firstAttribute="leading" secondItem="P12-w1-4ct" secondAttribute="leading" constant="23" id="QgZ-ad-rgm"/>
+                        <constraint firstItem="Jak-7o-y1i" firstAttribute="top" secondItem="EFw-mJ-HjM" secondAttribute="bottom" constant="13" id="VBe-5D-Ldk"/>
+                        <constraint firstItem="Jak-7o-y1i" firstAttribute="centerX" secondItem="P12-w1-4ct" secondAttribute="centerX" id="n8m-st-yQ9"/>
+                        <constraint firstItem="EFw-mJ-HjM" firstAttribute="top" secondItem="P1L-4L-Ihq" secondAttribute="bottom" constant="17" id="q5y-f3-Nsu"/>
+                        <constraint firstItem="P1L-4L-Ihq" firstAttribute="top" secondItem="P12-w1-4ct" secondAttribute="top" constant="110" id="yOB-zV-oWg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yBp-nF-2Dy" firstAttribute="top" secondItem="0Il-vG-Cnc" secondAttribute="top" id="LvA-MB-6NB"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="0Il-vG-Cnc" secondAttribute="bottom" id="Omk-V6-MZz"/>
+                <constraint firstItem="P12-w1-4ct" firstAttribute="top" secondItem="0Il-vG-Cnc" secondAttribute="top" id="P4Z-iC-trb"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="0Il-vG-Cnc" secondAttribute="trailing" id="Qrr-2G-UW7"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="P12-w1-4ct" secondAttribute="bottom" id="Tk9-y2-N0I"/>
+                <constraint firstItem="yBp-nF-2Dy" firstAttribute="trailing" secondItem="0Il-vG-Cnc" secondAttribute="trailing" id="ToE-q1-mYt"/>
+                <constraint firstItem="P12-w1-4ct" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="U9b-Rc-ycU"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="P12-w1-4ct" secondAttribute="trailing" id="WQ3-MU-s5d"/>
+                <constraint firstItem="0Il-vG-Cnc" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="bqR-BA-1t4"/>
+                <constraint firstItem="yBp-nF-2Dy" firstAttribute="bottom" secondItem="0Il-vG-Cnc" secondAttribute="bottom" id="csJ-Yj-Nl3"/>
+                <constraint firstItem="0Il-vG-Cnc" firstAttribute="top" secondItem="KlH-tW-6zV" secondAttribute="top" id="hzo-Tl-1wT"/>
+                <constraint firstItem="yBp-nF-2Dy" firstAttribute="leading" secondItem="0Il-vG-Cnc" secondAttribute="leading" id="rrd-Nh-Tmg"/>
+            </constraints>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+        <tapGestureRecognizer id="X4q-lN-SZF">
+            <connections>
+                <action selector="onBackgroundDidTapped:" destination="-1" id="Vi9-kC-M31"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ic_link_2" width="126" height="73"/>
+        <namedColor name="mainColor">
+            <color red="0.0" green="0.76078431372549016" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subTitle">
+            <color red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

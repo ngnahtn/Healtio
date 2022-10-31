@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MeasurementCollectionViewCell" customModule="_SKConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tz-oe-Ik4">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="166"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cân nặng tiêu chuẩn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lK-4p-y2l">
+                                <rect key="frame" x="8" y="3" width="168" height="160"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5lK-4p-y2l" firstAttribute="top" secondItem="5Tz-oe-Ik4" secondAttribute="top" constant="3" id="OFa-sq-3dz"/>
+                            <constraint firstItem="5lK-4p-y2l" firstAttribute="centerY" secondItem="5Tz-oe-Ik4" secondAttribute="centerY" id="ht9-ta-1Ux"/>
+                            <constraint firstItem="5lK-4p-y2l" firstAttribute="leading" secondItem="5Tz-oe-Ik4" secondAttribute="leading" constant="8" id="idR-Xm-HJD"/>
+                            <constraint firstItem="5lK-4p-y2l" firstAttribute="centerX" secondItem="5Tz-oe-Ik4" secondAttribute="centerX" id="zqs-3B-Ivc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="19"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="5Tz-oe-Ik4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2DH-6u-PfL"/>
+                <constraint firstAttribute="trailing" secondItem="5Tz-oe-Ik4" secondAttribute="trailing" id="YVO-rF-gzw"/>
+                <constraint firstItem="5Tz-oe-Ik4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eDf-B6-oRD"/>
+                <constraint firstAttribute="bottom" secondItem="5Tz-oe-Ik4" secondAttribute="bottom" id="sxf-rY-cUb"/>
+            </constraints>
+            <size key="customSize" width="184" height="166"/>
+            <connections>
+                <outlet property="measureLabel" destination="5lK-4p-y2l" id="fs1-OM-dtP"/>
+                <outlet property="viewContent" destination="5Tz-oe-Ik4" id="Jl9-5o-i8F"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="76.339285714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

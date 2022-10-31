@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleViewController" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="alertIconImageView" destination="AXF-OG-rX2" id="ogr-h9-Q2P"/>
+                <outlet property="alertViewLabel" destination="iV4-jr-A9g" id="02M-os-ptU"/>
+                <outlet property="tableView" destination="KQw-RI-mH8" id="9JZ-gX-yQs"/>
+                <outlet property="transparentView" destination="4EK-nQ-39i" id="svL-2N-gjR"/>
+                <outlet property="turnOnBLEAlertView" destination="sMW-vS-1CX" id="ZT3-8S-GyC"/>
+                <outlet property="turnOnBLEAlertViewHeightConstraint" destination="Xia-BH-7nx" id="h4I-bT-CFa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQw-RI-mH8">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EK-nQ-39i">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="aJw-iE-fFo" appends="YES" id="A8n-O0-bW1"/>
+                    </connections>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMW-vS-1CX">
+                    <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4g-rw-ixc">
+                            <rect key="frame" x="21" y="104.5" width="177" height="36"/>
+                            <color key="backgroundColor" name="subTitle"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="pGk-Ho-z0Y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <state key="normal" title="Đóng">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="close"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onCloseTurnOnBLEAlertButtonDidTapped:" destination="-1" eventType="touchUpInside" id="RbP-yG-2vo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eu-9q-hIn">
+                            <rect key="frame" x="216" y="104.5" width="177" height="36"/>
+                            <color key="backgroundColor" name="mainColor"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <state key="normal" title="Vào cài đặt">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onButtonSettingDidTapped:" destination="-1" eventType="touchUpInside" id="1jE-gT-Pjw"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bật Bluetooth để 1SK-Connect có thể kết nối với thiết bị của bạn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-jr-A9g">
+                            <rect key="frame" x="21" y="44" width="372" height="37.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                            <color key="textColor" name="title"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="turnOnBluetoothMessage"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone_ble" translatesAutoresizingMaskIntoConstraints="NO" id="AXF-OG-rX2">
+                            <rect key="frame" x="149" y="28" width="116" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="u8l-yj-tbu"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AXF-OG-rX2" firstAttribute="centerX" secondItem="sMW-vS-1CX" secondAttribute="centerX" id="381-D6-7ug"/>
+                        <constraint firstAttribute="trailing" secondItem="5eu-9q-hIn" secondAttribute="trailing" constant="21" id="5VJ-cR-ymN"/>
+                        <constraint firstItem="5eu-9q-hIn" firstAttribute="leading" secondItem="o4g-rw-ixc" secondAttribute="trailing" constant="18" id="Bsp-4U-jLI"/>
+                        <constraint firstItem="AXF-OG-rX2" firstAttribute="top" secondItem="sMW-vS-1CX" secondAttribute="top" constant="28" id="CcQ-hA-EyL"/>
+                        <constraint firstItem="5eu-9q-hIn" firstAttribute="top" secondItem="o4g-rw-ixc" secondAttribute="top" id="DyO-AT-nWe"/>
+                        <constraint firstItem="5eu-9q-hIn" firstAttribute="bottom" secondItem="o4g-rw-ixc" secondAttribute="bottom" id="LVb-B3-n60"/>
+                        <constraint firstAttribute="height" id="Xia-BH-7nx"/>
+                        <constraint firstItem="o4g-rw-ixc" firstAttribute="leading" secondItem="sMW-vS-1CX" secondAttribute="leading" constant="21" id="dwg-Vy-Knc"/>
+                        <constraint firstItem="o4g-rw-ixc" firstAttribute="width" secondItem="5eu-9q-hIn" secondAttribute="width" id="eFt-ik-W3o"/>
+                        <constraint firstItem="o4g-rw-ixc" firstAttribute="top" secondItem="iV4-jr-A9g" secondAttribute="bottom" constant="23" id="fcY-Tw-Vbk"/>
+                        <constraint firstItem="iV4-jr-A9g" firstAttribute="top" secondItem="AXF-OG-rX2" secondAttribute="bottom" constant="16" id="ngR-OK-YPF"/>
+                        <constraint firstItem="iV4-jr-A9g" firstAttribute="centerX" secondItem="sMW-vS-1CX" secondAttribute="centerX" id="oEI-Wi-4an"/>
+                        <constraint firstItem="iV4-jr-A9g" firstAttribute="leading" secondItem="sMW-vS-1CX" secondAttribute="leading" constant="21" id="u91-yt-Nuf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="4EK-nQ-39i" secondAttribute="trailing" id="7Hg-f0-OvJ"/>
+                <constraint firstItem="KQw-RI-mH8" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="AO4-fX-JKJ"/>
+                <constraint firstItem="4EK-nQ-39i" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="Fzw-2M-ife"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="KQw-RI-mH8" secondAttribute="bottom" id="Iha-zo-UPj"/>
+                <constraint firstItem="sMW-vS-1CX" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="NG2-05-mn9"/>
+                <constraint firstItem="KQw-RI-mH8" firstAttribute="top" secondItem="KlH-tW-6zV" secondAttribute="top" id="SWM-hx-kAR"/>
+                <constraint firstAttribute="bottom" secondItem="sMW-vS-1CX" secondAttribute="bottom" id="V5v-M8-cPS"/>
+                <constraint firstAttribute="bottom" secondItem="4EK-nQ-39i" secondAttribute="bottom" id="WYe-Y2-7Kk"/>
+                <constraint firstItem="4EK-nQ-39i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cDb-uP-T4x"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="KQw-RI-mH8" secondAttribute="trailing" id="nUd-up-b84"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="sMW-vS-1CX" secondAttribute="trailing" id="pMf-aL-C5p"/>
+            </constraints>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+        <tapGestureRecognizer id="aJw-iE-fFo">
+            <connections>
+                <action selector="onBackgroundDidTapped:" destination="-1" id="Jfu-sj-HjC"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ic_phone_ble" width="116" height="79"/>
+        <namedColor name="mainColor">
+            <color red="0.0" green="0.76078438758850098" blue="0.77254903316497803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subTitle">
+            <color red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.13725490196078433" green="0.16078431372549021" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

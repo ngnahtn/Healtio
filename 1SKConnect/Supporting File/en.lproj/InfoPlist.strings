@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  1SKConnect
+
+  Created by tuyenvx on 27/05/2021.
+  
+*/
+"NSBluetoothAlwaysUsageDescription"     = "1SK.Connect needs your consent to use the Bluetooth data transmission function in order to obtain the device data.";
+"NSBluetoothPeripheralUsageDescription" = "1SK.Connect needs your consent to use the Bluetooth data transmission function in order to obtain the device data.";
+"NSCameraUsageDescription"              = "1SK.Connect needs your authorization to take photo to set avatar.";
+"NSPhotoLibraryUsageDescription"        = "1SK.Connect needs your Photos to set avatar.";

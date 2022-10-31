@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="S5TemperatureDetailViewController" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="detailTableView" destination="pkf-fK-uQo" id="V3L-fc-ZCu"/>
+                <outlet property="timeFillterType" destination="J5B-4r-Kfh" id="bCn-Ox-8hh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5B-4r-Kfh" userLabel="Time Fillter View" customClass="SKTimeFilterView" customModule="_SKConnect" customModuleProvider="target">
+                    <rect key="frame" x="8" y="12" width="398" height="36"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="mt6-oP-HeA"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-fK-uQo">
+                    <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="A8B-dT-Ssa"/>
+                        <outlet property="delegate" destination="-1" id="Tut-tF-6Tm"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pkf-fK-uQo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gts-Fo-qVT"/>
+                <constraint firstItem="J5B-4r-Kfh" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" constant="8" id="Ijh-jb-1Vh"/>
+                <constraint firstItem="pkf-fK-uQo" firstAttribute="top" secondItem="J5B-4r-Kfh" secondAttribute="bottom" constant="12" id="Nfq-sf-RQE"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="pkf-fK-uQo" secondAttribute="bottom" id="Q36-h8-F1t"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="J5B-4r-Kfh" secondAttribute="trailing" constant="8" id="cmr-n2-Cng"/>
+                <constraint firstItem="J5B-4r-Kfh" firstAttribute="top" secondItem="KlH-tW-6zV" secondAttribute="top" constant="12" id="gmx-7v-d6s"/>
+                <constraint firstItem="KlH-tW-6zV" firstAttribute="trailing" secondItem="pkf-fK-uQo" secondAttribute="trailing" id="s9q-zU-5Jd"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

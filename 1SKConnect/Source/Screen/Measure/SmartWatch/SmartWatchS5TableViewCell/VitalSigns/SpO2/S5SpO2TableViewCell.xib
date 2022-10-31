@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="S5SpO2TableViewCell" customModule="_SKConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="490" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="490" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-MR-90V">
+                        <rect key="frame" x="8" y="7" width="474" height="211"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXy-Yw-dE4">
+                                <rect key="frame" x="0.0" y="0.0" width="474" height="211"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDm-Nq-TI7">
+                                <rect key="frame" x="0.0" y="0.0" width="474" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-xR-ugG">
+                                        <rect key="frame" x="8" y="10" width="39" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" name="title"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="smart_watch_s5_spO2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Db3-Xs-EX9">
+                                        <rect key="frame" x="409" y="-0.5" width="57" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwE-RG-Sx3">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="40"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                <color key="textColor" name="subTitle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chart" translatesAutoresizingMaskIntoConstraints="NO" id="rNj-mV-Yu4">
+                                                <rect key="frame" x="46" y="0.0" width="11" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="11" id="y9e-pp-fb8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="yu0-w6-avJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kpx-xR-ugG" firstAttribute="leading" secondItem="EDm-Nq-TI7" secondAttribute="leading" constant="8" id="1p2-Wa-2hl"/>
+                                    <constraint firstItem="Db3-Xs-EX9" firstAttribute="centerY" secondItem="kpx-xR-ugG" secondAttribute="centerY" id="1qW-p8-v3d"/>
+                                    <constraint firstAttribute="trailing" secondItem="Db3-Xs-EX9" secondAttribute="trailing" constant="8" id="5cb-5b-4Uj"/>
+                                    <constraint firstItem="kpx-xR-ugG" firstAttribute="top" secondItem="EDm-Nq-TI7" secondAttribute="top" constant="10" id="niI-pJ-SDn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EDm-Nq-TI7" firstAttribute="top" secondItem="7Kf-MR-90V" secondAttribute="top" id="6X9-7Q-TvY"/>
+                            <constraint firstItem="SXy-Yw-dE4" firstAttribute="top" secondItem="EDm-Nq-TI7" secondAttribute="top" id="GYN-5e-odV"/>
+                            <constraint firstItem="SXy-Yw-dE4" firstAttribute="bottom" secondItem="EDm-Nq-TI7" secondAttribute="bottom" id="MXo-fq-Xw7"/>
+                            <constraint firstItem="SXy-Yw-dE4" firstAttribute="trailing" secondItem="EDm-Nq-TI7" secondAttribute="trailing" id="Nom-cf-h3E"/>
+                            <constraint firstAttribute="trailing" secondItem="EDm-Nq-TI7" secondAttribute="trailing" id="W2o-Au-m5E"/>
+                            <constraint firstItem="SXy-Yw-dE4" firstAttribute="leading" secondItem="EDm-Nq-TI7" secondAttribute="leading" id="bKy-NV-i5J"/>
+                            <constraint firstItem="EDm-Nq-TI7" firstAttribute="leading" secondItem="7Kf-MR-90V" secondAttribute="leading" id="bzT-Rt-jqI"/>
+                            <constraint firstAttribute="bottom" secondItem="EDm-Nq-TI7" secondAttribute="bottom" id="upM-yl-KNx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7Kf-MR-90V" secondAttribute="bottom" constant="8" id="60Y-F2-Nic"/>
+                    <constraint firstAttribute="trailing" secondItem="7Kf-MR-90V" secondAttribute="trailing" constant="8" id="N04-AF-mf1"/>
+                    <constraint firstItem="7Kf-MR-90V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="RA4-4X-tjn"/>
+                    <constraint firstItem="7Kf-MR-90V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="pXN-gq-fK4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chartContentView" destination="EDm-Nq-TI7" id="hDx-eO-lTE"/>
+                <outlet property="chartImageView" destination="rNj-mV-Yu4" id="QQ4-fr-0n9"/>
+                <outlet property="dateLabel" destination="SwE-RG-Sx3" id="Jfm-U0-HNE"/>
+                <outlet property="shadowView" destination="SXy-Yw-dE4" id="T8b-OE-scX"/>
+                <outlet property="spO2Label" destination="kpx-xR-ugG" id="lCD-9n-WGA"/>
+                <outlet property="weekChartStackView" destination="Db3-Xs-EX9" id="IS2-p3-LAX"/>
+            </connections>
+            <point key="canvasLocation" x="255.07246376811597" y="102.45535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_chart" width="11" height="14"/>
+        <namedColor name="subTitle">
+            <color red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.13725490196078433" green="0.16078431372549021" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

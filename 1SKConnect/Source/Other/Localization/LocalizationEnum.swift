@@ -1,0 +1,165 @@
+//
+//  LocalizationEnum.swift
+//  1SKConnect
+//
+//  Created by tuyenvx on 15/04/2021.
+//
+
+import Foundation
+
+typealias L = LocalizationString
+
+enum LocalizationString: String {
+    case home
+    case tracking
+    case notification
+    case setting
+    case createFirstProfileText
+    case youDoNotHaveAnyDevice
+    case measurementIndex
+    case deviceMeasurementIndex
+    case createProfile
+    case myDevice
+    case lastestInfo
+    case weight
+    case walk
+    case run
+    case cycling
+    case swimming
+    case bloodPressure
+    case temperature
+    case heartRate
+    case bloodSugar
+    case distance
+    case time
+    case connect
+    case disconnect
+    case measurement
+    case measuring
+    case measuringHistory
+    case day
+    case week
+    case month
+    case year
+    case doNotHaveData
+    case turnOnBluetoothMessage
+    case turnOnBluetoothMessageForLinkDevice
+    case close
+    case underWeight
+    case normal
+    case overWeight
+    case overWeightLevel1
+    case overWeightLevel2
+    case overWeightLevel3
+    case thin
+    case fat
+    case healthy
+    case dangerous
+    case veryDangerous
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+    case today
+    case weightMeasuring
+    case standOnTheScale
+    case note
+    case removeShoes
+    case positionHeelAndToe
+    case measuringResult
+    case low
+    case high
+    case veryHigh
+    case move
+    case other
+    case significance
+    case linkFirstDeviceMessage
+    case linkDevice
+    case healthProfile
+    case device
+    case syncData
+    case introduce
+    case findDevice
+    case notFoundAnyDeviceMessage
+    case unlinkDeviceConfirmMessage
+    case no
+    case unlinkDeviceConfirm
+    case unlinkDeviceSuccessMessage
+    case update
+    case fullName
+    case birthday
+    case male
+    case female
+    case height
+    case heightCm
+    case weightKg
+    case bloodGroup
+    case relationship
+    case relationshipPlaceHolder
+    case deleteProfileConfirmMessage
+    case deleteProfileConfirm
+    case addNew
+    case chooseBirthday
+    case chooseBloodGroup
+    case chooseRelationship
+    case cancel
+    case confirm
+    case yourself
+    case father
+    case mother
+    case wife
+    case husband
+    case daughter
+    case son
+    case next
+    case bmi
+    case bmr
+    case muscle
+    case bone
+    case water
+    case protein
+    case fatPercent
+    case obesityLevel
+    case visceralFat
+    case subcutaneousFat
+    case lbw
+    case bodyStandard
+    case bodyShape
+    case bodyAge
+    case addDevice
+    case save
+    case addProfile
+    case chooseImageFrom
+    case agree
+    case noNotification
+    case turnOnNotification
+    case dontMissNotification
+    case lThinMuscle
+    case muscular
+    case lackofexercise
+    case standard
+    case standardMuscle
+    case obesFat
+    case lFatMuscle
+    case muscleFat
+    case canNotConnectToDevice
+    case ok
+    case overWeightMessage
+    case nameFieldRequire
+    case minNameLengthMessage
+    case birthDayFieldRequire
+    case minHeightMessage
+    case maxHeightMessage
+    case minWeightMessage
+    case maxWeightMessage
+    case weightMeasuringFalseMessage
+    case relationshipFieldRequire
+    case average
+
+    var localized: String {
+        return self.rawValue.localized
+    }
+}

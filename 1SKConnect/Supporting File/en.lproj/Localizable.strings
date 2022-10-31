@@ -1,0 +1,387 @@
+/* 
+  Localizable.strings
+  1SKConnect
+
+  Created by tuyenvx on 15/04/2021.
+  
+*/
+"home" = "Trang chủ";
+"tracking" = "Theo dõi";
+"notification" = "Thông báo";
+"setting" = "Cài đặt";
+"createFirstProfileText" = "Vui lòng tạo hồ sơ để lưu các chỉ số liên quan đến sức khoẻ của bạn.";
+"youDoNotHaveAnyDevice" = "Bạn chưa liên kết với thiết bị đo nào.";
+"deviceIsUnPaired" = "Bạn đã huỷ liên kết với thiết bị";
+"measurementIndex" = "Chỉ số đo";
+"deviceMeasurementIndex" = "Thiết bị đo";
+"createProfile" = "TẠO HỒ SƠ";
+"myDevice" = "Thiết bị của tôi";
+"lastestInfo" = "CHỈ SỐ MỚI NHẤT";
+"weight" = "Cân nặng";
+"bloodpressure" = "Huyết áp";
+"walk" = "Đi bộ";
+"run" = "Chạy";
+"cycling" = "Đạp xe";
+"swimming" = "Bơi";
+"bloodPressure" = "Huyết áp";
+"temperature" = "Nhiệt độ";
+"heartRate" = "Nhịp tim";
+"bloodSugar" = "Đường huyết";
+"distance" = "Quãng đường";
+"time" = "Thời gian";
+"speed" = "Vận tốc";
+"connect" = "Kết nối";
+"connected" = "Đã kết nối";
+"disconnect" = "Bỏ kết nối";
+"disconnected" = "Chưa kết nối";
+"measurement" = "Đo";
+"stop_measurement" = "Dừng đo";
+"measuring" = "Đang đo...";
+"measuringHistory" = "LỊCH SỬ ĐO";
+"day" = "Ngày";
+"week" = "Tuần";
+"month" = "Tháng";
+"year" = "Năm";
+"doNotHaveData" = "Chưa có dữ liệu";
+"turnOnBluetoothMessage" = "Bật Bluetooth để 1SK.Connect có thể kết nối với thiết bị của bạn.";
+"turnOnBluetoothMessageForLinkDevice" = "Bật Bluetooth để cho phép 1SK.Connect liên kết với thiết bị của bạn.";
+"close" = "Đóng";
+"underWeight" = "Thiếu cân";
+"normal" = "Bình thường";
+"overWeight" = "Thừa cân";
+"overWeightLevel1" = "Béo phì độ 1";
+"overWeightLevel2" = "Béo phì độ 2";
+"overWeightLevel3" = "Béo phì độ 3";
+"thin" = "Gầy";
+"fat" = "Béo";
+"healthy" = "Khoẻ mạnh";
+"dangerous" = "Nguy hiểm";
+"veryDangerous" = "Rất nguy hiểm";
+"monday" = "T2";
+"tuesday" = "T3";
+"wednesday" = "T4";
+"thursday" = "T5";
+"friday" = "T6";
+"saturday" = "T7";
+"sunday" = "CN";
+"today" = "Hôm nay";
+"weightMeasuring" = "Đo cân nặng";
+"standOnTheScale" = "Vui lòng đứng lên cân.";
+"note" = "Lưu ý:";
+"removeShoes" = "Bỏ giày và tất trước khi đứng lên cân để được kết quả phân tích chính xác nhất.";
+"positionHeelAndToe" = "Vị trí gót chân và ngón chân đứng đúng vào vị trí cảm biến.";
+"measuringResult" = "Kết quả đo";
+"low" = "Thấp";
+"high" = "Cao";
+"veryHigh" = "Rất cao";
+"move" = "Vận động";
+"step" = "Bước chân";
+"other" = "Khác";
+"significance" = "Sinh hiệu";
+"linkFirstDeviceMessage" = "Liên kết với thiết bị đo để theo dõi và nhận thông báo về các chỉ số sức khoẻ của bạn.";
+"linkDevice" = "Liên kết thiết bị";
+"healthProfile" = "Hồ sơ sức khoẻ";
+"device" = "Thiết bị";
+"syncData" = "Đồng bộ dữ liệu";
+"introduce" = "Giới thiệu";
+"findDevice" = "Tìm thiết bị";
+"notFoundAnyDeviceMessage" = "Không tìm thấy thiết bị nào. Vui lòng đảm bảo thiết bị cần kết nối đã được bật và đặt trong phạm vi có thể liên kết.";
+"unlinkDeviceConfirmMessage" = "Bạn có chắc chắn muốn bỏ liên kết với thiết bị này?";
+"no" = "Không";
+"unlinkDeviceConfirm" = "Có, bỏ liên kết";
+"unlinkDeviceSuccessMessage" = "Đã bỏ liên kết với thiết bị";
+"fullName" = "Họ tên";
+"birthday" = "Ngày sinh";
+"male" = "Nam";
+"female" = "Nữ";
+"height" = "Chiều cao";
+"heightCm" = "Chiều cao (cm)";
+"heightCmPlaceHolder" = "Chiều cao (cm)*";
+"weightKg" = "Cân nặng (kg)";
+"bloodGroup" = "Nhóm máu";
+"relationship" = "Mối quan hệ";
+"relationshipPlaceHolder" = "Mối quan hệ*";
+"update" = "Cập nhật";
+"deleteProfileConfirmMessage" = "Bạn có chắc chắn muốn xóa hồ sơ này?";
+"deleteProfileConfirm" = "Có, xóa hồ sơ";
+"addNew" = "Thêm mới";
+"chooseBirthday" = "Chọn ngày sinh";
+"chooseBloodGroup" = "Chọn nhóm máu";
+"chooseRelationship" = "Chọn mối quan hệ";
+"cancel" = "Huỷ";
+"confirm" = "Xác nhận";
+"yourself" = "Tôi";
+"father" = "Bố đẻ";
+"mother" = "Mẹ đẻ";
+"wife" = "Vợ";
+"husband" = "Chồng";
+"daughter" = "Con gái";
+"son" = "Con trai";
+"next" = "Tiếp";
+"bmi" = "BMI";
+"bmr" = "BMR";
+"muscle" = "Cơ (kg)";
+"bone" = "Xương (kg)";
+"water" = "Nước (%)";
+"protein" = "Protein (%)";
+"fatPercent" = "Mỡ (%)";
+"obesityLevel" = "Mức độ béo phì";
+"visceralFat" = "Mỡ nội tạng";
+"subcutaneousFat" = "Mỡ dưới da (%)";
+"lbw" = "Khối lượng cơ thể săn chắc (kg)";
+"bodyStandard" = "Cân nặng tiêu chuẩn (kg)";
+"bodyShape" = "Vóc dáng";
+"bodyAge" = "Body Age";
+"addDevice" = "Thêm thiết bị";
+"save" = "Lưu";
+"addProfile" = "Thêm hồ sơ";
+"chooseImageFrom" = "Chọn ảnh từ: ";
+"agree" = "Đồng ý";
+"noNotification" = "Chưa có thông báo nào.";
+"turnOnNotification" = "Bật tính năng thông báo";
+"dontMissNotification" = "Đừng bỏ lỡ thông báo hấp dẫn mỗi ngày từ 1SK";
+"lThinMuscle" = "Vận động viên thể hình";
+"muscular" = "Cơ bắp";
+"lackofexercise" = "Thiếu vận động";
+"standard" = "Cân đối";
+"standardMuscle" = "Vận động viên điền kinh";
+"obesFat" = "Béo phì";
+"lFatMuscle" = "Béo ẩn";
+"muscleFat" = "Béo chắc";
+"canNotConnectToDevice" = "Không thể kết nối với thiết bị";
+"ok" = "OK";
+"overWeightMessage" = "Bạn đã đạt quá giới hạn cân";
+"nameFieldRequire" = "Vui lòng nhập tên";
+"minNameLengthMessage" = "Tên tối thiểu phải từ 2 ký tự đổ lên";
+"birthDayFieldRequire" = "Vui lòng nhập ngày sinh";
+"minHeightMessage" = "Chiều cao tối thiểu là 50 cm";
+"maxHeightMessage" = "Chiều cao tối đa là 300 cm";
+"minWeightMessage" = "Cân nặng tối thiểu là 2 kg";
+"maxWeightMessage" = "Cân nặng tối đa là 200 kg";
+"weightMeasuringFalseMessage" = "Phép đo không thành công";
+"relationshipFieldRequire" = "Vui lòng nhập mối quan hệ";
+"average" = "Trung bình";
+"hour" = "giờ";
+"minute" = "phút";
+"kcalPerDay" = "kcal/ngày";
+"hourAndMinuteEmty" = "-- giờ -- phút";
+"reloadData" = "Cập nhật dữ liệu";
+"linked_device" = "Loại thiết bị này đã được liên kết";
+"apply"     =   "Áp dụng";
+
+// Mark: - Sync
+"sync"                  = " Liên kết ngay";
+"sync_fail"             = "Đồng bộ thất bại";
+"sync_account"          = "Đồng bộ tài khoản";
+"sync_link_account"     = "Liên kết tài khoản";
+"sync_auto"             = "Tự động đồng bộ dữ liệu";
+"sync_unlink"           = "Huỷ liên kết";
+"sync_not_link"         = "Chưa kết nối với tài khoản 1SK";
+"sync_linked_account"   = "Đã kết nối với tài khoản 1SK %@";
+"sync_success"          = "Đồng bộ thành công";
+"sync_facebook"         = "Đã kết nối với tài khoản facebook";
+"sync_link_failed"      = "Liên kết bị lỗi";
+"sync_profile"          = "Hồ sơ";
+"sync_description"      = "Đồng bộ dữ liệu các hồ sơ lên hệ thống 1SK, việc này giúp bạn:
+• Truy cập và xem dữ liệu với bất kỳ thiết bị nào bạn có.
+• Dữ liệu được đồng bộ xuyên suốt giữa 1SK và 1SK.Connect.
+• Chia sẻ các chỉ số sức khỏe cho bác sĩ, tạo thuận lợi cho việc tư vấn sức khỏe được nhanh và tốt hơn.";
+"sync_last_date"        = "Đồng bộ lần cuối %@:%@, %@ tháng %@, %@";
+"sync_linked"           = "Người dùng này đã được liên kết với một tài khoản khác trước đây";
+"sync_linked_user"      = "Tài khoản này đã được liên kết với người dùng khác";
+
+// Mark: - Alert
+"alert_cancel"          = "Huỷ";
+"alert_error"           = "Lỗi";
+"alert_message_unlink"  = "Bạn có chắc chắn muốn ngắt kết nối?";
+"alert_message_link"    = "Bạn phải liên kết tài khoản để bật tính năng này";
+
+// Mark: - Detail measurement
+"detail_measurement_muscle"                 = "Cơ";
+"detail_measurement_bone"                   = "Xương";
+"detail_measurement_weight"                 = "Cân nặng";
+"detail_measurement_ideal"                  = "Cân nặng tiêu chuẩn";
+"detail_measurement_water"                  = "Nước";
+"detail_measurement_protein"                = "Protein";
+"detail_measurement_fat"                    = "Mỡ";
+"detail_measurement_subcutaneous_fat"       = "Mỡ dưới da";
+
+// Mark: - Internet error
+"internet_error_data_error"      = "Lỗi dữ liệu.";
+"internet_error_not_connect"     = "Bạn vui lòng kiểm tra kết nối mạng.";
+"internet_error_lost_connection" = "Mất kết nối mạng, vui lòng kiểm tra lại.";
+
+// Mark: - Scale Result Detail
+"scale_result_detail_bmi"                           = "Chỉ số BMI";
+"scale_result_detail_bmr"                           = "Chỉ số BMR";
+"scale_result_detail_muscle"                        = "Chỉ số cơ";
+"scale_result_detail_bone"                          = "Khối lượng xương";
+"scale_result_detail_water"                         = "Lượng nước cơ thể";
+"scale_result_detail_protein"                       = "Protein";
+"scale_result_detail_fat"                           = "Chất béo cơ thể";
+"scale_result_detail_lbw"                           = "Khối lượng cơ thể săn chắc";
+"scale_result_detail_weight"                        = "Cân nặng cơ thể";
+"scale_result_detail_bmi_description"               = "Chỉ số BMI chuẩn được tính dựa trên chiều cao và cân nặng, áp dụng cho nam và nữ trưởng thành, nhằm xác định tình trạng cơ thể đang ở mức ổn định, suy dinh dưỡng hay béo phì.
+BMI lý tưởng của người Việt Nam (cả nam và nữ) là từ 18,5 đến 22,9. Người có BMI trong khoảng này nhưng cơ thể nhiều chất béo được xác định là “béo phì ẩn”";
+"scale_result_detail_bmr_description"               = "Là tỉ lệ trao đổi chất cơ bản cho biết mức năng lượng (calo) tối thiếu cơ thể cần trong 24 giờ để đảm bảo hoạt động bình thường của các cơ quan (bao gồm cả trạng thái nghỉ ngơi). Chỉ số được xác định bằng năng lượng tiêu thụ bởi khối cơ bắp. Những người có BMR thường không dễ để tăng cân. Sử dụng nhiều thịt, cá và các sản phẩm từ sữa kết hợp tập thể dục có thể giúp bạn tăng khối lượng cơ";
+"scale_result_detail_muscle_description"            = "Khối lượng cơ bao gồm khối lượng các cơ xương, cơ trơn như cơ tim, cơ hệ tiêu hóa và nước chứa trong các tế bào cơ. Tăng cường khối lượng cơ sẽ giúp tỷ lệ trao đổi chất cơ bản BMR tăng lên, giúp giảm lượng mỡ thừa trong cơ thể và giảm cân một cách lành mạnh.";
+"scale_result_detail_bone_description"              = "Chỉ số thể hiện khối lượng xương trong cơ thể (xương khoáng, canxi và các khoáng chất khác). Đo khối lượng xương thường xuyên sẽ chẩn đoán tình trạng loãng xương của cơ thể. Lượng xương có quan hệ tỷ lệ thuận với lượng cơ, vì vậy, tập luyện thể thao, chế độ dinh dưỡng cân bằng và duy trì cân nặng ổn định giúp xây dựng hệ xương chắc khỏe hơn.";
+"scale_result_detail_water_description"             = "Là tỷ lệ giữa toàn bộ lượng nước (bao gồm: nước trong máu, bạch huyết, dịch cơ thể,...) và trọng lượng cơ thể. Mất nước có thể gây ảnh hưởng tiêu cực đến sức khỏe con người. Theo dõi % lượng nước toàn phần tại một thời điểm nhất định trong ngày để đánh giá chính xác những thay đổi của cơ thể.";
+"scale_result_detail_protein_description"           = "Là thành phần dinh dưỡng quan trọng cấu tạo nên các bộ phận của cơ thể. Protein không chỉ giúp cơ thể khỏe mạnh và tăng cơ bắp mà còn tốt cho xương, sụn, máu. Thêm vào đó, protein giúp nuôi dưỡng da, tóc, móng tay và các cơ quan quan trọng trong cơ thể. Thiếu hụt Protein có thể dẫn đến suy giảm miễn dịch, thiếu máu, teo cơ.
+Tỷ lệ Protein trong cơ thể khỏe mạnh nằm từ 16- 20%";
+"scale_result_detail_fat_description"               = "Chỉ số thể hiện phần trăm khối lượng chất béo so với khối tượng toàn bộ cơ thể, giúp bạn nhanh chóng xác định lượng mỡ thừa, đặc biệt là mỡ xấu đang tích tụ. Chỉ số này đánh giá tình trạng sức khỏe cũng như vóc dáng cho nam giới và phụ nữ để xây dựng kế hoạch tập luyện và dinh dưỡng phù hợp.
+Chỉ số này thấp cơ thể có thể bị rối loạn nội tiết
+Chỉ số cao dẫn đến béo phì
+Giữ chỉ số này ở ngưỡng tiêu chuẩn với kế hoạch tập luyện và dinh dưỡng phù hợp cho bạn sức khỏe hoàn hảo, thân hình săn chắc, hấp dẫn";
+"scale_result_detail_obesity_level_description"     = "Béo phì không chỉ ảnh hưởng đến ngoại hình mà còn tác động tiêu cực đến sức khỏe, tăng nguy cơ mắc những bệnh về tim mạch, tiểu đường, huyết áp cao,... Có thể đánh giá mức độ thừa cân, béo phì theo chỉ số BMI";
+"scale_result_detail_visceral_fat_description"      = "Mỡ nội tạng là một loại chất béo trong cơ thể được lưu trữ trong khoang bụng. Mỡ nội tạng dư thừa làm tăng nguy cơ phát triển một số bệnh lý nghiêm trọng kéo dài. Thường xuyên theo dõi và đảm bảo chỉ số mỡ nội tạng nằm trong mức cho phép giúp bảo vệ và nâng cao sức khỏe hiệu quả.";
+"scale_result_detail_subcutaneous_fat_description"  = "Là lượng mỡ nằm ngay bên dưới da giúp cơ thể dự trữ năng lượng và điều chỉnh thân nhiệt, tỷ lệ này khác nhau phụ thuộc vào gen di truyền cũng như là các yếu tố về lối sống như mức độ hoạt động thể chất và chế độ ăn uống của mỗi người. Mỡ dưới da có chức năng như 1 lớp đệm để bảo vệ cơ và xương khỏi tác động của các cú va chạm từ bên ngoài như ngã, va đập,...";
+"scale_result_detail_lbw_description"               = "Là tổng khối lượng cơ thể trừ đi tất cả khối lượng mỡ, giúp bạn đánh giá được trạng thái cơ thể, từ đó có thể điều chỉnh để giảm cân, tăng cân hoặc cải thiện một số chỉ số quan trọng phù hợp với tình trạng cơ thể.
+Cách tính: Trọng lượng cơ thể x (1 - tỷ lệ % mỡ cơ thể)";
+"scale_result_detail_ideal_description"             = "Là khối lượng tương ứng phù hợp với chiều cao của mỗi người. Duy trì trọng lượng chuẩn giúp tránh một số vấn đề sức khỏe nghiêm trọng như: béo phì, tăng huyết áp, tiểu đường, suy dinh dưỡng...";
+"scale_result_detail_body_shape_description"        = "Chỉ số này phân loại vóc dáng người dùng dựa vào tỷ lệ Lượng mỡ và Lượng cơ của bạn.
+Khi bạn hoạt động và tăng cường tập luyện, lượng mỡ cơ thể sẽ giảm, chỉ số vóc dáng cũng sẽ thay đổi rõ rệt. Ngay cả khi cân nặng của bạn không đổi, sự thay đổi về tỷ lệ lượng cơ và lượng mỡ sẽ giúp bạn khỏe mạnh hơn và giảm thiểu nguy cơ dẫn tới các vấn đề về sức khỏe.";
+"scale_result_detail_weight_description"            = "Chỉ số đề cập đến số đo trọng lượng cơ thể mà không có gì trên người. Cân nặng cơ thể là một chỉ số cơ bản nhưng góp phần quan trọng trong quá trình phân tích thành phần cơ thể. Bạn có thể biết tình trạng sức khỏe dựa trên sự thay đổi cân nặng trong một khoảng thời gian cụ thể.";
+"scale_result_detail_value"                         = "Chỉ số của bạn: ";
+"scale_result_standar_description"                  = "Tiêu chuẩn";
+"scale_result_optimal_description"                  = "Tối ưu";
+"scale_result_short_description"                    = "Thiếu";
+"scale_result_healthy_description"                  = "Khỏe mạnh";
+"scale_result_find_description"                     = "Tốt";
+"scale_result_excess_description"                   = "Thừa";
+"scale_result_detail_discovery"                     = "Tìm hiểu thêm thông tin sức khỏe ở";
+"scale_result_detail_1sk"                           = "1SK";
+
+// Mark: - SpO2
+"spO2" = "SpO2";
+"PR"   = "PR";
+
+// Mark: - SpO2 Detail Value
+"spO2_detail_value_title"        = "Chi tiết dữ liệu";
+"spO2_detail_value_time_measure" = "Thời gian theo dõi: %@";
+"spO2_detail_value_from_to"      = "Từ %@ đến %@";
+"spO2_detail_value_average"      = "SpO2 trung bình";
+"spO2_detail_value_min"          = "SpO2 thấp nhất";
+"spO2_detail_value_average_pr"   = "Nhịp tim trung bình";
+
+// Mark: - BioLight Detail
+"biolight_detail_blood_pressure_low"                = "Huyết áp thấp";
+"biolight_detail_blood_pressure_normal"             = "Huyết áp bình thường";
+"biolight_detail_blood_pressure_pre_hypertension"   = "Tiền tăng huyết áp";
+"biolight_detail_blood_pressure_high_1"             = "Tăng huyết áp độ 1";
+"biolight_detail_blood_pressure_high_2"             = "Tăng huyết áp độ 2";
+
+// Mark: - BioLight Description
+"biolight_description_blood_pressure_low"                = "HA Thấp";
+"biolight_description_blood_pressure_normal"             = "HA Bình thường";
+"biolight_description_blood_pressure_pre_hypertension"   = "HA Tiền tăng";
+"biolight_description_blood_pressure_high_1"             = "HA Cao 1";
+"biolight_description_blood_pressure_high_2"             = "HA Cao 2";
+
+// Mark: - Biolight ErrorText
+"biolight_error_movement"       = "Bạn có cử động người trong khi đo, thiết bị không trả về kết quả. Bạn hãy ngồi đúng tư thế và thực hiện lại phép đo";
+"biolight_error_timeout"        = "Thiết bị không trả về kết quả do quá thời gian đo. Bạn hãy vui lòng ngồi đúng tư thế, kiểm tra và đeo lại thiết bị đo và thực hiện lại sau khi đã chuẩn bị xong";
+"biolight_error_device"         = "Có thể trong quá trình đo thiết bị đã bị lỏng hoặc không được đeo đúng cách nên đã không trả về kết quả, bạn hãy kiểm tra và đeo lại thiết bị và thử lại để có kết quả đo chuẩn xác nhất";
+
+// Mark: - Blood pressure values
+"blood_pressure_value_sys_day"      = "Tâm thu: %@ mmHg";
+"blood_pressure_value_dia_day"      = "Tâm trương: %@ mmHg";
+"blood_pressure_value_sys"          = "Tâm thu: %@ - %@ mmHg";
+"blood_pressure_value_dia"          = "Tâm trương: %@ - %@ mmHg";
+
+// MARK: - SpO2 download files
+"spO2_download_files_downloading"   = "Đang tải kết quả đo từ thiết bị.";
+
+// MARK: - Smart Watch S5
+"smart_watch_s5_step"                   = "bước";
+"smart_watch_s5_step_per_day"           = "bước/ngày";
+"smart_watch_s5_exercise"               = "Vận động";
+"smart_watch_s5_collapse"               = "Thu gọn";
+"smart_watch_s5_expand"                 = "Mở rộng";
+"smart_watch_s5_heart_rate_input"       = "Nhịp tim: %@ bpm";
+"smart_watch_s5_heart_rate"             = "Nhịp tim";
+"smart_watch_s5_spO2_input"             = "Oxy máu: %@";
+"smart_watch_s5_spO2"                   = "Oxy máu";
+"smart_watch_s5_blood_pressure_input"   = "Huyết áp: %@ mmHg";
+"smart_watch_s5_blood_pressure"         = "Huyết áp";
+"smart_watch_s5_temperature_input"      = "Nhiệt độ: %@ °C";
+"smart_watch_s5_temperature"            = "Nhiệt độ";
+"smart_watch_s5_sleep_input"            = "Giấc ngủ: %@";
+"smart_watch_s5_total_sleep_input"      = "Tổng thời gian ngủ: %@";
+"smart_watch_s5_average_sleep_input"    = "Thời gian ngủ trung bình hàng ngày %@";
+"smart_watch_s5_sleep"                  = "Giấc ngủ";
+"smart_watch_s5_7_days"                 = "7 ngày qua";
+"smart_watch_s5_step_count"             = "Số bước đi bộ";
+"smart_watch_s5_calo"                   = "Calo";
+"smart_watch_s5_average_spO2"           = "Oxy máu trung bình";
+"smart_watch_s5_goal"                   = "Mục tiêu";
+"smart_watch_s5_goal_title"             = "Đặt mục tiêu số bước hàng ngày để giúp bạn luôn năng động và khỏe mạnh.";
+"smart_watch_s5_run_times"              = "%@ lần chạy";
+"smart_watch_s5_min_bp"                 = "Huyết áp thấp nhất: ";
+"smart_watch_s5_max_bp"                 = "Huyết áp cao nhất: ";
+"smart_watch_s5_min_hr"                 = "Nhịp tim nghỉ: ";
+"smart_watch_s5_max_hr"                 = "Nhịp tim cao nhất: ";
+"smart_watch_s5_min_spO2"               = "Oxy máu thấp nhất: ";
+"smart_watch_s5_max_spO2"               = "Oxy máu: ";
+"smart_watch_s5_max_temp"               = "Nhiệt độ cao nhất: ";
+"smart_watch_s5_min_temp"               = "Nhiệt độ thấp nhất: ";
+"smart_watch_s5_avg_per_day"            = "(tb/ngày)";
+"smart_watch_s5_has_no_data"            = "Chưa có dữ liệu";
+"smart_watch_s5_is_on"                  = "Bật";
+"smart_watch_s5_is_off"                 = "Tắt";
+"smart_watch_s5_reset"                  = "Khôi phục cài đặt gốc";
+"smart_watch_s5_goal_cancel"            = "Huỷ mục tiêu";
+
+// MARK: - Sleep Type
+"sleep_type_deep"                       = "Ngủ sâu";
+"sleep_type_light"                      = "Ngủ nông";
+"sleep_type_rem"                        = "REM";
+"sleep_type_asleep"                     = "Thức";
+
+// MARK: - SM Excercise
+"sm_excercise_history"                  = "Lịch sử hoạt động";
+"sm_excercise_total_per_day"            = "Tổng số bước hàng ngày/mục tiêu";
+"sm_excercise_total_step"               = "Tổng số bước:";
+"sm_excercise_number_of_step"           = "Số bước:";
+"sm_excercise_total_distance"           = "Tổng quãng đường:";
+"sm_excercise_average_step"             = "Số bước trung bình hàng ngày:";
+"sm_excercise_average_kcal"             = "Calo tiêu thụ trung bình hàng ngày:";
+"sm_excercise_average_step_month"       = "Số bước trung bình hàng tháng:";
+"sm_excercise_average_kcal_month"       = "Calo tiêu thụ trung bình hàng tháng:";
+"sm_excersise_time"                     = "Thời gian vận động";
+"sm_practice_time"                      = "Thời gian tập luyện";
+"sm_excercise_avg_day"                  = "Thời gian vận động trung bình hàng ngày:";
+"sm_practice_avg_day"                   = "Thời gian tập luyện trung bình hàng ngày:";
+"sm_excercise_avg_month"                = "Thời gian vận động trung bình hàng tháng:";
+"sm_practice_avg_month"                 = "Thời gian tập luyện trung bình hàng tháng:";
+
+// MARK: - S5 Sport Type
+"s5_sport_type_walk"                    = "Đi bộ";
+"s5_sport_type_run"                     = "Chạy";
+"s5_sport_type_bike"                    = "Xe đạp";
+"s5_sport_type_climb"                   = "Leo núi";
+
+// MARK: - S5 Setting Type
+"s5_setting_type_notice"                = "Thông báo";
+"s5_setting_type_alarm"                 = "Báo thức";
+"s5_setting_type_sedentary_reminder"    = "Nhắc nhở ít vận động";
+"s5_setting_type_water_reminder"        = "Nhắc nhở uống nước";
+"s5_setting_type_watch_face"            = "Mặt đồng hồ";
+"s5_setting_type_movement_goal"         = "Mục tiêu vận động";
+"s5_setting_type_auto_heart_rate"       = "Đo nhịp tim định kì";
+"s5_setting_type_auto_temp"             = "Đo nhiệt độ định kì";
+"s5_setting_type_turn_wrist"            = "Nâng cổ tay để bật màn hình";
+"s5_setting_type_searching_s5"          = "Tìm kiếm vòng đeo tay";
+"s5_setting_type_s5_version"            = "Phiên bản phần mềm";
+"s5_setting_type_s5_reset"              = "Khôi phục cài đặt gốc";
+"s5_setting_type_notice_title"          = "Bật thông báo để cho phép trình theo dõi gửi thông báo. Nếu vòng đeo tay không nhận được tin nhắn nhắc nhở, vui lòng mở lại quyền thông báo của ứng dụng 1SK.Connect";
+"s5_setting_type_step_title"            = "Chọn số bước";
+"s5_setting_type_step_unit"             = "Đơn vị: bước";
+
+// MARK: - S5 Water Setting
+"s5_water_setting_title"                = "Nhắc nhở uống nước";
+"s5_water_setting_goal"                 = "Mục tiêu nước uống hàng ngày";
+"s5_water_setting_remind"               = "Uống nước rất cần thiết cho sức khỏe và ngăn ngừa mất nước. Mỗi người cần một lượng nước khác nhau. Thông thường chúng ta cần ít nhất 2L nước mỗi ngày";
+"s5_water_setting_cup_volume"           = "Thể tích cốc nước";
+"s5_water_setting_cup_numbers"          = "Số cốc";
+"s5_water_setting_remind_title"         = "Bạn hãy bật nhắc nhở uống nước để nhận thông báo trên vòng đeo sức khỏe.";

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ExcerciseChartCLVCell" customModule="_SKConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="372"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="410" height="372"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4x-fW-adM">
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="372"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_back_gray" translatesAutoresizingMaskIntoConstraints="NO" id="ivo-Lg-5bn">
+                                <rect key="frame" x="162.5" y="9.5" width="24" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Vqg-kp-XHo"/>
+                                    <constraint firstAttribute="width" constant="24" id="hfW-PH-I22"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUr-3C-sS3" userLabel="Date Label">
+                                <rect key="frame" x="190.5" y="8" width="29" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" name="subTitle"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="doNotHaveData"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYT-CZ-FKP">
+                                <rect key="frame" x="0.0" y="30.5" width="410" height="165.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mhz-5s-tSX">
+                                <rect key="frame" x="8" y="218" width="34" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fJ-YO-hTz">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_excercise_total_step"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-Tj-ers">
+                                        <rect key="frame" x="0.0" y="24.5" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_excercise_total_distance"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKc-xu-VgJ">
+                                        <rect key="frame" x="0.0" y="49" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_excercise_average_step"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAo-eE-AFU">
+                                        <rect key="frame" x="0.0" y="73.5" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_excercise_avg_day"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-FN-QxV">
+                                        <rect key="frame" x="0.0" y="98" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_practice_avg_day"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9q-Z4-G3d">
+                                        <rect key="frame" x="0.0" y="122.5" width="34" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <color key="textColor" name="subTitle"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sm_excercise_average_kcal"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next_gray" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-W8-96j" userLabel="ic_next_gray">
+                                <rect key="frame" x="223.5" y="9.5" width="24" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Hky-QT-kcx"/>
+                                    <constraint firstAttribute="width" constant="24" id="es8-MJ-uG7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="mhz-5s-tSX" secondAttribute="bottom" constant="15" id="A90-dO-4rj"/>
+                            <constraint firstAttribute="trailing" secondItem="rYT-CZ-FKP" secondAttribute="trailing" id="Hge-p0-KfK"/>
+                            <constraint firstItem="mhz-5s-tSX" firstAttribute="leading" secondItem="C4x-fW-adM" secondAttribute="leading" constant="8" id="QRt-fy-ufP"/>
+                            <constraint firstItem="bCf-W8-96j" firstAttribute="centerY" secondItem="lUr-3C-sS3" secondAttribute="centerY" id="Srr-ka-bns"/>
+                            <constraint firstItem="ivo-Lg-5bn" firstAttribute="centerY" secondItem="lUr-3C-sS3" secondAttribute="centerY" id="Ug4-By-BkD"/>
+                            <constraint firstItem="lUr-3C-sS3" firstAttribute="top" secondItem="C4x-fW-adM" secondAttribute="top" constant="8" id="ZxA-tS-zuh"/>
+                            <constraint firstItem="lUr-3C-sS3" firstAttribute="centerX" secondItem="C4x-fW-adM" secondAttribute="centerX" id="b5T-Ra-mPp"/>
+                            <constraint firstItem="mhz-5s-tSX" firstAttribute="top" secondItem="rYT-CZ-FKP" secondAttribute="bottom" constant="22" id="eoh-aS-bqp"/>
+                            <constraint firstItem="rYT-CZ-FKP" firstAttribute="top" secondItem="lUr-3C-sS3" secondAttribute="bottom" constant="8" id="i4g-u7-Xnw"/>
+                            <constraint firstItem="ivo-Lg-5bn" firstAttribute="trailing" secondItem="lUr-3C-sS3" secondAttribute="leading" constant="-4" id="okg-Gc-24y"/>
+                            <constraint firstItem="bCf-W8-96j" firstAttribute="leading" secondItem="lUr-3C-sS3" secondAttribute="trailing" constant="4" id="wQ2-0P-3lQ"/>
+                            <constraint firstItem="rYT-CZ-FKP" firstAttribute="leading" secondItem="C4x-fW-adM" secondAttribute="leading" id="x3M-GB-z1C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="C4x-fW-adM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="10c-ld-Onr"/>
+                <constraint firstAttribute="trailing" secondItem="C4x-fW-adM" secondAttribute="trailing" id="fsM-wB-Bbc"/>
+                <constraint firstAttribute="bottom" secondItem="C4x-fW-adM" secondAttribute="bottom" id="nkR-Uc-lPR"/>
+                <constraint firstItem="C4x-fW-adM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wc1-4q-AX1"/>
+            </constraints>
+            <size key="customSize" width="410" height="372"/>
+            <connections>
+                <outlet property="avgKcalLabel" destination="p9q-Z4-G3d" id="bCd-wF-nFx"/>
+                <outlet property="avgStepLabel" destination="VKc-xu-VgJ" id="9ME-xh-v5c"/>
+                <outlet property="chartContentView" destination="rYT-CZ-FKP" id="ftI-UO-Y8a"/>
+                <outlet property="dateLabel" destination="lUr-3C-sS3" id="rDX-Cr-MkG"/>
+                <outlet property="excerciseTimeLabel" destination="TAo-eE-AFU" id="Lxb-ly-LeS"/>
+                <outlet property="icNextImageView" destination="bCf-W8-96j" id="kDK-P1-EfL"/>
+                <outlet property="icPreviousImageView" destination="ivo-Lg-5bn" id="Ucd-PN-qZW"/>
+                <outlet property="practiceTimeLabel" destination="1GC-FN-QxV" id="CGZ-Q1-lD6"/>
+                <outlet property="totalDistance" destination="Dlh-Tj-ers" id="th6-3Q-dJz"/>
+                <outlet property="totalStepLabel" destination="8fJ-YO-hTz" id="Z1J-8g-zsD"/>
+            </connections>
+            <point key="canvasLocation" x="392.75362318840581" y="145.3125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_back_gray" width="6" height="10"/>
+        <image name="ic_next_gray" width="6" height="10"/>
+        <namedColor name="subTitle">
+            <color red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

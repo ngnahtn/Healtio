@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="KGk-i7-Jjw" customClass="S5SleepDetailTableViewCell" customModule="_SKConnect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="489" height="256"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kn-WX-9NF">
+                        <rect key="frame" x="8" y="8" width="473" height="240"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-Qr-31S">
+                                <rect key="frame" x="0.0" y="0.0" width="473" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-mD-ubB">
+                                <rect key="frame" x="0.0" y="0.0" width="473" height="240"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xxi-RA-SVg">
+                                        <rect key="frame" x="8" y="0.0" width="457" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DAv-12-ohm">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xxi-RA-SVg" secondAttribute="bottom" id="Eez-fh-xtB"/>
+                                    <constraint firstItem="xxi-RA-SVg" firstAttribute="centerX" secondItem="gfK-mD-ubB" secondAttribute="centerX" id="RFi-bS-XKd"/>
+                                    <constraint firstItem="xxi-RA-SVg" firstAttribute="top" secondItem="gfK-mD-ubB" secondAttribute="top" id="eko-v7-pPS"/>
+                                    <constraint firstItem="xxi-RA-SVg" firstAttribute="leading" secondItem="gfK-mD-ubB" secondAttribute="leading" constant="8" id="hSU-zB-rbF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQq-Qr-31S" firstAttribute="top" secondItem="2kn-WX-9NF" secondAttribute="top" id="30Y-tH-p9k"/>
+                            <constraint firstAttribute="trailing" secondItem="BQq-Qr-31S" secondAttribute="trailing" id="BMJ-Aa-Fap"/>
+                            <constraint firstAttribute="bottom" secondItem="gfK-mD-ubB" secondAttribute="bottom" id="FQe-rN-uH0"/>
+                            <constraint firstItem="BQq-Qr-31S" firstAttribute="leading" secondItem="2kn-WX-9NF" secondAttribute="leading" id="TS4-7E-27u"/>
+                            <constraint firstAttribute="trailing" secondItem="gfK-mD-ubB" secondAttribute="trailing" id="XIg-cY-sO1"/>
+                            <constraint firstItem="gfK-mD-ubB" firstAttribute="leading" secondItem="2kn-WX-9NF" secondAttribute="leading" id="e1Y-mf-z1e"/>
+                            <constraint firstItem="gfK-mD-ubB" firstAttribute="top" secondItem="2kn-WX-9NF" secondAttribute="top" id="exA-8K-uyF"/>
+                            <constraint firstAttribute="bottom" secondItem="BQq-Qr-31S" secondAttribute="bottom" id="lqo-D2-Jue"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="2kn-WX-9NF" secondAttribute="trailing" constant="8" id="Hoa-4w-t2L"/>
+                    <constraint firstAttribute="bottom" secondItem="2kn-WX-9NF" secondAttribute="bottom" constant="8" id="Vk9-Zn-5xr"/>
+                    <constraint firstItem="2kn-WX-9NF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cK9-Ww-xuh"/>
+                    <constraint firstItem="2kn-WX-9NF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pYQ-Ad-maQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chartCollectionView" destination="xxi-RA-SVg" id="6e9-Ou-34d"/>
+                <outlet property="shadowView" destination="BQq-Qr-31S" id="rul-hn-84g"/>
+            </connections>
+            <point key="canvasLocation" x="222.46376811594206" y="46.875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

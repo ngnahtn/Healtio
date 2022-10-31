@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleResultCollectionChart" customModule="_SKConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="x6y-AZ-A9D"/>
+                <outlet property="fatLabel" destination="aEX-v9-gXi" id="L6S-7J-Qiq"/>
+                <outlet property="firstHorizontalView" destination="Xp6-5e-MVW" id="7df-ka-7iz"/>
+                <outlet property="firstVerticalView" destination="KvP-AV-Y8Z" id="S1t-ec-rdi"/>
+                <outlet property="highLabel" destination="tdO-qU-wUV" id="OHb-DR-DH6"/>
+                <outlet property="lastHorizontalView" destination="Cde-c4-Bll" id="Bv0-c5-NYV"/>
+                <outlet property="lastVerticalView" destination="zVh-k6-Hha" id="Kqx-gY-9rO"/>
+                <outlet property="lowLabel" destination="4bt-jd-fRt" id="eGA-lz-RwI"/>
+                <outlet property="resultCollectionView" destination="wQi-ZA-P3e" id="MEu-0D-arJ"/>
+                <outlet property="standarLabel" destination="5BY-fW-JNT" id="xkv-JV-rBV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="513" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6c-ZV-1N5">
+                    <rect key="frame" x="0.0" y="0.0" width="513" height="302"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="42Z-Ej-Ns6">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="246"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNM-TW-NMC">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="82"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KvP-AV-Y8Z">
+                                            <rect key="frame" x="7" y="0.0" width="6" height="82"/>
+                                            <color key="backgroundColor" red="1" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="6" id="tYx-JV-eFZ"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượng mỡ cơ thể" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-qU-wUV">
+                                            <rect key="frame" x="-20" y="35" width="76" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="high"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KvP-AV-Y8Z" firstAttribute="top" secondItem="JNM-TW-NMC" secondAttribute="top" id="Flc-eF-cl4"/>
+                                        <constraint firstItem="KvP-AV-Y8Z" firstAttribute="centerX" secondItem="JNM-TW-NMC" secondAttribute="centerX" id="TZU-Ph-hIZ"/>
+                                        <constraint firstItem="tdO-qU-wUV" firstAttribute="centerX" secondItem="KvP-AV-Y8Z" secondAttribute="centerX" constant="8" id="luo-nC-NdN"/>
+                                        <constraint firstItem="tdO-qU-wUV" firstAttribute="centerY" secondItem="KvP-AV-Y8Z" secondAttribute="centerY" id="nbc-pF-bq0"/>
+                                        <constraint firstAttribute="bottom" secondItem="KvP-AV-Y8Z" secondAttribute="bottom" id="v09-VQ-hrb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZrP-nz-1zc">
+                                    <rect key="frame" x="0.0" y="82" width="20" height="82"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X83-Gj-FFm">
+                                            <rect key="frame" x="7" y="0.0" width="6" height="82"/>
+                                            <color key="backgroundColor" red="0.32156862745098036" green="0.76862745098039209" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="6" id="qLM-78-gT5"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuẩn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-fW-JNT">
+                                            <rect key="frame" x="4" y="35" width="28.5" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượng mỡ cơ thể" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-v9-gXi">
+                                            <rect key="frame" x="-36" y="35" width="76" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="5BY-fW-JNT" firstAttribute="centerX" secondItem="X83-Gj-FFm" secondAttribute="centerX" constant="8" id="7BR-m4-l5X"/>
+                                        <constraint firstItem="5BY-fW-JNT" firstAttribute="centerY" secondItem="X83-Gj-FFm" secondAttribute="centerY" id="KvA-0h-mUW"/>
+                                        <constraint firstItem="aEX-v9-gXi" firstAttribute="centerX" secondItem="X83-Gj-FFm" secondAttribute="centerX" constant="-8" id="Mcl-G2-Xmi"/>
+                                        <constraint firstItem="X83-Gj-FFm" firstAttribute="centerX" secondItem="ZrP-nz-1zc" secondAttribute="centerX" id="MdW-S4-BYF"/>
+                                        <constraint firstAttribute="bottom" secondItem="X83-Gj-FFm" secondAttribute="bottom" id="RFU-qK-f2Y"/>
+                                        <constraint firstItem="X83-Gj-FFm" firstAttribute="top" secondItem="ZrP-nz-1zc" secondAttribute="top" id="Wfb-vN-9zq"/>
+                                        <constraint firstItem="aEX-v9-gXi" firstAttribute="centerY" secondItem="X83-Gj-FFm" secondAttribute="centerY" id="iNh-l1-UY4"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjB-NX-2ZE">
+                                    <rect key="frame" x="0.0" y="164" width="20" height="82"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượng mỡ cơ thể" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bt-jd-fRt">
+                                            <rect key="frame" x="-20" y="35" width="76" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="low"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVh-k6-Hha">
+                                            <rect key="frame" x="7" y="0.0" width="6" height="82"/>
+                                            <color key="backgroundColor" red="0.41176470588235292" green="0.75294117647058822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="6" id="TY0-62-CLs"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="zVh-k6-Hha" secondAttribute="bottom" id="JIc-hh-irg"/>
+                                        <constraint firstItem="4bt-jd-fRt" firstAttribute="centerX" secondItem="zVh-k6-Hha" secondAttribute="centerX" constant="8" id="cnm-As-zzy"/>
+                                        <constraint firstItem="zVh-k6-Hha" firstAttribute="centerX" secondItem="pjB-NX-2ZE" secondAttribute="centerX" id="gMf-NP-kBk"/>
+                                        <constraint firstItem="zVh-k6-Hha" firstAttribute="top" secondItem="pjB-NX-2ZE" secondAttribute="top" id="s3o-4M-zdS"/>
+                                        <constraint firstItem="4bt-jd-fRt" firstAttribute="centerY" secondItem="zVh-k6-Hha" secondAttribute="centerY" id="uHu-lp-cXj"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="IwX-9q-RIP"/>
+                                <constraint firstAttribute="height" constant="246" id="Lku-eJ-N8n"/>
+                            </constraints>
+                        </stackView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wQi-ZA-P3e">
+                            <rect key="frame" x="24" y="0.0" width="489" height="246"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XX1-aO-bkX">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="c4m-B3-JG1"/>
+                                <outlet property="delegate" destination="-1" id="4Ek-f5-QVC"/>
+                            </connections>
+                        </collectionView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vf2-7C-TG9">
+                            <rect key="frame" x="24" y="250" width="489" height="20"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-fO-OMR">
+                                    <rect key="frame" x="0.0" y="0.0" width="163" height="20"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượng mỡ cơ thể" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icx-1r-7cG">
+                                            <rect key="frame" x="44" y="-5" width="75.5" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="low"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xp6-5e-MVW">
+                                            <rect key="frame" x="0.0" y="7" width="163" height="6"/>
+                                            <color key="backgroundColor" red="0.41176470590000003" green="0.75294117650000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="gos-JU-HRD"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Xp6-5e-MVW" firstAttribute="leading" secondItem="Yzb-fO-OMR" secondAttribute="leading" id="3rb-wp-IYg"/>
+                                        <constraint firstItem="Xp6-5e-MVW" firstAttribute="centerY" secondItem="Yzb-fO-OMR" secondAttribute="centerY" id="cAt-aj-aS9"/>
+                                        <constraint firstItem="Xp6-5e-MVW" firstAttribute="centerX" secondItem="Yzb-fO-OMR" secondAttribute="centerX" id="q3e-jI-FdO"/>
+                                        <constraint firstItem="icx-1r-7cG" firstAttribute="bottom" secondItem="Xp6-5e-MVW" secondAttribute="top" id="tIl-vf-xAh"/>
+                                        <constraint firstItem="icx-1r-7cG" firstAttribute="centerX" secondItem="Xp6-5e-MVW" secondAttribute="centerX" id="xBQ-Tc-A1r"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRs-Bw-LOA">
+                                    <rect key="frame" x="163" y="0.0" width="163" height="20"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fm0-uF-QZJ">
+                                            <rect key="frame" x="0.0" y="7" width="163" height="6"/>
+                                            <color key="backgroundColor" red="0.32156862749999998" green="0.76862745099999996" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="X01-sf-0SE"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuẩn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKN-hV-VK0">
+                                            <rect key="frame" x="67.5" y="-5" width="28.5" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khối lượng cơ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sn-40-Wsc">
+                                            <rect key="frame" x="51" y="13" width="61.5" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="fm0-uF-QZJ" firstAttribute="centerX" secondItem="CRs-Bw-LOA" secondAttribute="centerX" id="Imi-ps-d5S"/>
+                                        <constraint firstItem="fm0-uF-QZJ" firstAttribute="leading" secondItem="CRs-Bw-LOA" secondAttribute="leading" id="L33-UI-3oc"/>
+                                        <constraint firstItem="jKN-hV-VK0" firstAttribute="centerX" secondItem="fm0-uF-QZJ" secondAttribute="centerX" id="NgE-eO-LcX"/>
+                                        <constraint firstItem="3sn-40-Wsc" firstAttribute="top" secondItem="fm0-uF-QZJ" secondAttribute="bottom" id="c58-qd-XP8"/>
+                                        <constraint firstItem="jKN-hV-VK0" firstAttribute="bottom" secondItem="fm0-uF-QZJ" secondAttribute="top" id="fmc-QO-3sL"/>
+                                        <constraint firstItem="fm0-uF-QZJ" firstAttribute="centerY" secondItem="CRs-Bw-LOA" secondAttribute="centerY" id="lYb-XD-7jS"/>
+                                        <constraint firstItem="3sn-40-Wsc" firstAttribute="centerX" secondItem="fm0-uF-QZJ" secondAttribute="centerX" id="y00-In-907"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og9-Li-aSv">
+                                    <rect key="frame" x="326" y="0.0" width="163" height="20"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-c4-Bll">
+                                            <rect key="frame" x="0.0" y="7" width="163" height="6"/>
+                                            <color key="backgroundColor" red="0.0" green="0.55294117647058827" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="6B9-fN-Jy4"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lượng mỡ cơ thể" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17J-Ar-I3r">
+                                            <rect key="frame" x="52" y="-5" width="75.5" height="12"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                            <color key="textColor" red="0.45098039220000002" green="0.46274509800000002" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="high"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Cde-c4-Bll" firstAttribute="centerX" secondItem="Og9-Li-aSv" secondAttribute="centerX" id="120-dn-8Dw"/>
+                                        <constraint firstItem="17J-Ar-I3r" firstAttribute="centerX" secondItem="Cde-c4-Bll" secondAttribute="centerX" constant="8" id="8vs-Fw-T8c"/>
+                                        <constraint firstItem="17J-Ar-I3r" firstAttribute="bottom" secondItem="Cde-c4-Bll" secondAttribute="top" id="CqZ-IA-zgy"/>
+                                        <constraint firstItem="Cde-c4-Bll" firstAttribute="leading" secondItem="Og9-Li-aSv" secondAttribute="leading" id="POl-Q7-FP5"/>
+                                        <constraint firstItem="Cde-c4-Bll" firstAttribute="centerY" secondItem="Og9-Li-aSv" secondAttribute="centerY" id="SiG-Di-1Dg"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="1EE-A2-VcZ"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="wQi-ZA-P3e" firstAttribute="bottom" secondItem="42Z-Ej-Ns6" secondAttribute="bottom" id="BVm-Dk-ikf"/>
+                        <constraint firstItem="vf2-7C-TG9" firstAttribute="trailing" secondItem="wQi-ZA-P3e" secondAttribute="trailing" id="NtT-O7-vpW"/>
+                        <constraint firstItem="42Z-Ej-Ns6" firstAttribute="top" secondItem="o6c-ZV-1N5" secondAttribute="top" id="W2F-Lf-r1L"/>
+                        <constraint firstItem="wQi-ZA-P3e" firstAttribute="leading" secondItem="42Z-Ej-Ns6" secondAttribute="trailing" constant="4" id="dOZ-Dh-fw2"/>
+                        <constraint firstItem="vf2-7C-TG9" firstAttribute="top" secondItem="wQi-ZA-P3e" secondAttribute="bottom" constant="4" id="qxM-bg-lyc"/>
+                        <constraint firstAttribute="trailing" secondItem="wQi-ZA-P3e" secondAttribute="trailing" id="skQ-Tl-p5T"/>
+                        <constraint firstItem="vf2-7C-TG9" firstAttribute="leading" secondItem="wQi-ZA-P3e" secondAttribute="leading" id="uzo-FP-lu0"/>
+                        <constraint firstItem="42Z-Ej-Ns6" firstAttribute="leading" secondItem="o6c-ZV-1N5" secondAttribute="leading" id="v7C-wb-NM4"/>
+                        <constraint firstItem="wQi-ZA-P3e" firstAttribute="top" secondItem="42Z-Ej-Ns6" secondAttribute="top" id="x8h-4j-Tq5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="o6c-ZV-1N5" secondAttribute="trailing" id="BkZ-D1-EfU"/>
+                <constraint firstAttribute="bottom" secondItem="o6c-ZV-1N5" secondAttribute="bottom" id="J2O-jW-lSc"/>
+                <constraint firstItem="o6c-ZV-1N5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SQh-hW-fJd"/>
+                <constraint firstItem="o6c-ZV-1N5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SSq-Zl-Oqg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-271.73913043478262" y="-200.22321428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
