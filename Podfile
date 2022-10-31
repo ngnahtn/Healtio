@@ -18,16 +18,16 @@ target '1SKConnect' do
   pod 'FBSDKLoginKit'
   pod 'KeychainAccess'
   pod 'SnapKit'
-#  pod 'Kingfisher', '~> 5.14.0'
-#  pod 'IQKeyboardManagerSwift'
-#  pod 'R.swift'
+  pod 'Kingfisher', '~> 5.14.0'
+  pod 'IQKeyboardManagerSwift'
+  pod 'R.swift'
 #  pod 'RealmSwift'
 #  pod "SkeletonView"
 #  pod 'DLRadioButton'
 #  pod 'ReachabilitySwift'
 #  pod 'GoogleSignIn'
 #  pod 'FBSDKLoginKit'
-#  pod 'SwiftyJSON'
-#  pod 'Charts'
-#  pod "MBCircularProgressBar"
+  pod 'SwiftyJSON'
+  pod 'Charts'
+  pod "MBCircularProgressBar"
 end
