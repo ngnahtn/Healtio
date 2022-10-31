@@ -22,11 +22,11 @@ target '1SKConnect' do
   pod 'IQKeyboardManagerSwift'
   pod 'R.swift'
 #  pod 'RealmSwift'
-#  pod "SkeletonView"
-#  pod 'DLRadioButton'
-#  pod 'ReachabilitySwift'
-#  pod 'GoogleSignIn'
-#  pod 'FBSDKLoginKit'
+  pod "SkeletonView"
+  pod 'DLRadioButton'
+  pod 'ReachabilitySwift'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
   pod 'SwiftyJSON'
   pod 'Charts'
   pod "MBCircularProgressBar"
