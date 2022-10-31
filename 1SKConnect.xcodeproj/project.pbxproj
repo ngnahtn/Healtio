@@ -2979,7 +2979,6 @@
 				0BEAA35F25C3EA950022DC39 /* Resources */,
 				0BEAA3B525C3EF4E0022DC39 /* Swift lint */,
 				C925142A9C1AD726D6E61975 /* [CP] Embed Pods Frameworks */,
-				37201354112C60054DB4F4EA /* [CP] Copy Pods Resources */,
 				0B19077C2637C71500D20E39 /* Embed App Extensions */,
 				0B17B79A2655EF4300CF139A /* Firebase Crashlytics */,
 			);
@@ -2988,8 +2987,6 @@
 			dependencies = (
 			);
 			name = 1SKConnect;
-			packageProductDependencies = (
-			);
 			productName = 1SKConnect;
 			productReference = 0BEAA36125C3EA950022DC39 /* 1SKConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -3019,8 +3016,6 @@
 				Base,
 			);
 			mainGroup = 0BEAA35825C3EA950022DC39;
-			packageReferences = (
-			);
 			productRefGroup = 0BEAA36225C3EA950022DC39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -3185,7 +3180,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3208,23 +3203,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n\n";
-		};
-		37201354112C60054DB4F4EA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		C925142A9C1AD726D6E61975 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
