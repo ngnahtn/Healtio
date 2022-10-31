@@ -21,7 +21,7 @@ target '1SKConnect' do
   pod 'Kingfisher', '~> 5.14.0'
   pod 'IQKeyboardManagerSwift'
   pod 'R.swift'
-#  pod 'RealmSwift'
+  pod 'RealmSwift'
   pod "SkeletonView"
   pod 'DLRadioButton'
   pod 'ReachabilitySwift'
