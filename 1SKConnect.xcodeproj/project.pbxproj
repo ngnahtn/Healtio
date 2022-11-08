@@ -3180,7 +3180,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3843,7 +3843,7 @@
 					"$(PROJECT_DIR)/1SKConnect/Source/Other/BLE/SpO2",
 				);
 				MARKETING_VERSION = 1.1.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elcom.skConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ngnahtn.SDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "1SKConnect/Supporting File/BLE/1SKConnect-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3886,7 +3886,7 @@
 					"$(PROJECT_DIR)/1SKConnect/Source/Other/BLE/SpO2",
 				);
 				MARKETING_VERSION = 1.1.6;
-				PRODUCT_BUNDLE_IDENTIFIER = com.elcom.skConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ngnahtn.SDKTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_OBJC_BRIDGING_HEADER = "1SKConnect/Supporting File/BLE/1SKConnect-Bridging-Header.h";
