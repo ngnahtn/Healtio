@@ -10,7 +10,7 @@ import KeychainAccess
 class KeyChainManager {
 
     static let shared = KeyChainManager()
-    private let keychain = Keychain(service: "1SK")
+    private let keychain = Keychain(service: "Healtio")
 
     private init() {
 

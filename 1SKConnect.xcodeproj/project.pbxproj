@@ -748,7 +748,7 @@
 		0BE791BC260886A600A75CE5 /* OperationQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueManager.swift; sourceTree = "<group>"; };
 		0BE791BF260886DD00A75CE5 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		0BE791E32608887F00A75CE5 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
-		0BEAA36125C3EA950022DC39 /* 1SKConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1SKConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BEAA36125C3EA950022DC39 /* Healtio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healtio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BEAA36425C3EA950022DC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BEAA36625C3EA950022DC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0BEAA36D25C3EA970022DC39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1712,7 +1712,7 @@
 		0BEAA36225C3EA950022DC39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0BEAA36125C3EA950022DC39 /* 1SKConnect.app */,
+				0BEAA36125C3EA950022DC39 /* Healtio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2988,7 +2988,7 @@
 			);
 			name = 1SKConnect;
 			productName = 1SKConnect;
-			productReference = 0BEAA36125C3EA950022DC39 /* 1SKConnect.app */;
+			productReference = 0BEAA36125C3EA950022DC39 /* Healtio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3830,6 +3830,7 @@
 					"$(PROJECT_DIR)/1SKConnect/Supporting\\ File/BLE",
 				);
 				INFOPLIST_FILE = "1SKConnect/Supporting File/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Healtio;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3844,7 +3845,7 @@
 				);
 				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngnahtn.SDKTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Healtio;
 				SWIFT_OBJC_BRIDGING_HEADER = "1SKConnect/Supporting File/BLE/1SKConnect-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -3873,6 +3874,7 @@
 					"$(PROJECT_DIR)/1SKConnect/Supporting\\ File/BLE",
 				);
 				INFOPLIST_FILE = "1SKConnect/Supporting File/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Healtio;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3887,7 +3889,7 @@
 				);
 				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngnahtn.SDKTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Healtio;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
 				SWIFT_OBJC_BRIDGING_HEADER = "1SKConnect/Supporting File/BLE/1SKConnect-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
