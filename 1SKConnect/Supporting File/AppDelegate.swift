@@ -104,47 +104,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Set the new schema version. This must be greater than the previously used
             // version (if you've never set a schema version before, the version is 0).
             encryptionKey: encryptionKeyData,
-            schemaVersion: 4,
+            schemaVersion: 1,
             // Set the block which will be called automatically when opening a Realm with
             // a schema version lower than the one set above
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
-                if oldSchemaVersion < 2 {
-                    migration.enumerateObjects(ofType: ProfileModel.className()) { (oldObject, newObject) in
-                        newObject!["linkAccount"] = nil
-                        newObject!["enableAutomaticSync"] = false
-                        newObject!["lastSyncDate"] = ""
-                        newObject!["linkAccountId"] = ""
-                        newObject!["deleteSyncId"] = List<String>()
-                        newObject!["needDowloadData"] = false
-                        newObject!["scaleDowloadMonths"] = RealmOptional<Int>()
-                        newObject!["spO2DowloadMonths"] = RealmOptional<Int>()
-                    }
-
-                    migration.enumerateObjects(ofType: BodyFat.className()) { oldObject, newObject in
-                        newObject!["bmrStatus"] = ""
-                        newObject!["weightOfMuscleStatus"] = ""
-                        newObject!["weightOfBoneStatus"] = ""
-                        newObject!["ratioOfFatStatus"] = ""
-                        newObject!["syncId"] = ""
-                        newObject!["isSync"] = false
-                        newObject!["subcutaneousFatStatus"] = ""
-                    }
-                }
-
-                if oldSchemaVersion < 3 {
-                    migration.enumerateObjects(ofType: BodyFat.className()) { oldObject, newObject in
-                        newObject!["impedance"] = 0
-                    }
-                    migration.enumerateObjects(ofType: ProfileModel.className()) { (oldObject, newObject) in
-                        newObject!["bpDeleteSyncId"] = List<String>()
-                    }
-                    migration.enumerateObjects(ofType: DeviceModel.className()) { (oldObject, newObject) in
-                        newObject!["fileList"] = List<String>()
-                    }
-                }
-                
-                if oldSchemaVersion < 4 { }
             })
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config

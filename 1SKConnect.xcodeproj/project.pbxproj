@@ -97,7 +97,6 @@
 		0B51C139261C527100D037FB /* WeightMeasuringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C133261C527100D037FB /* WeightMeasuringViewController.swift */; };
 		0B51C13A261C527100D037FB /* WeightMeasuringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B51C134261C527100D037FB /* WeightMeasuringViewController.xib */; };
 		0B51C13B261C527100D037FB /* WeightMeasuringConstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51C135261C527100D037FB /* WeightMeasuringConstract.swift */; };
-		0B5D323B26394B6A00C08164 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B5D323A26394B6A00C08164 /* GoogleService-Info.plist */; };
 		0B5FF942262984AB00EF1097 /* ActivityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FF941262984AB00EF1097 /* ActivityData.swift */; };
 		0B6466BB26098286007D61FD /* BLECommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6466BA26098286007D61FD /* BLECommand.swift */; };
 		0B6844C62684450600620BCF /* HistoryWeightResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B6844C52684450600620BCF /* HistoryWeightResultTableViewCell.xib */; };
@@ -523,6 +522,7 @@
 		FAF59E8926E869B200A637E3 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF59E8826E869B200A637E3 /* CGFloat+Extension.swift */; };
 		FAF59E8C26E8984800A637E3 /* GarphsBodyFatCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF59E8B26E8984800A637E3 /* GarphsBodyFatCollectionViewCellModel.swift */; };
 		FAFA12CA26B91E4A007F5F78 /* MeasurementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA12C926B91E4A007F5F78 /* MeasurementType.swift */; };
+		FAFD27BE291AAA8F00EC53AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAFD27BD291AAA8F00EC53AA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -632,7 +632,6 @@
 		0B51C133261C527100D037FB /* WeightMeasuringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightMeasuringViewController.swift; sourceTree = "<group>"; };
 		0B51C134261C527100D037FB /* WeightMeasuringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeightMeasuringViewController.xib; sourceTree = "<group>"; };
 		0B51C135261C527100D037FB /* WeightMeasuringConstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightMeasuringConstract.swift; sourceTree = "<group>"; };
-		0B5D323A26394B6A00C08164 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B5FF941262984AB00EF1097 /* ActivityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityData.swift; sourceTree = "<group>"; };
 		0B6466BA26098286007D61FD /* BLECommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECommand.swift; sourceTree = "<group>"; };
 		0B6844C52684450600620BCF /* HistoryWeightResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryWeightResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -1070,6 +1069,7 @@
 		FAF59E8826E869B200A637E3 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		FAF59E8B26E8984800A637E3 /* GarphsBodyFatCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarphsBodyFatCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		FAFA12C926B91E4A007F5F78 /* MeasurementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementType.swift; sourceTree = "<group>"; };
+		FAFD27BD291AAA8F00EC53AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1749,8 +1749,8 @@
 				0BEAA36625C3EA950022DC39 /* SceneDelegate.swift */,
 				0BEAA36F25C3EA970022DC39 /* LaunchScreen.storyboard */,
 				0BEAA37225C3EA970022DC39 /* Info.plist */,
+				FAFD27BD291AAA8F00EC53AA /* GoogleService-Info.plist */,
 				0BEAA3BB25C3F03B0022DC39 /* R.generated.swift */,
-				0B5D323A26394B6A00C08164 /* GoogleService-Info.plist */,
 				0B966CDE2627DED5008AB8FF /* Localizable.strings */,
 				0B49E09C265F41790008CF75 /* InfoPlist.strings */,
 			);
@@ -3073,12 +3073,12 @@
 				0BFD6E5A26438164008E5807 /* Roboto-BlackItalic.ttf in Resources */,
 				FA4EC6D7269D4A1C00F74F2C /* SyncViewController.xib in Resources */,
 				24772CD227439EC700F8B3AE /* SpO2DetailValueViewController.xib in Resources */,
+				FAFD27BE291AAA8F00EC53AA /* GoogleService-Info.plist in Resources */,
 				0B77AE312615737F0013CF96 /* NotificationTableViewCell.xib in Resources */,
 				0BFD6E6226438164008E5807 /* Roboto-Bold.ttf in Resources */,
 				0BA62A35261411E800FFCFB0 /* ProfileCollectionViewCell.xib in Resources */,
 				FA97D26A279E8FF8006CC41C /* S5DeviceSettingTableViewCell.xib in Resources */,
 				842DE7AF2739021D002DC0FB /* HistoryBpResultTBVCell.xib in Resources */,
-				0B5D323B26394B6A00C08164 /* GoogleService-Info.plist in Resources */,
 				0BA62A2A2614094A00FFCFB0 /* MainHomeViewController.xib in Resources */,
 				0B0C92B925C8E77B0059CFBA /* SpO2ViewController.xib in Resources */,
 				FA152749277A1807000F63AF /* S5HeartRateChartCollectionViewCell.xib in Resources */,
