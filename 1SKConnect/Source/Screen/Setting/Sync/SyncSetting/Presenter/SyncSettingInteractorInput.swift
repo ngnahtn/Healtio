@@ -57,8 +57,8 @@ extension SyncSettingInteractorInput {
         let syncModel = BodyFatSyncModel(currentProfile, bodyFat: bodyFats ?? [])
         let accessToken = currentProfile.linkAccount?.accessToken
         dLogDebug("ACCESS_TOKEN: \(accessToken ?? "Empty")")
-        let deleteSynchronizedId = currentProfile.deleteSyncId.array.uniqued()
-        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniqued()
+        let deleteSynchronizedId = currentProfile.deleteSyncId.array.uniquedElement()
+        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniquedElement()
 
         let MAX_API = deleteSynchronizedId.isEmpty || bpDeleteSynchronizedId.isEmpty  ? 1 : 2
         var finalStatus = true

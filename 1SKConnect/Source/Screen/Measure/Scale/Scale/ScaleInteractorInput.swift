@@ -68,8 +68,8 @@ extension ScaleInteractorInput: ScaleInteractorInputProtocol {
         let bodyFats = bodyFatList?.bodyfats.array.filter { String.isNilOrEmpty($0.syncId) }
         let syncModel = BodyFatSyncModel(currentProfile, bodyFat: bodyFats ?? [])
         let accessToken = currentProfile.linkAccount?.accessToken
-        let deleteSynchronizedId = currentProfile.deleteSyncId.array.uniqued()
-        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniqued()
+        let deleteSynchronizedId = currentProfile.deleteSyncId.array.uniquedElement()
+        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniquedElement()
 
         let MAX_API = deleteSynchronizedId.isEmpty ? 1 : 2
         var finalStatus = true

@@ -381,8 +381,8 @@ extension S5BloodPressureChartCollectionViewCell: ChartViewDelegate {
             set2.drawCirclesEnabled = true
         }
         let dataSet = LineChartData()
-        dataSet.addDataSet(set1)
-        dataSet.addDataSet(set2)
+        dataSet.append(set1)
+        dataSet.append(set2)
         dataSet.setDrawValues(false)
         return dataSet
     }
@@ -420,7 +420,7 @@ extension S5BloodPressureChartCollectionViewCell: ChartViewDelegate {
             set.drawFilledEnabled = false
             
             set.circleRadius = 2
-            dataSet.addDataSet(set)
+            dataSet.append(set)
         }
         dataSet.setDrawValues(false)
         return dataSet

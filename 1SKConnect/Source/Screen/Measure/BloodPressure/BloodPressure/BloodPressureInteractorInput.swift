@@ -73,7 +73,7 @@ extension BloodPressureInteractorInput: BloodPressureInteractorInputProtocol {
         let bloodPressures = bloodPressureList?.bloodPressureList.array.filter { String.isNilOrEmpty($0.syncId) }
         let bpSyncModel = BloodPressureSyncModel(currentProfile, bp: bloodPressures ?? [])
         let accessToken = currentProfile.linkAccount?.accessToken
-        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniqued()
+        let bpDeleteSynchronizedId = currentProfile.bpDeleteSyncId.array.uniquedElement()
 
         let MAX_API = bpDeleteSynchronizedId.isEmpty ? 1 : 2
         var finalStatus = true

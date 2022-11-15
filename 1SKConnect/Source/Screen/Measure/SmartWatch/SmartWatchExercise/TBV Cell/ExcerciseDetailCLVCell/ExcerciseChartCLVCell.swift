@@ -406,7 +406,7 @@ extension ExcerciseChartCLVCell: ChartViewDelegate {
         let dataSet = BarChartData(dataSet: set)
         set.colors = [UIColor(hex: "4B7E7F"), UIColor(hex: "00C2C5")]
         dataSet.barWidth = barWidth
-        dataSet.highlightEnabled = true
+        dataSet.isHighlightEnabled = true
         dataSet.setDrawValues(false)
         self.weakStepBarChartView.animate(yAxisDuration: 1)
         return dataSet
