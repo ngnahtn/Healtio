@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainHomeViewController" customModule="_SKConnect" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainHomeViewController" customModule="Healtio" customModuleProvider="target">
             <connections>
                 <outlet property="avatarImageView" destination="jAv-5Q-QRj" id="ox1-T0-8eC"/>
                 <outlet property="chevronImageView" destination="D5h-6f-9Ce" id="UU7-QN-XA4"/>
@@ -38,11 +38,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O74-Bz-0Go">
-                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nr-MA-3hM" userLabel="ProfileView">
-                    <rect key="frame" x="0.0" y="94" width="414" height="0.0"/>
+                    <rect key="frame" x="0.0" y="98" width="414" height="0.0"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GKD-eg-d1i">
                             <rect key="frame" x="0.0" y="0.0" width="301" height="115"/>
@@ -119,7 +119,7 @@
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-Op-pOh">
-                    <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                    <rect key="frame" x="0.0" y="98" width="414" height="798"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <gestureRecognizers/>
                     <connections>
@@ -127,13 +127,13 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-Ad-J5I" userLabel="Top View">
-                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="f9c-Ml-8Wa">
-                            <rect key="frame" x="16" y="11.5" width="116" height="27"/>
+                            <rect key="frame" x="16" y="6" width="139" height="38"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="27" id="HEY-ZO-09g"/>
-                                <constraint firstAttribute="width" constant="116" id="r2p-sn-NVd"/>
+                                <constraint firstAttribute="height" constant="38" id="HEY-ZO-09g"/>
+                                <constraint firstAttribute="width" constant="139" id="r2p-sn-NVd"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ea-yL-Pvr">
@@ -243,7 +243,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6z-pO-Rc5" userLabel="aView">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
@@ -284,7 +284,7 @@
         <image name="ic_down" width="13" height="7"/>
         <image name="ic_smart_watch" width="31" height="31"/>
         <image name="ic_sync" width="24" height="24"/>
-        <image name="logo" width="203" height="46"/>
+        <image name="logo" width="139" height="38"/>
         <namedColor name="title">
             <color red="0.13725490196078433" green="0.16078431372549021" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
