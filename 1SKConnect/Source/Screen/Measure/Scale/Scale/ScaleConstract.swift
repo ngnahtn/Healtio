@@ -28,15 +28,11 @@ protocol ScaleInteractorInputProtocol {
     func startObserver()
     func deleteBodyFat(_ bodyfat: BodyFat)
     func getCurrentProfile() -> ProfileModel?
-    func syncListData(with userId: String, accessToken: String, page: Int, limit: Int)
-    func handleSync()
 }
 
 protocol ScaleInteractorOutputProtocol: AnyObject {
     func onBodyFatListDidChanged(with bodyfatList: BodyFatList?)
     func onConnectDeviceListChanged(with devices: [DeviceModel])
-    func onSyncFinished(with message: String)
-    func onSyncFinished(with data: SyncBaseModel?, status: Bool, message: String, page: Int)
 }
 
 // MARK: Presenter -
