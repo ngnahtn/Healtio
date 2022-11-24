@@ -260,12 +260,12 @@ class S5SleepChartCollectionViewCell: UICollectionViewCell {
         awakeSet.colors = [UIColor(hex: "FEC63D")]
         
         let dataSet = BarChartData()
-        dataSet.addDataSet(remSet)
-        dataSet.addDataSet(deepSet)
-        dataSet.addDataSet(lightSet)
-        dataSet.addDataSet(awakeSet)
+        dataSet.append(remSet)
+        dataSet.append(deepSet)
+        dataSet.append(lightSet)
+        dataSet.append(awakeSet)
         dataSet.barWidth = 1
-        dataSet.highlightEnabled = true
+        dataSet.isHighlightEnabled = true
         self.sleepBarChart.animate(yAxisDuration: 1)
         self.sleepBarChart.setVisibleXRangeMaximum(7)
         dataSet.setDrawValues(false)

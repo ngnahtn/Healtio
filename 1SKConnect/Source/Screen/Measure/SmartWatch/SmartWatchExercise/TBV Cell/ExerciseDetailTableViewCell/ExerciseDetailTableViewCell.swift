@@ -266,7 +266,7 @@ extension ExerciseDetailTableViewCell: ChartViewDelegate {
         set.colors = [UIColor(hex: "00C2C5")]
         let dataSet = BarChartData(dataSet: set)
         dataSet.barWidth = 300
-        dataSet.highlightEnabled = true
+        dataSet.isHighlightEnabled = true
         self.excerciseChartView.animate(yAxisDuration: 1)
         self.excerciseChartView.setVisibleXRangeMaximum(7)
         dataSet.setDrawValues(false)

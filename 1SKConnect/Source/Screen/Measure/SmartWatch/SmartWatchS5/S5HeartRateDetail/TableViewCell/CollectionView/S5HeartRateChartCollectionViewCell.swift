@@ -492,8 +492,8 @@ extension S5HeartRateChartCollectionViewCell {
         set1.mode = (set1.mode == .cubicBezier) ? .linear : .horizontalBezier
         set2.mode = (set2.mode == .cubicBezier) ? .linear : .horizontalBezier
         let dataSet = LineChartData()
-        dataSet.addDataSet(set1)
-        dataSet.addDataSet(set2)
+        dataSet.append(set1)
+        dataSet.append(set2)
         dataSet.setDrawValues(false)
         return dataSet
     }

@@ -13,7 +13,7 @@ enum ChartValueType {
     case pr
 }
 
-class LineChartLeftAxisFormatter: NSObject, IAxisValueFormatter {
+class LineChartLeftAxisFormatter: NSObject, AxisValueFormatter {
     var type: ChartValueType!
     var cellType: CellType!
 
@@ -53,7 +53,7 @@ class LineChartLeftAxisFormatter: NSObject, IAxisValueFormatter {
     }
 }
 
-public class TimeValueFormatter: NSObject, IAxisValueFormatter {
+public class TimeValueFormatter: NSObject, AxisValueFormatter {
     var defaultDate: Date
     
     init(date: Date) {
@@ -74,13 +74,13 @@ public class TimeValueFormatter: NSObject, IAxisValueFormatter {
     }
 }
 
-public class NoneValueFormatter: NSObject, IAxisValueFormatter {
+public class NoneValueFormatter: NSObject, AxisValueFormatter {
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
        return ""
     }
 }
 
-public class BarChartLeftAxisFormatter: NSObject, IAxisValueFormatter {
+public class BarChartLeftAxisFormatter: NSObject, AxisValueFormatter {
     
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         if value == 0 {
@@ -91,7 +91,7 @@ public class BarChartLeftAxisFormatter: NSObject, IAxisValueFormatter {
     }
 }
 
-public class DayValueFormatter: NSObject, IAxisValueFormatter {    
+public class DayValueFormatter: NSObject, AxisValueFormatter {
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let date = Date(timeIntervalSince1970: value)
         let formatter = DateFormatter()
@@ -100,7 +100,7 @@ public class DayValueFormatter: NSObject, IAxisValueFormatter {
     }
 }
 
-public class YearValueFormatter: NSObject, IAxisValueFormatter {
+public class YearValueFormatter: NSObject, AxisValueFormatter {
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         if value == 0 || value >= 13 {
             return ""
@@ -109,7 +109,7 @@ public class YearValueFormatter: NSObject, IAxisValueFormatter {
     }
 }
 
-public class WMYValueFormatter: NSObject, IAxisValueFormatter {
+public class WMYValueFormatter: NSObject, AxisValueFormatter {
     var defaultDate: Date
     var timeType: TimeFilterType
 
