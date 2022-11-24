@@ -24,7 +24,6 @@ target '1SKConnect' do
   pod "SkeletonView"
   pod 'DLRadioButton'
   pod 'ReachabilitySwift'
-  pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   pod 'SwiftyJSON'
   pod "MBCircularProgressBar"
