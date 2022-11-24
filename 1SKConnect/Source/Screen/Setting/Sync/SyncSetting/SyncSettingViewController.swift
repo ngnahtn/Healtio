@@ -29,7 +29,6 @@ class SyncSettingViewController: BaseViewController {
     @IBOutlet weak var facebookButtonWidthAnchor: NSLayoutConstraint!
     var presenter: SyncSettingPresenter!
     
-
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,27 +39,27 @@ class SyncSettingViewController: BaseViewController {
     }
 
     @IBAction func googleSignIn(_ sender: Any) {
-        let config = GIDConfiguration(clientID: Constant.Client.googleCilentID)
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [weak self] (user,error) in
-            guard error == nil else { return dLogError(error!.localizedDescription) }
-            guard
-                let authentication = user?.authentication,
-                let idToken = authentication.idToken
-            else { return }
-            self?.showHud()
-            dLogDebug("[TOKEN Google: \(idToken)]")
-            ConfigService.share.signInWithGoogle(with: idToken) { [weak self] result in
-                guard let `self` = self else { return }
-                self.hideHud()
-                switch result {
-                case .success(let tokenModel):
-                    SKUserDefaults.shared.token = tokenModel.data?.accessToken ?? ""
-                    self.getUserInfo(with: tokenModel.data, isGoogleAccount: true)
-                case .failure:
-                    self.presenter.saveLinkedAccount(with: nil, isGoogleAccount: true)
-                }
-            }
-        }
+//        let config = GIDConfiguration(clientID: Constant.Client.googleCilentID)
+//        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [weak self] (user,error) in
+//            guard error == nil else { return dLogError(error!.localizedDescription) }
+//            guard
+//                let authentication = user?.authentication,
+//                let idToken = authentication.idToken
+//            else { return }
+//            self?.showHud()
+//            dLogDebug("[TOKEN Google: \(idToken)]")
+//            ConfigService.share.signInWithGoogle(with: idToken) { [weak self] result in
+//                guard let `self` = self else { return }
+//                self.hideHud()
+//                switch result {
+//                case .success(let tokenModel):
+//                    SKUserDefaults.shared.token = tokenModel.data?.accessToken ?? ""
+//                    self.getUserInfo(with: tokenModel.data, isGoogleAccount: true)
+//                case .failure:
+//                    self.presenter.saveLinkedAccount(with: nil, isGoogleAccount: true)
+//                }
+//            }
+//        }
     }
 
     @IBAction func handleClose(_ sender: Any) {

@@ -28,6 +28,5 @@ target '1SKConnect' do
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
   pod 'SwiftyJSON'
-  pod 'Charts'
   pod "MBCircularProgressBar"
 end
