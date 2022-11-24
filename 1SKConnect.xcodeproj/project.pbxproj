@@ -458,6 +458,8 @@
 		FA2ACD37274A980200F68223 /* SpO2Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ACD36274A980200F68223 /* SpO2Device.swift */; };
 		FA2ACD39274A983100F68223 /* BODevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2ACD38274A983100F68223 /* BODevice.swift */; };
 		FA2E09F8292FCCD800027794 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FA2E09F7292FCCD800027794 /* Charts */; };
+		FA2E09FB292FD0C800027794 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FA2E09FA292FD0C800027794 /* Realm */; };
+		FA2E09FD292FD0C800027794 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA2E09FC292FD0C800027794 /* RealmSwift */; };
 		FA329A2F269DEED300C534AB /* DownloadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA329A2D269DEED300C534AB /* DownloadDataViewController.swift */; };
 		FA329A30269DEED300C534AB /* DownloadDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA329A2E269DEED300C534AB /* DownloadDataViewController.xib */; };
 		FA420B9526D38F8F003366BF /* CurvedSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA420B9426D38F8F003366BF /* CurvedSegment.swift */; };
@@ -1078,7 +1080,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2E09FB292FD0C800027794 /* Realm in Frameworks */,
 				FA2E09F8292FCCD800027794 /* Charts in Frameworks */,
+				FA2E09FD292FD0C800027794 /* RealmSwift in Frameworks */,
 				84099BBF275E54C3001E2D60 /* TrusangBluetooth.framework in Frameworks */,
 				FAF2B77E2759C05D001D1634 /* VTO2Lib.framework in Frameworks */,
 				0B7A5CE825F7203B005BAE0D /* HTBodyfat_SDK.a in Frameworks */,
@@ -2992,6 +2996,8 @@
 			name = 1SKConnect;
 			packageProductDependencies = (
 				FA2E09F7292FCCD800027794 /* Charts */,
+				FA2E09FA292FD0C800027794 /* Realm */,
+				FA2E09FC292FD0C800027794 /* RealmSwift */,
 			);
 			productName = 1SKConnect;
 			productReference = 0BEAA36125C3EA950022DC39 /* Healtio.app */;
@@ -3024,6 +3030,7 @@
 			mainGroup = 0BEAA35825C3EA950022DC39;
 			packageReferences = (
 				FA2E09F6292FCCD800027794 /* XCRemoteSwiftPackageReference "Charts" */,
+				FA2E09F9292FD0C800027794 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 0BEAA36225C3EA950022DC39 /* Products */;
 			projectDirPath = "";
@@ -3956,6 +3963,14 @@
 				kind = branch;
 			};
 		};
+		FA2E09F9292FD0C800027794 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3963,6 +3978,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA2E09F6292FCCD800027794 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
+		};
+		FA2E09FA292FD0C800027794 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA2E09F9292FD0C800027794 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		FA2E09FC292FD0C800027794 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA2E09F9292FD0C800027794 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
