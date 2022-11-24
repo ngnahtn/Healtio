@@ -7,7 +7,6 @@ target '1SKConnect' do
 
   # Pods for 1SKConnect
   pod 'Alamofire'
-  pod 'SwiftLint'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'

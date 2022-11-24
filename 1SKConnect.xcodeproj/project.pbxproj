@@ -2983,11 +2983,9 @@
 				0BEAA35D25C3EA950022DC39 /* Sources */,
 				0BEAA35E25C3EA950022DC39 /* Frameworks */,
 				0BEAA35F25C3EA950022DC39 /* Resources */,
-				0BEAA3B525C3EF4E0022DC39 /* Swift lint */,
 				C925142A9C1AD726D6E61975 /* [CP] Embed Pods Frameworks */,
 				0B19077C2637C71500D20E39 /* Embed App Extensions */,
 				0B17B79A2655EF4300CF139A /* Firebase Crashlytics */,
-				5F10CEDF6DC3CDA18971EBD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3201,41 +3199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		0BEAA3B525C3EF4E0022DC39 /* Swift lint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Swift lint";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n\n";
-		};
-		5F10CEDF6DC3CDA18971EBD9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-1SKConnect/Pods-1SKConnect-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		C925142A9C1AD726D6E61975 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
