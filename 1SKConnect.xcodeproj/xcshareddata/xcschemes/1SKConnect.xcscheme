@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0BEAA36025C3EA950022DC39"
-               BuildableName = "1SKConnect.app"
+               BuildableName = "Healtio.app"
                BlueprintName = "1SKConnect"
                ReferencedContainer = "container:1SKConnect.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BEAA36025C3EA950022DC39"
-            BuildableName = "1SKConnect.app"
+            BuildableName = "Healtio.app"
             BlueprintName = "1SKConnect"
             ReferencedContainer = "container:1SKConnect.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0BEAA36025C3EA950022DC39"
-            BuildableName = "1SKConnect.app"
+            BuildableName = "Healtio.app"
             BlueprintName = "1SKConnect"
             ReferencedContainer = "container:1SKConnect.xcodeproj">
          </BuildableReference>
