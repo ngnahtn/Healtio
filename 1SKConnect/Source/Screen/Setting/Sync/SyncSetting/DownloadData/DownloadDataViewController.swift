@@ -7,7 +7,6 @@
 
 import UIKit
 import GoogleSignIn
-import FBSDKLoginKit
 
 protocol DownloadDataViewControllerDelegate: AnyObject {
     func handleDownloadData(needDownload: Bool)

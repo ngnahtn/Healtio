@@ -927,6 +927,7 @@
 		846640FA274DDD52002F2B71 /* SignificanceTBVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignificanceTBVCell.xib; sourceTree = "<group>"; };
 		846640FD274DDD74002F2B71 /* BiolightDeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiolightDeviceTableViewCell.swift; sourceTree = "<group>"; };
 		846640FE274DDD74002F2B71 /* BiolightDeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BiolightDeviceTableViewCell.xib; sourceTree = "<group>"; };
+		847BB8B8292FE1DF00F10F5E /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSDKCoreKit.xcframework; path = Pods/FBSDKCoreKit/XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		847E9DB927737457001FC7AC /* S5HeartRateListRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S5HeartRateListRecordModel.swift; sourceTree = "<group>"; };
 		847E9DBB27737480001FC7AC /* S5HeartRateRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S5HeartRateRecordModel.swift; sourceTree = "<group>"; };
 		847E9DBD27737D3F001FC7AC /* S5HeartRateDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S5HeartRateDetailModel.swift; sourceTree = "<group>"; };
@@ -2318,6 +2319,7 @@
 		37C3CA59C507B8E3C23C578A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				847BB8B8292FE1DF00F10F5E /* FBSDKCoreKit.xcframework */,
 				29079375B388C198DBCC6BA3 /* Pods_1SKConnect.framework */,
 				06B80690E3115C2B84EDF5D9 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);

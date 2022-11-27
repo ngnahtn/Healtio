@@ -14,7 +14,6 @@ target '1SKConnect' do
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
   pod 'GoogleSignIn'
-  pod 'FBSDKLoginKit'
   pod 'KeychainAccess'
   pod 'SnapKit'
   pod 'Kingfisher', '~> 5.14.0'
@@ -23,7 +22,6 @@ target '1SKConnect' do
   pod "SkeletonView"
   pod 'DLRadioButton'
   pod 'ReachabilitySwift'
-  pod 'FBSDKLoginKit'
   pod 'SwiftyJSON'
   pod "MBCircularProgressBar"
 end

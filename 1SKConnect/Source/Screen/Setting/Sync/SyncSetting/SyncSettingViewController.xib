@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,11 +15,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SyncSettingViewController" customModule="_SKConnect" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SyncSettingViewController" customModule="Healtio" customModuleProvider="target">
             <connections>
                 <outlet property="closeButton" destination="NdW-LO-kmn" id="H9e-eO-lux"/>
-                <outlet property="facebookButtonWidthAnchor" destination="Dp1-ka-pqH" id="dzF-ca-spg"/>
-                <outlet property="facebookSignInButton" destination="m5d-1g-hJN" id="pS7-sD-e41"/>
                 <outlet property="googleSignInButton" destination="4hX-Si-oBU" id="S9f-Vg-vsf"/>
                 <outlet property="lastDateLabel" destination="gVy-9D-Gx9" id="xcT-df-7Vw"/>
                 <outlet property="linkAccountIconImageView" destination="CnR-65-nXT" id="2PT-Qq-09o"/>
@@ -39,7 +37,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-uH-60p">
-                    <rect key="frame" x="0.0" y="59" width="414" height="159"/>
+                    <rect key="frame" x="0.0" y="63" width="414" height="159"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-ZM-HCl">
                             <rect key="frame" x="162" y="30" width="90" height="90"/>
@@ -86,11 +84,11 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fj-6P-sIb">
-                    <rect key="frame" x="0.0" y="318" width="414" height="578"/>
+                    <rect key="frame" x="0.0" y="322" width="414" height="574"/>
                     <color key="backgroundColor" red="0.90588235294117647" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-R2-Sfw">
-                    <rect key="frame" x="16" y="248" width="382" height="70"/>
+                    <rect key="frame" x="16" y="252" width="382" height="70"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1S-gM-vWL">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="70"/>
@@ -130,7 +128,7 @@
                                     <rect key="frame" x="43" y="0.0" width="339" height="70"/>
                                     <subviews>
                                         <label opaque="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWT-Hu-URI">
-                                            <rect key="frame" x="266" y="25.5" width="39" height="19"/>
+                                            <rect key="frame" x="250" y="25.5" width="39" height="19"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                             <color key="textColor" red="0.45098039215686275" green="0.46274509803921571" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -139,7 +137,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hX-Si-oBU">
-                                            <rect key="frame" x="281" y="23" width="24" height="24"/>
+                                            <rect key="frame" x="299" y="23" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="2y6-lS-Iwz"/>
                                                 <constraint firstAttribute="width" constant="24" id="ALi-Eo-MT4"/>
@@ -149,26 +147,15 @@
                                                 <action selector="googleSignIn:" destination="-1" eventType="touchUpInside" id="NCc-bF-kwM"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5d-1g-hJN">
-                                            <rect key="frame" x="315" y="23" width="24" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="m5d-1g-hJN" secondAttribute="height" id="BB2-Yc-RKK"/>
-                                                <constraint firstAttribute="width" constant="24" id="Dp1-ka-pqH"/>
-                                            </constraints>
-                                            <state key="normal" image="ic_facebook"/>
-                                            <connections>
-                                                <action selector="facebookSignIn:" destination="-1" eventType="touchUpInside" id="gha-Oo-48s"/>
-                                            </connections>
-                                        </button>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-65-nXT">
-                                            <rect key="frame" x="315" y="23" width="24" height="24"/>
+                                            <rect key="frame" x="299" y="23" width="24" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="CnR-65-nXT" secondAttribute="height" id="Mhf-h7-4Pi"/>
                                                 <constraint firstAttribute="height" constant="24" id="kfY-ho-ROT"/>
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_unlink_gray" translatesAutoresizingMaskIntoConstraints="NO" id="C1k-cb-G6f">
-                                            <rect key="frame" x="249" y="26.5" width="15" height="17"/>
+                                            <rect key="frame" x="233" y="26.5" width="15" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="6c2-H0-kZG"/>
                                                 <constraint firstAttribute="width" constant="15" id="oHj-Ww-NKm"/>
@@ -178,14 +165,12 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="CnR-65-nXT" firstAttribute="leading" secondItem="fWT-Hu-URI" secondAttribute="trailing" constant="10" id="0Rx-Gv-1du"/>
-                                        <constraint firstItem="m5d-1g-hJN" firstAttribute="leading" secondItem="4hX-Si-oBU" secondAttribute="trailing" constant="10" id="8E8-mE-4gj"/>
+                                        <constraint firstAttribute="trailing" secondItem="4hX-Si-oBU" secondAttribute="trailing" constant="16" id="8E8-mE-4gj"/>
                                         <constraint firstItem="C1k-cb-G6f" firstAttribute="centerY" secondItem="fWT-Hu-URI" secondAttribute="centerY" id="Bh2-oA-MHj"/>
                                         <constraint firstItem="CnR-65-nXT" firstAttribute="centerY" secondItem="fWT-Hu-URI" secondAttribute="centerY" id="amQ-jW-F4t"/>
                                         <constraint firstItem="fWT-Hu-URI" firstAttribute="leading" secondItem="C1k-cb-G6f" secondAttribute="trailing" constant="2" id="fWC-LQ-g81"/>
-                                        <constraint firstAttribute="trailing" secondItem="CnR-65-nXT" secondAttribute="trailing" id="qW1-21-IAE"/>
-                                        <constraint firstItem="m5d-1g-hJN" firstAttribute="centerY" secondItem="4hX-Si-oBU" secondAttribute="centerY" id="zQh-9S-SiC"/>
-                                        <constraint firstItem="m5d-1g-hJN" firstAttribute="centerY" secondItem="RDi-27-5eO" secondAttribute="centerY" id="zig-CG-SJT"/>
-                                        <constraint firstAttribute="trailing" secondItem="m5d-1g-hJN" secondAttribute="trailing" id="zky-X3-cqP"/>
+                                        <constraint firstAttribute="trailing" secondItem="CnR-65-nXT" secondAttribute="trailing" constant="16" id="qW1-21-IAE"/>
+                                        <constraint firstAttribute="centerY" secondItem="4hX-Si-oBU" secondAttribute="centerY" id="zQh-9S-SiC"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -237,7 +222,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="nxo-2E-PFS"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRU-Hw-0Jn" customClass="SKSwitch" customModule="_SKConnect" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRU-Hw-0Jn" customClass="SKSwitch" customModule="Healtio" customModuleProvider="target">
                                                     <rect key="frame" x="340" y="8" width="42" height="14"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -304,12 +289,11 @@
     </objects>
     <resources>
         <image name="ic_close" width="12" height="12"/>
-        <image name="ic_facebook" width="24" height="24"/>
         <image name="ic_google" width="24" height="24"/>
         <image name="ic_sync_gray" width="20" height="20"/>
         <image name="ic_unlink_gray" width="18" height="15.5"/>
         <namedColor name="mainColor">
-            <color red="0.0" green="0.76078438758850098" blue="0.77254903316497803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.52941179275512695" blue="0.58039218187332153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

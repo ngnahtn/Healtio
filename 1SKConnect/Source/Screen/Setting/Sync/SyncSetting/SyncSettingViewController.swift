@@ -8,7 +8,6 @@
 import UIKit
 import RealmSwift
 import GoogleSignIn
-import FBSDKLoginKit
 
 class SyncSettingViewController: BaseViewController {
 
@@ -20,13 +19,11 @@ class SyncSettingViewController: BaseViewController {
     @IBOutlet weak var linkLabel: UILabel!
     @IBOutlet weak var linkIconImageView: UIImageView!
     @IBOutlet weak var linkAccountIconImageView: UIImageView!
-    @IBOutlet weak var syncLabel: UILabel!
+//    @IBOutlet weak var syncLabel: UILabel!
     @IBOutlet weak var linkDescriptionLabel: UILabel!
     @IBOutlet weak var googleSignInButton: UIButton!
-    @IBOutlet weak var facebookSignInButton: UIButton!
     @IBOutlet weak var lastDateLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var facebookButtonWidthAnchor: NSLayoutConstraint!
     var presenter: SyncSettingPresenter!
     
     // MARK: - Lifecycles
@@ -39,53 +36,31 @@ class SyncSettingViewController: BaseViewController {
     }
 
     @IBAction func googleSignIn(_ sender: Any) {
-//        let config = GIDConfiguration(clientID: Constant.Client.googleCilentID)
-//        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [weak self] (user,error) in
-//            guard error == nil else { return dLogError(error!.localizedDescription) }
-//            guard
-//                let authentication = user?.authentication,
-//                let idToken = authentication.idToken
-//            else { return }
-//            self?.showHud()
-//            dLogDebug("[TOKEN Google: \(idToken)]")
-//            ConfigService.share.signInWithGoogle(with: idToken) { [weak self] result in
-//                guard let `self` = self else { return }
-//                self.hideHud()
-//                switch result {
-//                case .success(let tokenModel):
-//                    SKUserDefaults.shared.token = tokenModel.data?.accessToken ?? ""
-//                    self.getUserInfo(with: tokenModel.data, isGoogleAccount: true)
-//                case .failure:
-//                    self.presenter.saveLinkedAccount(with: nil, isGoogleAccount: true)
-//                }
-//            }
-//        }
-    }
-
-    @IBAction func handleClose(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-
-    @IBAction func facebookSignIn(_ sender: Any) {
-        let fbLoginManager = LoginManager()
-        if  AccessToken.current != nil {
-            fbLoginManager.logOut()
-        }
-        fbLoginManager.logIn(permissions: Constant.Client.facebookPermission, from: self) { result, _ in
-            guard let token = result?.token?.tokenString else { return }
-            self.showHud()
-            dLogDebug("[TOKEN Facebook: \(token)]")
-            ConfigService.share.signInWithFacebook(with: token) { [weak self] result in
+        let config = GIDConfiguration(clientID: Constant.Client.googleCilentID)
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [weak self] (user,error) in
+            guard error == nil else { return dLogError(error!.localizedDescription) }
+            guard
+                let authentication = user?.authentication,
+                let idToken = authentication.idToken
+            else { return }
+            self?.showHud()
+            dLogDebug("[TOKEN Google: \(idToken)]")
+            ConfigService.share.signInWithGoogle(with: idToken) { [weak self] result in
                 guard let `self` = self else { return }
                 self.hideHud()
                 switch result {
                 case .success(let tokenModel):
-                    self.getUserInfo(with: tokenModel.data, isGoogleAccount: false)
+                    SKUserDefaults.shared.token = tokenModel.data?.accessToken ?? ""
+                    self.getUserInfo(with: tokenModel.data, isGoogleAccount: true)
                 case .failure:
-                    self.presenter.saveLinkedAccount(with: nil, isGoogleAccount: false)
+                    self.presenter.saveLinkedAccount(with: nil, isGoogleAccount: true)
                 }
             }
         }
+    }
+
+    @IBAction func handleClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -123,7 +98,6 @@ extension SyncSettingViewController {
             self.linkLabel.isHidden = false
             self.linkIconImageView.isHidden = false
             self.linkAccountIconImageView.isHidden = false
-            self.facebookSignInButton.isHidden = true
             self.googleSignInButton.isHidden = true
 
             if let linkAccount = self.presenter.profile?.linkAccount {
@@ -147,16 +121,6 @@ extension SyncSettingViewController {
             self.linkLabel.isHidden = true
             self.linkIconImageView.isHidden = true
             self.linkAccountIconImageView.isHidden = true
-            self.facebookSignInButton.isHidden = false
-            if let profile = self.presenter.profile {
-                if profile.relation.value == .yourSelf {
-                    self.facebookSignInButton.isHidden = false
-                    self.facebookButtonWidthAnchor.constant = 25
-                } else {
-                    self.facebookSignInButton.isHidden = true
-                    self.facebookButtonWidthAnchor.constant = 0
-                }
-            }
             self.googleSignInButton.isHidden = false
             self.linkDescriptionLabel.isHidden = true
             if self.syncSwich.isOn {
