@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_home_selected.png",
+      "filename" : "home (2).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "home (2)@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "home (2)@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_tracking_selected.pdf",
+      "filename" : "Group 4259.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Group 4259@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Group 4259@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
