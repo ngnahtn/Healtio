@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupDefaults()
         presenter.onViewDidLoad()
+        setupLocalNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,22 @@ class HomeViewController: UIViewController {
     private func setupDefaults() {
         setupTableView()
         setupActivitySelectionView()
+    }
+    
+    private func setupLocalNotification() {
+        let manager = LocalNotificationManager()
+        var component1 = Calendar.current.dateComponents([.hour, .minute], from: Date())
+        component1.hour = 11
+        component1.minute = 0
+        var component2 = Calendar.current.dateComponents([.hour, .minute], from: Date())
+        component2.hour = 22
+        component2.minute = 0
+        
+        manager.notifications = [
+            LocalNotificationModel(id: "01", title: "test Notification", dateTime: component1),
+            LocalNotificationModel(id: "02", title: "test Notification2", dateTime: component2)
+        ]
+        
     }
 
     private func setupTableView() {
