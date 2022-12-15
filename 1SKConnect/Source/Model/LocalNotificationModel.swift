@@ -10,5 +10,6 @@ import Foundation
 struct LocalNotificationModel {
     var id: String
     var title: String
+    var body: String
     var dateTime: DateComponents
 }

@@ -46,17 +46,17 @@ class HomeViewController: UIViewController {
     private func setupLocalNotification() {
         let manager = LocalNotificationManager()
         var component1 = Calendar.current.dateComponents([.hour, .minute], from: Date())
-        component1.hour = 11
-        component1.minute = 0
+        component1.hour = 14
+        component1.minute = 05
         var component2 = Calendar.current.dateComponents([.hour, .minute], from: Date())
         component2.hour = 22
         component2.minute = 0
         
+        manager.listScheduledNotifications()
         manager.notifications = [
-            LocalNotificationModel(id: "01", title: "test Notification", dateTime: component1),
-            LocalNotificationModel(id: "02", title: "test Notification2", dateTime: component2)
+            LocalNotificationModel(id: "01", title: R.string.localizable.take_a_nap_notification_title(), body: R.string.localizable.sleep_notification_body(), dateTime: component1),
+            LocalNotificationModel(id: "02", title: R.string.localizable.sleep_notification_title(), body: R.string.localizable.sleep_notification_body(), dateTime: component2)
         ]
-        
     }
 
     private func setupTableView() {

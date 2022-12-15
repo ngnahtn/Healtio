@@ -50,6 +50,10 @@ extension SettingPresenter: SettingPresenterProtocol {
     func onButtonIntroduceDidTapped() {
         router.gotoIntroduceViewController()
     }
+    
+    func onButtonSleepReminderDidTapped() {
+        router.gotoSleepRemiderViewController()
+    }
 }
 
 // MARK: - SettingPresenter: SettingInteractorOutput -

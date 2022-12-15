@@ -43,6 +43,10 @@ class SettingViewController: BaseViewController {
     @IBAction func onIntroduceButtonDidTapped(_ sender: Any) {
         presenter.onButtonIntroduceDidTapped()
     }
+    
+    @IBAction func onSleepReminderButtonDidTapped(_ sender: Any) {
+        presenter.onButtonSleepReminderDidTapped()
+    }
 }
 
 // MARK: SettingViewController - SettingViewProtocol -

@@ -49,4 +49,8 @@ extension SettingRouter: SettingRouterProtocol {
         let introduceVC = IntroduceRouter.setupModule()
         viewController?.navigationController?.pushViewController(introduceVC, animated: true)
     }
+    
+    func gotoSleepRemiderViewController() {
+        
+    }
 }

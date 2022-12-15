@@ -29,6 +29,7 @@ protocol SettingPresenterProtocol {
     func onButtonDeviceDidTapped()
     func onButtonSyncDidTap()
     func onButtonIntroduceDidTapped()
+    func onButtonSleepReminderDidTapped()
 }
 
 // MARK: Router -
@@ -38,4 +39,5 @@ protocol SettingRouterProtocol {
     func gotoDeviceViewController()
     func gotoSyncViewController()
     func gotoIntroduceViewController()
+    func gotoSleepRemiderViewController()
 }
