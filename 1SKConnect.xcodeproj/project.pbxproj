@@ -349,6 +349,8 @@
 		24F61A84275F013E00498FF9 /* SmartWatchS5Constract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F61A7E275F013E00498FF9 /* SmartWatchS5Constract.swift */; };
 		2CB569E8294B1A6F0040F7E7 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569E7294B1A6F0040F7E7 /* LocalNotificationManager.swift */; };
 		2CB569EA294B1A7C0040F7E7 /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569E9294B1A7C0040F7E7 /* LocalNotificationModel.swift */; };
+		2CB569FC294C31ED0040F7E7 /* SleepReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569FA294C31ED0040F7E7 /* SleepReminderTableViewCell.swift */; };
+		2CB569FD294C31ED0040F7E7 /* SleepReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB569FB294C31ED0040F7E7 /* SleepReminderTableViewCell.xib */; };
 		61C1B88191AD2C2E54E41E32 /* Pods_1SKConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29079375B388C198DBCC6BA3 /* Pods_1SKConnect.framework */; };
 		8402258C274A9DBB00D6245B /* BioLightBLEPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402258B274A9DBB00D6245B /* BioLightBLEPeripheralDelegate.swift */; };
 		84099BBF275E54C3001E2D60 /* TrusangBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84099BBE275E54C3001E2D60 /* TrusangBluetooth.framework */; };
@@ -897,6 +899,8 @@
 		29079375B388C198DBCC6BA3 /* Pods_1SKConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1SKConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB569E7294B1A6F0040F7E7 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		2CB569E9294B1A7C0040F7E7 /* LocalNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
+		2CB569FA294C31ED0040F7E7 /* SleepReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepReminderTableViewCell.swift; sourceTree = "<group>"; };
+		2CB569FB294C31ED0040F7E7 /* SleepReminderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepReminderTableViewCell.xib; sourceTree = "<group>"; };
 		48ADFD8DB0F6B82B200043F9 /* Pods-1SKConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1SKConnect.debug.xcconfig"; path = "Target Support Files/Pods-1SKConnect/Pods-1SKConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		8402258B274A9DBB00D6245B /* BioLightBLEPeripheralDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioLightBLEPeripheralDelegate.swift; sourceTree = "<group>"; };
 		84099BBE275E54C3001E2D60 /* TrusangBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrusangBluetooth.framework; sourceTree = "<group>"; };
@@ -1273,6 +1277,7 @@
 		0B3EC6EE25E5E3B6001813A5 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				2CB569F8294C31ED0040F7E7 /* SleepReminder */,
 				0B3EC6EF25E5E3C7001813A5 /* SettingPresenter.swift */,
 				0B3EC6F025E5E3C7001813A5 /* SettingRouter.swift */,
 				0B3EC6F125E5E3C7001813A5 /* SettingInteractorInput.swift */,
@@ -2322,6 +2327,23 @@
 			path = SmartWatch;
 			sourceTree = "<group>";
 		};
+		2CB569F8294C31ED0040F7E7 /* SleepReminder */ = {
+			isa = PBXGroup;
+			children = (
+				2CB569F9294C31ED0040F7E7 /* Cell */,
+			);
+			path = SleepReminder;
+			sourceTree = "<group>";
+		};
+		2CB569F9294C31ED0040F7E7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2CB569FA294C31ED0040F7E7 /* SleepReminderTableViewCell.swift */,
+				2CB569FB294C31ED0040F7E7 /* SleepReminderTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		37C3CA59C507B8E3C23C578A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3157,6 +3179,7 @@
 				24DE323A27619D3200BFEBB4 /* S5HeartRateTableViewCell.xib in Resources */,
 				FA4EC6E9269D703400F74F2C /* SyncTableViewCell.xib in Resources */,
 				0BEAA38E25C3ECB20022DC39 /* StartViewController.xib in Resources */,
+				2CB569FD294C31ED0040F7E7 /* SleepReminderTableViewCell.xib in Resources */,
 				0B333030263126CC00073333 /* IntroduceViewController.xib in Resources */,
 				0BFD6E6126438164008E5807 /* Roboto-Black.ttf in Resources */,
 				0B3EC6EA25E5E3AC001813A5 /* HomeViewController.xib in Resources */,
@@ -3586,6 +3609,7 @@
 				FA52D9C02706264D0068410E /* ArtChartLayer.swift in Sources */,
 				0BA62A8F26144F4C00FFCFB0 /* ProfileListViewController.swift in Sources */,
 				0B0C92BA25C8E77B0059CFBA /* SpO2Constract.swift in Sources */,
+				2CB569FC294C31ED0040F7E7 /* SleepReminderTableViewCell.swift in Sources */,
 				FA97D258279E4DED006CC41C /* S5SmartWatchSettingRouter.swift in Sources */,
 				0BBB211026084FD2008EC36F /* ScaleResultViewController.swift in Sources */,
 				FA97D25C279E4DED006CC41C /* S5SmartWatchSettingConstract.swift in Sources */,
