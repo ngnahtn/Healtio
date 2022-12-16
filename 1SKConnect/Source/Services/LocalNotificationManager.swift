@@ -9,15 +9,27 @@ import Foundation
 import UserNotifications
 
 class LocalNotificationManager {
+    static let shared = LocalNotificationManager()
     var notifications = [LocalNotificationModel]() {
         didSet {
             self.schedule()
         }
     }
+    
+    var numberOfNoti = 0
 
     func listScheduledNotifications() {
         UNUserNotificationCenter.current().getPendingNotificationRequests { notifications in
             notifications.forEach( { print($0) })
+            self.numberOfNoti = notifications.count
+        }
+    }
+    
+    func removePendingNotificationRequests(_ identify: [String]) {
+        if identify.isEmpty {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        } else {
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identify)
         }
     }
     

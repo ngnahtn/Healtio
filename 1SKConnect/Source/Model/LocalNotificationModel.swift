@@ -13,3 +13,9 @@ struct LocalNotificationModel {
     var body: String
     var dateTime: DateComponents
 }
+
+struct ReminderModel {
+    var title: String
+    var time = Date()
+    var isOn: Bool = false
+}
