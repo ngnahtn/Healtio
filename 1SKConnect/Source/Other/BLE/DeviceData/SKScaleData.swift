@@ -2,7 +2,7 @@
 //  SKScaleData.swift
 //  1SKConnect
 //
-//  Created by tuyenvx on 22/03/2021.
+//  Created by TrungDN on 22/03/2021.
 //
 
 import Foundation

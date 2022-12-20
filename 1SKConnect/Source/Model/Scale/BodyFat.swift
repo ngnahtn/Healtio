@@ -275,6 +275,59 @@ class BodyFat: Object {
         self.timestamp = Date().timeIntervalSince1970
         self.createStatus(with: self.items)
     }
+    
+    init(bodyFat: HTBodyfat_NewSDK, hasError: Bool, impedance: Int, encryptedImpedance: Int, weight: Double, height: Double, age: Int, sex: THTSexType) {
+        let heightM = height / 100
+        let bmi = Double(weight) / pow(heightM, 2)
+        
+        let fatFreeMass: Double = (0.36 * (pow(height, 2) / Double(encryptedImpedance))) + (0.162 * height) + (0.289 * Double(weight)) - (0.134 * Double(age)) + (4.83 * Double(sex.rawValue)) - 6.83
+                    
+        let fatMass: Double = Double(weight) - fatFreeMass
+        let fatPercentage: Double = fatMass / Double(weight)
+        let bmr: Double = 370 + 21.6 * (1 - fatPercentage) * Double(weight)
+
+        let totalbodyWater: Double = 0.73 * fatFreeMass
+        let waterPercentage: Double = totalbodyWater / Double(weight)
+        
+        super.init()
+        self.impedance.value = impedance
+        self.weight.value = bodyFat.thtWeightKg.doubleValue
+        self.bmi.value = bmi
+        self.bmiRange.append(objectsIn: getRangeList(of: bodyFat.thtBMIRatingList))
+        self.idealWeight.value = bodyFat.thtIdealWeightKg.doubleValue
+        self.bodyStandard.value = bodyFat.thtBodystandard.doubleValue
+        self.bmr.value = bmr
+        self.bmrRange.append(objectsIn: getRangeList(of: bodyFat.thtBMRRatingList))
+        if !hasError {
+            self.ratioOfFat.value = fatPercentage * 100
+            self.ratioOfFatRange.append(objectsIn: getRangeList(of: bodyFat.thtBodyfatRatingList))
+            self.ratioOfMuscle.value = bodyFat.thtMusclePercentage.doubleValue
+            self.weightOfMuscle.value = bodyFat.thtMuscleKg.doubleValue
+            self.weithOfMuscleRange.append(objectsIn: getRangeList(of: bodyFat.thtMuscleRatingList))
+            self.weightOfBone.value = bodyFat.thtBoneKg.doubleValue
+            self.weightOfBoneRange.append(objectsIn: getRangeList(of: bodyFat.thtBoneRatingList))
+            self.ratioOfWater.value = waterPercentage * 100
+            self.ratioOfWaterRange.append(objectsIn: getRangeList(of: bodyFat.thtWaterRatingList))
+            self.ratioOfProtein.value = bodyFat.thtproteinPercentage.doubleValue
+            self.ratioOfProteinRange.append(objectsIn: getRangeList(of: bodyFat.thtproteinRatingList))
+            self.levelOfVisceralFat.value = bodyFat.thtVFAL.doubleValue
+            self.levelOfVisceralFatRange.append(objectsIn: getRangeList(of: bodyFat.thtVFALRatingList))
+            self.ratioOfSubcutaneousFat.value = bodyFat.thtBodySubcutaneousFat.doubleValue
+            if bodyFat.thtSex == .male {
+                ratioOfSubcutaneousFatRange.append(objectsIn: [8.6, 16.7, 20.7])
+            } else {
+                ratioOfSubcutaneousFatRange.append(objectsIn: [18.5, 26.7, 30.8])
+            }
+            self.bodyShape.value = Double(bodyFat.thtBodyScore)
+            self.lbw.value = bodyFat.thtBodyLBW.doubleValue
+            self.ageOfBody.value = Double(bodyFat.thtBodyAge)
+            self.bodyType.value = BodyType(rawValue: bodyFat.thtBodyType.rawValue)
+            self.obesityLevel.value = bmi
+        }
+        self.createAt = Date().toString(.hmsdMy)
+        self.timestamp = Date().timeIntervalSince1970
+        self.createStatus(with: self.items)
+    }
 
     func createStatus(with items: [DetailsItemProtocol]) {
         self.bmrStatus = items[1].statusCode ?? ""

@@ -10940,7 +10940,6 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "ic_close", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_close' is used in nib 'SyncSettingViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "ic_facebook", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_facebook' is used in nib 'SyncSettingViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_google", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_google' is used in nib 'SyncSettingViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_sync_gray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_sync_gray' is used in nib 'SyncSettingViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_unlink_gray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_unlink_gray' is used in nib 'SyncSettingViewController', but couldn't be loaded.") }

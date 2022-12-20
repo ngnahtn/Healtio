@@ -28,9 +28,13 @@ class SKScaleBLEDataHandler: ScaleBLEDataHandler {
         case .lockData:
             delegate?.updateWeight(weight)
             guard let bodyfat = caculateBodyFatData(from: CGFloat(scaleData.weight),
-                                                    impedance: scaleData.encryptionImpedance) else {
+                                                    encryptionImpedance: scaleData.encryptionImpedance, impedance: Int(scaleData.impedance)) else {
                 return
             }
+            print(data)
+            print(scaleData.impedance)
+            print(scaleData.encryptionImpedance)
+
             delegate?.finishData(bodyfat)
         case .overloaded:
             delegate?.scaleDidOverload()
@@ -39,7 +43,7 @@ class SKScaleBLEDataHandler: ScaleBLEDataHandler {
         }
     }
 
-    private func caculateBodyFatData(from weight: CGFloat, impedance: Int) -> BodyFat? {
+    private func caculateBodyFatData(from weight: CGFloat, encryptionImpedance: Int, impedance: Int) -> BodyFat? {
         guard let currentProfile = profile,
               let height = currentProfile.height.value,
               let birthday = currentProfile.birthday?.toDate(.ymd),
@@ -50,10 +54,20 @@ class SKScaleBLEDataHandler: ScaleBLEDataHandler {
         let sex = gender == .male ? THTSexType.male : .female
         let age = Date().year - birthday.year
 
-        let errorType = hTBodyfat.getBodyfatWithweightKg(weight, heightCm: CGFloat(height), sex: sex, age: age, impedance: impedance)
-        let bodyfat = BodyFat(bodyFat: hTBodyfat, hasError: errorType != .none, impedance: impedance)
-        bodyfat.profileID = currentProfile.id
-        bodyfat.scale = scale
-        return bodyfat
+        let errorType = hTBodyfat.getBodyfatWithweightKg(weight, heightCm: CGFloat(height), sex: sex, age: age, impedance: encryptionImpedance)
+        let bodyfat = BodyFat(bodyFat: hTBodyfat, hasError: errorType != .none, impedance: encryptionImpedance)
+        
+        let something = BodyFat(bodyFat: hTBodyfat,
+                                hasError: errorType != .none,
+                                impedance: encryptionImpedance,
+                                encryptedImpedance: impedance,
+                                weight: Double(weight),
+                                height: height,
+                                age: age,
+                                sex: sex)
+        
+        something.profileID = currentProfile.id
+        something.scale = scale
+        return something
     }
 }

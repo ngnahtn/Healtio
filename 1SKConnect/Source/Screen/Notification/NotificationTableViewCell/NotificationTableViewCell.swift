@@ -25,8 +25,8 @@ class NotificationTableViewCell: UITableViewCell {
         contentLabel.isSkeletonable = true
         timeLabel.isSkeletonable = true
         dateLabel.isSkeletonable = true
-        titleLabel.lineBreakStrategy = []
-        contentLabel.lineBreakStrategy = []
+//        titleLabel.lineBreakStrategy = []
+//        contentLabel.lineBreakStrategy = []
     }
 
     override func prepareForReuse() {

@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Medium.ttf">
-            <string>Roboto-Medium</string>
-        </array>
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleResultDetailViewController" customModule="_SKConnect" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScaleResultDetailViewController" customModule="Healtio" customModuleProvider="target">
             <connections>
                 <outlet property="bodyStandarView" destination="TOJ-6O-jZW" id="yx5-Xs-ABt"/>
                 <outlet property="descriptionLabel" destination="SLV-j4-Po7" id="mh8-Gs-R1R"/>
-                <outlet property="discoveryView" destination="rII-v3-Nmy" id="638-SU-wIi"/>
                 <outlet property="lineChart" destination="wv8-Rv-FZR" id="dSG-fh-g6k"/>
                 <outlet property="titleLabel" destination="zQU-vd-qzI" id="oP4-vv-xo8"/>
                 <outlet property="valueLabel" destination="Xxh-hk-CWG" id="yi4-V3-Xm3"/>
@@ -34,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZA-Xz-vu8">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naL-Ng-RPj">
                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -80,14 +76,14 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyg-ox-YPR">
-                    <rect key="frame" x="0.0" y="40" width="414" height="5"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="5" id="nk2-t9-EYO"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtA-kn-1OP">
-                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                    <rect key="frame" x="0.0" y="108" width="414" height="754"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-kD-Fud">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
@@ -107,14 +103,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wv8-Rv-FZR" customClass="ScaleResultRulerChart" customModule="_SKConnect" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wv8-Rv-FZR" customClass="ScaleResultRulerChart" customModule="Healtio" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="68" width="382" height="60"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="Uav-RU-MWE"/>
                                             </constraints>
                                         </view>
-                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-6O-jZW" customClass="ScaleResultCollectionChart" customModule="_SKConnect" customModuleProvider="target">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-6O-jZW" customClass="ScaleResultCollectionChart" customModule="Healtio" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="128" width="382" height="177"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
@@ -152,58 +148,16 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="46s-VK-kyC"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="cGt-aM-JlB"/>
                 </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rII-v3-Nmy">
-                    <rect key="frame" x="82" y="806" width="250" height="40"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q6N-AA-qfy">
-                            <rect key="frame" x="73.5" y="-5" width="103" height="50"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6R-qp-sIN">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                                    <color key="textColor" red="0.13725490196078433" green="0.16078431372549018" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="scale_result_detail_discovery"/>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omL-jE-PiK">
-                                    <rect key="frame" x="53" y="0.0" width="50" height="50"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
-                                    <color key="textColor" red="0.0" green="0.76078431372549016" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="scale_result_detail_1sk"/>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="6A0-7Y-Vdl"/>
-                        <constraint firstItem="Q6N-AA-qfy" firstAttribute="centerX" secondItem="rII-v3-Nmy" secondAttribute="centerX" id="NtG-uu-Soa"/>
-                        <constraint firstAttribute="width" constant="250" id="Xgc-ro-Q5b"/>
-                        <constraint firstItem="Q6N-AA-qfy" firstAttribute="centerY" secondItem="rII-v3-Nmy" secondAttribute="centerY" id="ydQ-qy-eOL"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="KlH-tW-6zV"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rII-v3-Nmy" firstAttribute="centerX" secondItem="KlH-tW-6zV" secondAttribute="centerX" id="0hf-Ee-3tP"/>
                 <constraint firstItem="UtA-kn-1OP" firstAttribute="top" secondItem="yZA-Xz-vu8" secondAttribute="bottom" constant="16" id="3aH-Is-7Rj"/>
                 <constraint firstItem="yZA-Xz-vu8" firstAttribute="top" secondItem="KlH-tW-6zV" secondAttribute="top" id="EN7-gW-gfz"/>
                 <constraint firstItem="Pyg-ox-YPR" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="HJD-zu-82o"/>
                 <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="UtA-kn-1OP" secondAttribute="bottom" id="TCT-pM-PSe"/>
                 <constraint firstItem="UtA-kn-1OP" firstAttribute="leading" secondItem="KlH-tW-6zV" secondAttribute="leading" id="X9o-4g-NfW"/>
                 <constraint firstItem="UtA-kn-1OP" firstAttribute="centerX" secondItem="KlH-tW-6zV" secondAttribute="centerX" id="aKC-wu-iaA"/>
-                <constraint firstItem="KlH-tW-6zV" firstAttribute="bottom" secondItem="rII-v3-Nmy" secondAttribute="bottom" constant="16" id="eqq-f3-wV5"/>
                 <constraint firstItem="Pyg-ox-YPR" firstAttribute="bottom" secondItem="yZA-Xz-vu8" secondAttribute="top" constant="1" id="jEb-3P-e7d"/>
                 <constraint firstItem="Pyg-ox-YPR" firstAttribute="centerX" secondItem="KlH-tW-6zV" secondAttribute="centerX" id="mqM-xt-d9n"/>
                 <constraint firstItem="yZA-Xz-vu8" firstAttribute="centerX" secondItem="KlH-tW-6zV" secondAttribute="centerX" id="t2M-Vx-jFX"/>

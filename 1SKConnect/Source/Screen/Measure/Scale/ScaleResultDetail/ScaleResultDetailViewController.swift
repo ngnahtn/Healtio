@@ -16,7 +16,6 @@ class ScaleResultDetailViewController: UIViewController {
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var lineChart: ScaleResultRulerChart!
     @IBOutlet weak var bodyStandarView: ScaleResultCollectionChart!
-    @IBOutlet weak var discoveryView: UIView!
 
     var presenter: ScaleResultDetailPresenterProtocol!
 
@@ -29,18 +28,11 @@ class ScaleResultDetailViewController: UIViewController {
 
     // MARK: - Setup
     private func setupInit() {
-        self.discoveryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleDiscovery(_:))))
     }
 
     // MARK: - Action
     @IBAction func handleBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-    }
-
-    @objc private func handleDiscovery(_ sender: UITapGestureRecognizer) {
-        if let url = URL(string: "https://1sk.vn") {
-            UIApplication.shared.open(url)
-        }
     }
 }
 
