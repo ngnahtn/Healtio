@@ -17,9 +17,9 @@ class SettingViewController: BaseViewController {
     @IBOutlet weak var sleepReminderViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var sleepReminderView: UIView!
     @IBOutlet weak var sleepTitle: UILabel!
-    @IBOutlet weak var tableView: UITableView!
     var presenter: SettingPresenterProtocol!
     var isOpenNotificationSetting = false
+    var remiderDatas: [ReminderModel] = []
     let notificationManager = LocalNotificationManager()
 
     private lazy var sleepReminderSwitch: SKSwitch = {
@@ -30,7 +30,13 @@ class SettingViewController: BaseViewController {
         deviceSwitch.thumbTintOnColor = R.color.mainColor()!
         deviceSwitch.thumbTintOffColor = .white
         deviceSwitch.thumbSize = CGSize(width: 22, height: 22)
-        deviceSwitch.isOn = LocalNotificationManager.shared.numberOfNoti == 0 ? false : true
+        UNUserNotificationCenter.current().getNotificationSettings { setting in
+            if setting.authorizationStatus == .notDetermined {
+                deviceSwitch.isOn = false
+            } else {
+                deviceSwitch.isOn = LocalNotificationManager.shared.number == 0 ? false : true
+            }
+        }
         deviceSwitch.addTarget(self, action: #selector(onSwitchValueChange(_:)), for: .valueChanged)
         return deviceSwitch
     }()
@@ -39,7 +45,6 @@ class SettingViewController: BaseViewController {
         super.viewDidLoad()
         setupDefaults()
         presenter.onViewDidLoad()
-        setUpTableView()
         setUpSleepReminder()
     }
     
@@ -62,31 +67,6 @@ class SettingViewController: BaseViewController {
             make.width.equalTo(42)
             make.height.equalTo(14)
         }
-        
-        if LocalNotificationManager.shared.numberOfNoti == 0 {
-            self.isOpenNotificationSetting = false
-
-            DispatchQueue.main.async {
-                self.sleepReminderViewHeightConstraint.constant = 50
-                self.tableView.reloadData()
-                self.view.layoutIfNeeded()
-            }
-        } else {
-            self.isOpenNotificationSetting = true
-
-            DispatchQueue.main.async {
-                self.sleepReminderViewHeightConstraint.constant = 150
-                self.tableView.reloadData()
-                self.view.layoutIfNeeded()
-            }
-        }
-    }
-    
-    private func setUpTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.registerNib(ofType: SleepReminderTableViewCell.self)
-        tableView.separatorStyle = .none
     }
     // MARK: - Action
 
@@ -107,28 +87,19 @@ class SettingViewController: BaseViewController {
     }
     
     @objc func onSwitchValueChange(_ sender: SKSwitch) {
-        if !sender.isOn {
-            self.isOpenNotificationSetting = false
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.25) {
-                    self.tableView.reloadData()
-                    self.sleepReminderViewHeightConstraint.constant = 50
-                    self.view.updateConstraints()
-                    self.view.layoutIfNeeded()
-                }
-            }
+        LocalNotificationManager.shared.removePendingNotificationRequests([])
+        if sender.isOn {
+            var component1 = Calendar.current.dateComponents([.hour, .minute], from: Date())
+            component1.hour = 12
+            component1.minute = 0
+            var component2 = Calendar.current.dateComponents([.hour, .minute], from: Date())
+            component2.hour = 22
+            component2.minute = 0
             
-        } else {
-            LocalNotificationManager.shared.removePendingNotificationRequests([])
-            self.isOpenNotificationSetting = true
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.25) {
-                    self.tableView.reloadData()
-                    self.sleepReminderViewHeightConstraint.constant = 150
-                    self.view.updateConstraints()
-                    self.view.layoutIfNeeded()
-                }
-            }
+            LocalNotificationManager.shared.notifications = [
+                LocalNotificationModel(id: "01", title: R.string.localizable.take_a_nap_notification_title(), body: R.string.localizable.sleep_notification_body(), dateTime: component1),
+                LocalNotificationModel(id: "02", title: R.string.localizable.sleep_notification_title(), body: R.string.localizable.sleep_notification_body(), dateTime: component2)
+            ]
         }
     }
 }
@@ -141,23 +112,4 @@ extension SettingViewController: SettingViewProtocol {
 // MARK: SettingViewController - UITableViewDelegate -
 extension SettingViewController: UITableViewDelegate {
     
-}
-
-// MARK: SettingViewController - UITableViewDelegate -
-extension SettingViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isOpenNotificationSetting {
-            return 2
-        }
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(ofType: SleepReminderTableViewCell.self, for: indexPath)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
 }

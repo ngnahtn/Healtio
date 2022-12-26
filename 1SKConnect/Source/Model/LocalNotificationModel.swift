@@ -16,6 +16,10 @@ struct LocalNotificationModel {
 
 struct ReminderModel {
     var title: String
-    var time = Date()
+    var time: DateComponents
     var isOn: Bool = false
+    
+    mutating func changeTime(with time: DateComponents) {
+        self.time = time
+    }
 }

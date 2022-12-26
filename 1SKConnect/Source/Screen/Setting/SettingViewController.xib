@@ -20,7 +20,6 @@
                 <outlet property="sleepReminderView" destination="dMt-Qu-esg" id="cDf-Dx-mXc"/>
                 <outlet property="sleepReminderViewHeightConstraint" destination="jga-BE-Vht" id="X7t-wK-a7u"/>
                 <outlet property="sleepTitle" destination="o6T-fd-b6S" id="g9V-EH-WRb"/>
-                <outlet property="tableView" destination="mCO-EA-7dG" id="6An-cw-5iC"/>
                 <outlet property="topView" destination="Waa-Lk-ojY" id="qQs-hF-vng"/>
                 <outlet property="versionLabel" destination="lHs-5X-Gpj" id="RdP-rp-k8I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -125,7 +124,7 @@
                                             <rect key="frame" x="0.0" y="106" width="414" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6T-fd-b6S">
-                                                    <rect key="frame" x="16" y="15.5" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="16" y="25" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" name="title"/>
                                                     <nil key="highlightedColor"/>
@@ -133,19 +132,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sleepReminder"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mCO-EA-7dG">
-                                                    <rect key="frame" x="0.0" y="27.5" width="414" height="22.5"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </tableView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="mCO-EA-7dG" secondAttribute="trailing" id="3t3-ez-jqM"/>
-                                                <constraint firstItem="mCO-EA-7dG" firstAttribute="top" secondItem="o6T-fd-b6S" secondAttribute="bottom" constant="12" id="8BE-4B-XbS"/>
                                                 <constraint firstItem="o6T-fd-b6S" firstAttribute="leading" secondItem="dMt-Qu-esg" secondAttribute="leading" constant="16" id="HPB-o8-jW7"/>
-                                                <constraint firstItem="o6T-fd-b6S" firstAttribute="top" secondItem="dMt-Qu-esg" secondAttribute="top" constant="15.5" id="MWY-40-Htw"/>
-                                                <constraint firstAttribute="bottom" secondItem="mCO-EA-7dG" secondAttribute="bottom" id="Yup-09-gIT"/>
-                                                <constraint firstItem="mCO-EA-7dG" firstAttribute="leading" secondItem="dMt-Qu-esg" secondAttribute="leading" id="gm7-qI-sk7"/>
+                                                <constraint firstItem="o6T-fd-b6S" firstAttribute="centerY" secondItem="dMt-Qu-esg" secondAttribute="centerY" id="MWY-40-Htw"/>
                                                 <constraint firstAttribute="height" constant="50" id="jga-BE-Vht"/>
                                             </constraints>
                                         </view>

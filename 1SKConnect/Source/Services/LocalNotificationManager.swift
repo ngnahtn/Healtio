@@ -15,13 +15,11 @@ class LocalNotificationManager {
             self.schedule()
         }
     }
-    
-    var numberOfNoti = 0
 
-    func listScheduledNotifications() {
-        UNUserNotificationCenter.current().getPendingNotificationRequests { notifications in
-            notifications.forEach( { print($0) })
-            self.numberOfNoti = notifications.count
+    var number = 0
+    func getNumberNoti() {
+        UNUserNotificationCenter.current().getPendingNotificationRequests { [weak self] (notifications) in
+            self?.number = notifications.count
         }
     }
     
