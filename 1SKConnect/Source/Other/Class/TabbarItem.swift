@@ -30,7 +30,7 @@ enum TabbarItem {
         case .setting:
             return UITabBarItem(title: L.setting.localized,
                                 image: tabbarImage(with: R.image.ic_setting()),
-                                selectedImage: tabbarImage(with: R.image.ic_setting_selected()))
+                                selectedImage: tabbarImage(with: UIImage(named: "ic_setting_selected")))
         }
     }
 

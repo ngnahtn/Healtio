@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupDefaults()
         presenter.onViewDidLoad()
+        setupLocalNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,10 @@ class HomeViewController: UIViewController {
     private func setupDefaults() {
         setupTableView()
         setupActivitySelectionView()
+    }
+    
+    private func setupLocalNotification() { 
+        LocalNotificationManager.shared.getNumberNoti()
     }
 
     private func setupTableView() {

@@ -82,6 +82,7 @@
 "linkDevice" = "Liên kết thiết bị";
 "healthProfile" = "Hồ sơ sức khoẻ";
 "device" = "Thiết bị";
+"sleepReminder" = "Nhắc nhở thời gian ngủ";
 "syncData" = "Đồng bộ dữ liệu";
 "introduce" = "Giới thiệu";
 "findDevice" = "Tìm thiết bị";
@@ -384,4 +385,11 @@ Khi bạn hoạt động và tăng cường tập luyện, lượng mỡ cơ th�
 "s5_water_setting_remind"               = "Uống nước rất cần thiết cho sức khỏe và ngăn ngừa mất nước. Mỗi người cần một lượng nước khác nhau. Thông thường chúng ta cần ít nhất 2L nước mỗi ngày";
 "s5_water_setting_cup_volume"           = "Thể tích cốc nước";
 "s5_water_setting_cup_numbers"          = "Số cốc";
-"s5_water_setting_remind_title"         = "Bạn hãy bật nhắc nhở uống nước để nhận thông báo trên vòng đeo sức khỏe.";
+"s5_water_setting_remind_title"         = "Bạn hãy bật nhắc nhở uống nước để nhận thông báo trên vòng đeo sức khỏe.";®
+
+// MARK: - Local Notification
+"take_a_nap_notification_title"         = "Hôm nay bạn có ngủ trưa không?";
+"sleep_notification_title"              = "Đến giờ đi ngủ rồi";
+"sleep_notification_body"               = "Bạn đừng quên đeo chiếc đồng hồ thông minh của chúng mình nha";
+"take_a_nap_time"                       = "Giấc ngủ trưa";
+"sleep_time"                            = "Giấc ngủ tối";

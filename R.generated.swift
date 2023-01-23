@@ -971,7 +971,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 93 images.
+  /// This `R.image` struct is generated, and contains static references to 97 images.
   struct image {
     /// Image `1SK-SmartScale68`.
     static let skSmartScale68 = Rswift.ImageResource(bundle: R.hostingBundle, name: "1SK-SmartScale68")
@@ -999,6 +999,16 @@ struct R: Rswift.Validatable {
     static let ic_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_back")
     /// Image `ic_blood_pressure`.
     static let ic_blood_pressure = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_blood_pressure")
+    /// Image `ic_bloodpressure_state_high1`.
+    static let ic_bloodpressure_state_high1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bloodpressure_state_high1")
+    /// Image `ic_bloodpressure_state_high2`.
+    static let ic_bloodpressure_state_high2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bloodpressure_state_high2")
+    /// Image `ic_bloodpressure_state_low`.
+    static let ic_bloodpressure_state_low = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bloodpressure_state_low")
+    /// Image `ic_bloodpressure_state_normal`.
+    static let ic_bloodpressure_state_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bloodpressure_state_normal")
+    /// Image `ic_bloodpressure_state_prehypre`.
+    static let ic_bloodpressure_state_prehypre = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bloodpressure_state_prehypre")
     /// Image `ic_bluetooth`.
     static let ic_bluetooth = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_bluetooth")
     /// Image `ic_bp_error_state`.
@@ -1109,8 +1119,6 @@ struct R: Rswift.Validatable {
     static let ic_s5_slider = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_s5_slider")
     /// Image `ic_s5_walk`.
     static let ic_s5_walk = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_s5_walk")
-    /// Image `ic_setting_selected`.
-    static let ic_setting_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_setting_selected")
     /// Image `ic_setting_white`.
     static let ic_setting_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_setting_white")
     /// Image `ic_setting`.
@@ -1248,6 +1256,41 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ic_blood_pressure", bundle: ..., traitCollection: ...)`
     static func ic_blood_pressure(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_blood_pressure, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_bloodpressure_state_high1", bundle: ..., traitCollection: ...)`
+    static func ic_bloodpressure_state_high1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_bloodpressure_state_high1, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_bloodpressure_state_high2", bundle: ..., traitCollection: ...)`
+    static func ic_bloodpressure_state_high2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_bloodpressure_state_high2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_bloodpressure_state_low", bundle: ..., traitCollection: ...)`
+    static func ic_bloodpressure_state_low(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_bloodpressure_state_low, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_bloodpressure_state_normal", bundle: ..., traitCollection: ...)`
+    static func ic_bloodpressure_state_normal(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_bloodpressure_state_normal, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_bloodpressure_state_prehypre", bundle: ..., traitCollection: ...)`
+    static func ic_bloodpressure_state_prehypre(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_bloodpressure_state_prehypre, compatibleWith: traitCollection)
     }
     #endif
 
@@ -1644,13 +1687,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_setting_selected", bundle: ..., traitCollection: ...)`
-    static func ic_setting_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_setting_selected, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_setting_white", bundle: ..., traitCollection: ...)`
     static func ic_setting_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_setting_white, compatibleWith: traitCollection)
@@ -1844,7 +1880,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 90 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 91 nibs.
   struct nib {
     /// Nib `AddDeviceCollectionViewCell`.
     static let addDeviceCollectionViewCell = _R.nib._AddDeviceCollectionViewCell()
@@ -1990,6 +2026,8 @@ struct R: Rswift.Validatable {
     static let settingViewController = _R.nib._SettingViewController()
     /// Nib `SignificanceTBVCell`.
     static let significanceTBVCell = _R.nib._SignificanceTBVCell()
+    /// Nib `SleepReminderTableViewCell`.
+    static let sleepReminderTableViewCell = _R.nib._SleepReminderTableViewCell()
     /// Nib `SmartWatchExerciseViewController`.
     static let smartWatchExerciseViewController = _R.nib._SmartWatchExerciseViewController()
     /// Nib `SmartWatchS5ViewController`.
@@ -2604,6 +2642,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SleepReminderTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.sleepReminderTableViewCell) instead")
+    static func sleepReminderTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.sleepReminderTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "SmartWatchExerciseViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.smartWatchExerciseViewController) instead")
     static func smartWatchExerciseViewController(_: Void = ()) -> UIKit.UINib {
@@ -3035,6 +3081,10 @@ struct R: Rswift.Validatable {
       return R.nib.skTimeFilterView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
+    static func sleepReminderTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SleepReminderTableViewCell? {
+      return R.nib.sleepReminderTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SleepReminderTableViewCell
+    }
+
     static func smartWatchExerciseViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.smartWatchExerciseViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
@@ -3194,7 +3244,7 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 334 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 340 localization keys.
     struct localizable {
       /// en translation:  Liên kết ngay
       ///
@@ -3320,6 +3370,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: vi, en
       static let overWeightMessage = Rswift.StringResource(key: "overWeightMessage", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
+      /// en translation: Bạn đừng quên đeo chiếc đồng hồ thông minh của chúng mình nha
+      ///
+      /// Locales: en
+      static let sleep_notification_body = Rswift.StringResource(key: "sleep_notification_body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Bật
       ///
       /// Locales: vi, en
@@ -3584,6 +3638,14 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: vi, en
       static let smart_watch_s5_sleep = Rswift.StringResource(key: "smart_watch_s5_sleep", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
+      /// en translation: Giấc ngủ trưa
+      ///
+      /// Locales: en
+      static let take_a_nap_time = Rswift.StringResource(key: "take_a_nap_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Giấc ngủ tối
+      ///
+      /// Locales: en
+      static let sleep_time = Rswift.StringResource(key: "sleep_time", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Giấc ngủ: %@
       ///
       /// Locales: vi, en
@@ -3668,6 +3730,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: vi, en
       static let today = Rswift.StringResource(key: "today", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
+      /// en translation: Hôm nay bạn có ngủ trưa không?
+      ///
+      /// Locales: en
+      static let take_a_nap_notification_title = Rswift.StringResource(key: "take_a_nap_notification_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Họ tên
       ///
       /// Locales: vi, en
@@ -3928,6 +3994,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: vi, en
       static let bloodGroup = Rswift.StringResource(key: "bloodGroup", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
+      /// en translation: Nhắc nhở thời gian ngủ
+      ///
+      /// Locales: vi, en
+      static let sleepReminder = Rswift.StringResource(key: "sleepReminder", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
       /// en translation: Nhắc nhở uống nước
       ///
       /// Locales: vi, en
@@ -4500,6 +4570,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: vi, en
       static let smart_watch_s5_goal_title = Rswift.StringResource(key: "smart_watch_s5_goal_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["vi", "en"], comment: nil)
+      /// en translation: Đến giờ đi ngủ rồi
+      ///
+      /// Locales: en
+      static let sleep_notification_title = Rswift.StringResource(key: "sleep_notification_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Đồng bộ dữ liệu
       ///
       /// Locales: vi, en
@@ -4998,6 +5072,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("overWeightMessage", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Bạn đừng quên đeo chiếc đồng hồ thông minh của chúng mình nha
+      ///
+      /// Locales: en
+      static func sleep_notification_body(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sleep_notification_body", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sleep_notification_body"
+        }
+
+        return NSLocalizedString("sleep_notification_body", bundle: bundle, comment: "")
       }
 
       /// en translation: Bật
@@ -5990,6 +6079,36 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("smart_watch_s5_sleep", bundle: bundle, comment: "")
       }
 
+      /// en translation: Giấc ngủ trưa
+      ///
+      /// Locales: en
+      static func take_a_nap_time(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("take_a_nap_time", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "take_a_nap_time"
+        }
+
+        return NSLocalizedString("take_a_nap_time", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Giấc ngủ tối
+      ///
+      /// Locales: en
+      static func sleep_time(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sleep_time", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sleep_time"
+        }
+
+        return NSLocalizedString("sleep_time", bundle: bundle, comment: "")
+      }
+
       /// en translation: Giấc ngủ: %@
       ///
       /// Locales: vi, en
@@ -6307,6 +6426,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("today", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Hôm nay bạn có ngủ trưa không?
+      ///
+      /// Locales: en
+      static func take_a_nap_notification_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("take_a_nap_notification_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "take_a_nap_notification_title"
+        }
+
+        return NSLocalizedString("take_a_nap_notification_title", bundle: bundle, comment: "")
       }
 
       /// en translation: Họ tên
@@ -7284,6 +7418,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("bloodGroup", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Nhắc nhở thời gian ngủ
+      ///
+      /// Locales: vi, en
+      static func sleepReminder(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sleepReminder", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sleepReminder"
+        }
+
+        return NSLocalizedString("sleepReminder", bundle: bundle, comment: "")
       }
 
       /// en translation: Nhắc nhở uống nước
@@ -9453,6 +9602,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("smart_watch_s5_goal_title", bundle: bundle, comment: "")
       }
 
+      /// en translation: Đến giờ đi ngủ rồi
+      ///
+      /// Locales: en
+      static func sleep_notification_title(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("sleep_notification_title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "sleep_notification_title"
+        }
+
+        return NSLocalizedString("sleep_notification_title", bundle: bundle, comment: "")
+      }
+
       /// en translation: Đồng bộ dữ liệu
       ///
       /// Locales: vi, en
@@ -10804,6 +10968,17 @@ struct _R: Rswift.Validatable {
           if UIKit.UIColor(named: "subTitle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'subTitle' is used in nib 'SignificanceTBVCell', but couldn't be loaded.") }
           if UIKit.UIColor(named: "title", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'title' is used in nib 'SignificanceTBVCell', but couldn't be loaded.") }
         }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SleepReminderTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SleepReminderTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SleepReminderTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SleepReminderTableViewCell
       }
 
       fileprivate init() {}

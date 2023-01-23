@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,8 +15,11 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="_SKConnect" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="Healtio" customModuleProvider="target">
             <connections>
+                <outlet property="sleepReminderView" destination="dMt-Qu-esg" id="cDf-Dx-mXc"/>
+                <outlet property="sleepReminderViewHeightConstraint" destination="jga-BE-Vht" id="X7t-wK-a7u"/>
+                <outlet property="sleepTitle" destination="o6T-fd-b6S" id="g9V-EH-WRb"/>
                 <outlet property="topView" destination="Waa-Lk-ojY" id="qQs-hF-vng"/>
                 <outlet property="versionLabel" destination="lHs-5X-Gpj" id="RdP-rp-k8I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,13 +31,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEA-mF-XK8">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEQ-bB-rey">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="s4J-lC-QmD">
-                                    <rect key="frame" x="0.0" y="44" width="414" height="207"/>
+                                    <rect key="frame" x="0.0" y="44" width="414" height="258"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8R-pF-47k">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
@@ -110,15 +113,42 @@
                                                 <constraint firstAttribute="height" constant="50" id="uqi-ho-21N"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-VE-chU">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGX-lj-qqA">
                                             <rect key="frame" x="0.0" y="105" width="414" height="1"/>
+                                            <color key="backgroundColor" name="background"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="g8o-Pn-48t"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMt-Qu-esg">
+                                            <rect key="frame" x="0.0" y="106" width="414" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6T-fd-b6S">
+                                                    <rect key="frame" x="16" y="25" width="0.0" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                    <color key="textColor" name="title"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocalizeKey" value="sleepReminder"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="o6T-fd-b6S" firstAttribute="leading" secondItem="dMt-Qu-esg" secondAttribute="leading" constant="16" id="HPB-o8-jW7"/>
+                                                <constraint firstItem="o6T-fd-b6S" firstAttribute="centerY" secondItem="dMt-Qu-esg" secondAttribute="centerY" id="MWY-40-Htw"/>
+                                                <constraint firstAttribute="height" constant="50" id="jga-BE-Vht"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-VE-chU">
+                                            <rect key="frame" x="0.0" y="156" width="414" height="1"/>
                                             <color key="backgroundColor" name="background"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="d5D-cB-7Y9"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-b6-Gwr">
-                                            <rect key="frame" x="0.0" y="106" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="157" width="414" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-iI-ryK">
                                                     <rect key="frame" x="16" y="25" width="0.0" height="0.0"/>
@@ -148,14 +178,14 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXw-At-GBi">
-                                            <rect key="frame" x="0.0" y="156" width="414" height="1"/>
+                                            <rect key="frame" x="0.0" y="207" width="414" height="1"/>
                                             <color key="backgroundColor" name="background"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="Hhk-pY-K2a"/>
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIu-Ky-wfb">
-                                            <rect key="frame" x="0.0" y="157" width="414" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="208" width="414" height="0.0"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đồng bộ dữ liệu." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjJ-hB-tqr">
                                                     <rect key="frame" x="16" y="-10" width="125.5" height="20.5"/>
@@ -175,7 +205,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-mO-hiB">
-                                            <rect key="frame" x="0.0" y="157" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="208" width="414" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới thiệu." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZX-dG-uMA">
                                                     <rect key="frame" x="16" y="15.5" width="71.5" height="19"/>
@@ -208,7 +238,7 @@
                                     <color key="backgroundColor" name="background"/>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDt-nM-9sx">
-                                    <rect key="frame" x="0.0" y="251" width="414" height="40"/>
+                                    <rect key="frame" x="0.0" y="302" width="414" height="40"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ver 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHs-5X-Gpj">
                                             <rect key="frame" x="19" y="10.5" width="376" height="19"/>
