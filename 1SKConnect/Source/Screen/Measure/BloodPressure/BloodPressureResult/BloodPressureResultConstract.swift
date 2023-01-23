@@ -18,7 +18,8 @@ protocol BloodPressureResultViewProtocol: AnyObject {
 // MARK: - Presenter
 protocol BloodPressureResultPresenterProtocol {
     func onViewDidLoad()
-    func sendBackToBloodPressureVC(from view: UIViewController)
+    func sendBackToBloodPressureVC(from view: BloodPressureResultViewController)
+    func sendMeasureAgain(from view: BloodPressureResultViewController)
 }
 
 // MARK: - Interactor Input
@@ -33,5 +34,6 @@ protocol BloodPressureResultInteractorOutputProtocol: AnyObject {
 
 // MARK: - Router
 protocol BloodPressureResultRouterProtocol {
-    func backToBloodPressureVC(from view: UIViewController)
+    func backToBloodPressureVC(from view: BloodPressureResultViewController)
+    func measureAgain(from view: BloodPressureResultViewController)
 }

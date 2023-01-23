@@ -10,7 +10,6 @@
 import UIKit
 
 class BloodPressureRouter: BaseRouter {
-//    weak var viewController: UIViewController?
     static func setupModule(with bo: DeviceModel) -> BaseNavigationController {
         let viewController = BloodPressureViewController()
         let router = BloodPressureRouter()
@@ -31,8 +30,12 @@ class BloodPressureRouter: BaseRouter {
 
 // MARK: - BloodPressureRouter: BloodPressureRouterProtocol -
 extension BloodPressureRouter: BloodPressureRouterProtocol {
-    func gotoBloodPressureResultViewController(with data: BloodPressureModel?, and errorText: String) {
-        let vc = BloodPressureResultRouter.setupModule(with: data, and: errorText)
+    func gotoBloodPressureResultViewController(with data: BloodPressureModel?, and errorText: String, and presenter: BloodPressurePresenter) {
+        let vc = BloodPressureResultRouter.setupModule(with: data, and: errorText, and: false)
+        vc.callBack = { () -> Void in
+            presenter.onButtonStartDidTapped()
+            print("abcc")
+        }
         vc.modalPresentationStyle = .overFullScreen
         viewController?.present(vc, animated: true)
     }

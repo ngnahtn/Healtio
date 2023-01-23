@@ -388,8 +388,8 @@ Khi bạn hoạt động và tăng cường tập luyện, lượng mỡ cơ th�
 "s5_water_setting_remind_title"         = "Bạn hãy bật nhắc nhở uống nước để nhận thông báo trên vòng đeo sức khỏe.";®
 
 // MARK: - Local Notification
-"take_a_nap_notification_title"         = "Hôm nay bạn có ngủ trưa không 😴";
-"sleep_notification_title"              = "Đến giờ đi ngủ rồi 😴";
+"take_a_nap_notification_title"         = "Hôm nay bạn có ngủ trưa không?";
+"sleep_notification_title"              = "Đến giờ đi ngủ rồi";
 "sleep_notification_body"               = "Bạn đừng quên đeo chiếc đồng hồ thông minh của chúng mình nha";
 "take_a_nap_time"                       = "Giấc ngủ trưa";
 "sleep_time"                            = "Giấc ngủ tối";

@@ -10,12 +10,14 @@
 import UIKit
 
 class BloodPressureResultRouter: BaseRouter {
-    static func setupModule(with data: BloodPressureModel?, and errorText: String) -> BloodPressureResultViewController {
+    
+    static func setupModule(with data: BloodPressureModel?, and errorText: String, and isFromeHome: Bool) -> BloodPressureResultViewController {
         let viewController = BloodPressureResultViewController()
         let router = BloodPressureResultRouter()
         let interactorInput = BloodPressureResultInteractorInput()
         let presenter = BloodPressureResultPresenter(interactor: interactorInput, router: router)
         viewController.presenter = presenter
+        viewController.isFromHome = isFromeHome
         presenter.bloodPressureModel = data
         presenter.errorText = errorText
         presenter.view = viewController
@@ -27,7 +29,13 @@ class BloodPressureResultRouter: BaseRouter {
 
 // MARK: - BloodPressureResultRouterProtocol
 extension BloodPressureResultRouter: BloodPressureResultRouterProtocol {
-    func backToBloodPressureVC(from view: UIViewController) {
-        view.dismiss(animated: true, completion: nil)
+    func measureAgain(from view: BloodPressureResultViewController) {
+        view.dismiss(animated: true) {
+            view.callBack?()
+        }
+    }
+    
+    func backToBloodPressureVC(from view: BloodPressureResultViewController) {
+        view.dismiss(animated: true)
     }
 }

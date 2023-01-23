@@ -26,7 +26,11 @@ class BloodPressureResultPresenter {
 
 // MARK: - BloodPressureResultPresenterProtocol
 extension BloodPressureResultPresenter: BloodPressureResultPresenterProtocol {
-    func sendBackToBloodPressureVC(from view: UIViewController) {
+    func sendMeasureAgain(from view: BloodPressureResultViewController) {
+        router.measureAgain(from: view)
+    }
+    
+    func sendBackToBloodPressureVC(from view: BloodPressureResultViewController) {
         router.backToBloodPressureVC(from: view)
     }
 

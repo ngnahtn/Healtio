@@ -62,5 +62,5 @@ protocol BloodPressureRouterProtocol {
     func showLinkAccountAlert()
     func openAppSetting()
     func openLinkSetting()
-    func gotoBloodPressureResultViewController(with data: BloodPressureModel?, and errorText: String)
+    func gotoBloodPressureResultViewController(with data: BloodPressureModel?, and errorText: String, and presenter: BloodPressurePresenter )
 }

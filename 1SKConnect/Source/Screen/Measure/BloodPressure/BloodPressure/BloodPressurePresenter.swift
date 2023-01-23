@@ -278,14 +278,14 @@ extension BloodPressurePresenter {
                 let bloodPressureModel = BloodPressureModel(with: biolightMeasurementModel, of: self.biolight)
                 self.interactor.saveBloodPressure(bloodPressureModel, biolight: self.biolight)
                 self.automaticSync(bloodpressure: bloodPressureModel)
-                router.gotoBloodPressureResultViewController(with: bloodPressureModel, and: "")
+                router.gotoBloodPressureResultViewController(with: bloodPressureModel, and: "", and: self)
             } else {
                 if errorByte == 6 || errorByte == 20 {
-                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_device())
+                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_device(), and: self)
                 } else if errorByte == 11 || errorByte == 13 {
-                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_movement())
+                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_movement(), and: self)
                 } else if errorByte == 19 {
-                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_timeout())
+                    router.gotoBloodPressureResultViewController(with: nil, and: R.string.localizable.biolight_error_timeout(), and: self)
                 }
             }
             view?.getMeasurementState(.none)
@@ -357,7 +357,7 @@ extension BloodPressurePresenter: BloodPressurePresenterProtocol {
     }
 
     func showBioLightDataSelected(with data: BloodPressureModel?, and errorText: String) {
-        router.gotoBloodPressureResultViewController(with: data, and: errorText)
+        router.gotoBloodPressureResultViewController(with: data, and: errorText, and: self)
     }
 
     func tableViewNumberOfRow(in section: Int) -> Int {

@@ -61,7 +61,7 @@ class TrackingRouter: BaseRouter {
             return
         }
         guard bloodPressure.dia.value != nil else { return }
-        let resultViewController = BloodPressureResultRouter.setupModule(with: bloodPressure, and: "")
+        let resultViewController = BloodPressureResultRouter.setupModule(with: bloodPressure, and: "", and: true)
         resultViewController.modalPresentationStyle = .fullScreen
         if let bloodPressureMeasureVC = viewController?.presentedViewController as? BloodPressureViewController {
             bloodPressureMeasureVC.present(resultViewController, animated: true, completion: nil)

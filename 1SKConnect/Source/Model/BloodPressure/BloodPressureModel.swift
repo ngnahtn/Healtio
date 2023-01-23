@@ -5,6 +5,7 @@
 //  Created by admin on 12/11/2021.
 //
 
+import Foundation
 import RealmSwift
 
 struct BiolightMeasurementModel {
@@ -12,6 +13,11 @@ struct BiolightMeasurementModel {
     var dia: Int
     var map: Int
     var pr: Int
+}
+
+struct VitalSignsDescriptionModel {
+    var title: String
+    var des: String
 }
 
 class BloodPressureModel: Object {

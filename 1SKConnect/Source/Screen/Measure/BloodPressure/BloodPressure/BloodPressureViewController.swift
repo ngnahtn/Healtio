@@ -56,6 +56,10 @@ class BloodPressureViewController: BaseViewController {
         header.delegate = self
         bpHomeTableView.tableHeaderView = header
     }
+    
+    public func measureAgain() {
+        self.presenter.onButtonStartDidTapped()
+    }
     // MARK: - Action
     func hideTurnOnBLEView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(transViewDidTap))
