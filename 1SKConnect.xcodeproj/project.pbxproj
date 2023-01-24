@@ -357,6 +357,9 @@
 		84040FFE297EED850055CF1C /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84040FFC297EED850055CF1C /* DescriptionTableViewCell.xib */; };
 		84041002297F0A4F0055CF1C /* MesureAgainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84041000297F0A4F0055CF1C /* MesureAgainTableViewCell.swift */; };
 		84041003297F0A4F0055CF1C /* MesureAgainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84041001297F0A4F0055CF1C /* MesureAgainTableViewCell.xib */; };
+		84041005298045540055CF1C /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84041004298045540055CF1C /* RoundShadowView.swift */; };
+		84041008298052BA0055CF1C /* RecentValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84041006298052BA0055CF1C /* RecentValueTableViewCell.swift */; };
+		84041009298052BA0055CF1C /* RecentValueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84041007298052BA0055CF1C /* RecentValueTableViewCell.xib */; };
 		84099BBF275E54C3001E2D60 /* TrusangBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84099BBE275E54C3001E2D60 /* TrusangBluetooth.framework */; };
 		841D63CE275E50B90003B28F /* Tools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 841D63CD275E50B90003B28F /* Tools.mm */; };
 		8421765127799545008BB8AC /* ExcerciseChartCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421764F27799545008BB8AC /* ExcerciseChartCLVCell.swift */; };
@@ -911,6 +914,9 @@
 		84040FFC297EED850055CF1C /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		84041000297F0A4F0055CF1C /* MesureAgainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesureAgainTableViewCell.swift; sourceTree = "<group>"; };
 		84041001297F0A4F0055CF1C /* MesureAgainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesureAgainTableViewCell.xib; sourceTree = "<group>"; };
+		84041004298045540055CF1C /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		84041006298052BA0055CF1C /* RecentValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentValueTableViewCell.swift; sourceTree = "<group>"; };
+		84041007298052BA0055CF1C /* RecentValueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentValueTableViewCell.xib; sourceTree = "<group>"; };
 		84099BBE275E54C3001E2D60 /* TrusangBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrusangBluetooth.framework; sourceTree = "<group>"; };
 		841D63CC275E50B90003B28F /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		841D63CD275E50B90003B28F /* Tools.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tools.mm; sourceTree = "<group>"; };
@@ -1823,6 +1829,7 @@
 				24DA2AB32766DF0200E89480 /* ZHJSleep+Extension.swift */,
 				FA15272C27772CF1000F63AF /* ZHJSportMode+Extension.swift */,
 				24C9D3FD277EEED20047446D /* Formatter+Extension.swift */,
+				84041004298045540055CF1C /* RoundShadowView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1948,6 +1955,8 @@
 				24225A582779625400486689 /* CollectionView */,
 				24225A5427795DAB00486689 /* S5BloodPressureDetailTableViewCell.swift */,
 				24225A5527795DAB00486689 /* S5BloodPressureDetailTableViewCell.xib */,
+				84041006298052BA0055CF1C /* RecentValueTableViewCell.swift */,
+				84041007298052BA0055CF1C /* RecentValueTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -3156,6 +3165,7 @@
 				FA152749277A1807000F63AF /* S5HeartRateChartCollectionViewCell.xib in Resources */,
 				24DE32452761BAFC00BFEBB4 /* S5TenperatureTableViewCell.xib in Resources */,
 				243C370D277D62DB0064C44D /* S5SleepDetailViewController.xib in Resources */,
+				84041009298052BA0055CF1C /* RecentValueTableViewCell.xib in Resources */,
 				FA4EC6EE269D774500F74F2C /* SyncSettingViewController.xib in Resources */,
 				0B77AE352615737F0013CF96 /* NotificationViewController.xib in Resources */,
 				0BA62A9026144F4C00FFCFB0 /* ProfileListViewController.xib in Resources */,
@@ -3663,6 +3673,7 @@
 				0B0F12BD25C7A1E400880C1D /* BloodPressureViewController.swift in Sources */,
 				8455B557274798CC0073A59E /* BloodPressureGraphView.swift in Sources */,
 				0BA62A51261420B000FFCFB0 /* ActivityIndex.swift in Sources */,
+				84041008298052BA0055CF1C /* RecentValueTableViewCell.swift in Sources */,
 				84328119274A825700738586 /* BLEDataHandlerProtocol.swift in Sources */,
 				FA4EC6F7269D861E00F74F2C /* SyncSettingPresenter.swift in Sources */,
 				FA49D3AA2762820F006C105C /* SyntheticCategoriesTableViewCell.swift in Sources */,
@@ -3709,6 +3720,7 @@
 				0BA62A8D26144F4C00FFCFB0 /* ProfileListRouter.swift in Sources */,
 				0BB60AC3261C3AC30002CF70 /* AlertViewController.swift in Sources */,
 				24A774BE2754B0840058A400 /* SpO2DataHandler.swift in Sources */,
+				84041005298045540055CF1C /* RoundShadowView.swift in Sources */,
 				842DE7B227391C02002DC0FB /* BloodPresureHeader.swift in Sources */,
 				84ED5B77277069020053AB80 /* ExerciseDetailTableViewCell.swift in Sources */,
 				FAEE1E0426D2C0D600FE1853 /* MeasurementCollectionViewCell.swift in Sources */,

@@ -89,9 +89,9 @@ extension S5BloodPressureChartCollectionViewCell {
         let dateStr = date.toString(.dayOfWeek)
         self.dateLabel.text = dateStr
         if !model.bloodPressureDetail.isEmpty {
-            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.max.sbp)/\(model.max.dbp) mmHg", description: R.string.localizable.smart_watch_s5_max_bp())
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.max.sbp)/\(model.max.dbp) ", description: "mmHg")
             
-            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.min.sbp)/\(model.min.dbp) mmHg", description: R.string.localizable.smart_watch_s5_min_bp())
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.min.sbp)/\(model.min.dbp) ", description: "mmHg")
             
             DispatchQueue.main.async {
                 self.dayLineChartView.xAxis.valueFormatter = TimeValueFormatter(date: model.dateTime.toDate(.ymd)!)
@@ -100,9 +100,9 @@ extension S5BloodPressureChartCollectionViewCell {
                 self.setUpDayChartsData(sys: model.sysSigns, dia: model.diaSigns)
             }
         } else {
-            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- mmHg", description: R.string.localizable.smart_watch_s5_max_bp())
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
             
-            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- mmHg", description: R.string.localizable.smart_watch_s5_min_bp())
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
             
             DispatchQueue.main.async {
                 self.setUpDayChartsData(sys: [], dia: [])
@@ -117,9 +117,9 @@ extension S5BloodPressureChartCollectionViewCell {
             let endOfWeek = data[0].dateTime.toDate(.ymd)!.endOfWeek.toString(.dayMonth)
             dateLabel.text = startOfWeek + " - " + endOfWeek
             DispatchQueue.main.async {
-                self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.max.sbp }.max()!)/\(data.map { $0.max.dbp }.max()!) mmHg", description: R.string.localizable.smart_watch_s5_max_bp())
+                self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.max.sbp }.max()!)/\(data.map { $0.max.dbp }.max()!) ", description: "mmHg")
                 
-                self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.min.sbp }.min()!)/\(data.map { $0.min.dbp }.min()!) mmHg", description: R.string.localizable.smart_watch_s5_min_bp())
+                self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.min.sbp }.min()!)/\(data.map { $0.min.dbp }.min()!) ", description: "mmHg")
                 
                 self.weekLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.chartStartOfWeek!.timeIntervalSince1970
                 self.weekLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.chartEndOfWeek!.timeIntervalSince1970
@@ -128,6 +128,9 @@ extension S5BloodPressureChartCollectionViewCell {
         } else {
             let startOfWeek = Date().startOfWeek.toString(.dayMonth)
             let endOfWeek = Date().endOfWeek.toString(.dayMonth)
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
+            
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
             dateLabel.text = startOfWeek + " - " + endOfWeek
         }
     }
@@ -139,9 +142,9 @@ extension S5BloodPressureChartCollectionViewCell {
             let endOfMonth = data[0].dateTime.toDate(.ymd)!.endOfMonth.toString(.dayMonth)
             dateLabel.text = startOfMonth + " - " + endOfMonth
             DispatchQueue.main.async {
-                self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.max.sbp }.max()!)/\(data.map { $0.max.dbp }.max()!) mmHg", description: R.string.localizable.smart_watch_s5_max_bp())
+                self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.max.sbp }.max()!)/\(data.map { $0.max.dbp }.max()!) ", description: "mmHg")
                 
-                self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.min.sbp }.min()!)/\(data.map { $0.min.dbp }.min()!) mmHg", description: R.string.localizable.smart_watch_s5_min_bp())
+                self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.min.sbp }.min()!)/\(data.map { $0.min.dbp }.min()!) ", description: "mmHg")
                 
                 self.monthLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.startOfMonth.timeIntervalSince1970
                 self.monthLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.endOfMonth.timeIntervalSince1970
@@ -151,6 +154,9 @@ extension S5BloodPressureChartCollectionViewCell {
         } else {
             let startOfMonth = Date().startOfWeek.toString(.dayMonth)
             let endOfMonth = Date().endOfWeek.toString(.dayMonth)
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
+            
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
             dateLabel.text = startOfMonth + " - " + endOfMonth
         }
     }
@@ -186,12 +192,15 @@ extension S5BloodPressureChartCollectionViewCell {
                 }.min()!
             }.min()!
             
-            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(maxSbp)/\(maxDbp) mmHg", description: R.string.localizable.smart_watch_s5_max_bp())
-            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(minSbp)/\(minDbp) mmHg", description: R.string.localizable.smart_watch_s5_min_bp())
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(maxSbp)/\(maxDbp) ", description: "mmHg")
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "\(minSbp)/\(minDbp) ", description: "mmHg")
             DispatchQueue.main.async {
                 self.setUpYearChartsData(data: data)
             }
         } else {
+            self.maxBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
+            
+            self.minBpLabel.attributedText = self.getNSMutableAttributedString(for: "--/-- ", description: "mmHg")
             let startOfMonth = Date().startOfYear.toString(.dayMonth)
             let endOfMonth = Date().endOfYear.toString(.dayMonth)
             dateLabel.text = startOfMonth + " - " + endOfMonth
@@ -322,8 +331,8 @@ extension S5BloodPressureChartCollectionViewCell {
     ///   - description: description string
     /// - Returns: a string with format `description value`
     private func getNSMutableAttributedString(for value: String, description: String) -> NSMutableAttributedString? {
-        let attributeString = NSMutableAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!])
-        attributeString.append(NSAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.title()!]))
+        let attributeString = NSMutableAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 16)!, NSAttributedString.Key.foregroundColor: R.color.mainColor()!])
+        attributeString.append(NSAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!]))
         return attributeString
     }
 }

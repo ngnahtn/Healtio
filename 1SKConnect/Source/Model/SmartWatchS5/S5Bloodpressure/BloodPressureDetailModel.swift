@@ -28,6 +28,12 @@ class BloodPressureDetailModel: Object {
         self.sbp = data.SBP
     }
     
+    /// Blood pressure state
+    var state: BloodPressureState {
+        return BloodPressureState(sys: self.sbp, dia: self.dbp)
+    }
+
+    
     override init() {
         super.init()
     }
