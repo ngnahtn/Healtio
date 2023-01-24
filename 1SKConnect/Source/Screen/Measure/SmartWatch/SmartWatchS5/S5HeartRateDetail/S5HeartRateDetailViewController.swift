@@ -46,7 +46,7 @@ extension S5HeartRateDetailViewController: S5HeartRateDetailViewProtocol {
 // MARK: - UITableViewDelegate
 extension S5HeartRateDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 300
     }
 }
 

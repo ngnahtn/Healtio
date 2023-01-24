@@ -67,6 +67,8 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.createChart()
+        self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_max_temp())
+        self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_min_temp())
         self.icNextImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleNext)))
         self.icPreviousImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handlePrevious)))
     }
@@ -129,8 +131,8 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
     private func setDayData() {
         guard let model = self.dayModel else {
             self.setUpDayChartsData(data: [])
-            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "-- °C", description: R.string.localizable.smart_watch_s5_max_temp())
-            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "-- °C", description: R.string.localizable.smart_watch_s5_min_temp())
+            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_max_temp())
+            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_min_temp())
             return
         }
         let date = model.dateTime.toDate(.ymd) ?? Date()
@@ -138,8 +140,8 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
         self.dateLabel.text = dateStr
 
         if !model.tempDetail.isEmpty {
-            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(model.max) / 100) °C", description: R.string.localizable.smart_watch_s5_max_temp())
-            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(model.min) / 100) °C", description: R.string.localizable.smart_watch_s5_min_temp())
+            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(model.max) / 100) ", description: R.string.localizable.smart_watch_s5_max_temp())
+            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(model.min) / 100) ", description: R.string.localizable.smart_watch_s5_min_temp())
             DispatchQueue.main.async {
                 self.dayLineChartView.xAxis.valueFormatter = TimeValueFormatter(date: model.dateTime.toDate(.ymd)!)
                 self.dayLineChartView.xAxis.axisMinimum = model.dateTime.toDate(.ymd)!.startOfDay.timeIntervalSince1970
@@ -147,8 +149,8 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
                 self.setUpDayChartsData(data: model.vitalSigns)
             }
         } else {
-            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "-- °C", description: R.string.localizable.smart_watch_s5_max_temp())
-            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "-- °C", description: R.string.localizable.smart_watch_s5_min_temp())
+            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_max_temp())
+            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: R.string.localizable.smart_watch_s5_min_temp())
             DispatchQueue.main.async {
                 self.setUpDayChartsData(data: [])
             }
@@ -163,9 +165,9 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
             dateLabel.text = startOfWeek + " - " + endOfWeek
             
             DispatchQueue.main.async {
-                self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.max }.max()!) / 100) °C", description: R.string.localizable.smart_watch_s5_max_temp())
+                self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.max }.max()!) / 100) ", description: R.string.localizable.smart_watch_s5_max_temp())
                 
-                self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.min }.min()!) / 100) °C", description: R.string.localizable.smart_watch_s5_min_temp())
+                self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.min }.min()!) / 100) ", description: R.string.localizable.smart_watch_s5_min_temp())
                 
                 self.weekLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.chartStartOfWeek!.timeIntervalSince1970
                 self.weekLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.chartEndOfWeek!.timeIntervalSince1970
@@ -186,9 +188,9 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
             dateLabel.text = startOfWeek + " - " + endOfWeek
             
             DispatchQueue.main.async {
-                self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.max }.max()!) / 100) °C", description: R.string.localizable.smart_watch_s5_max_temp())
+                self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.max }.max()!) / 100) ", description: R.string.localizable.smart_watch_s5_max_temp())
                 
-                self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.min }.min()!) / 100) °C", description: R.string.localizable.smart_watch_s5_min_temp())
+                self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(data.map { $0.min }.min()!) / 100) ", description: R.string.localizable.smart_watch_s5_min_temp())
                 
                 self.monthLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.startOfMonth.timeIntervalSince1970
                 self.monthLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.endOfMonth.timeIntervalSince1970
@@ -220,8 +222,8 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
                 }.min()!
             }.min()!
             
-            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(maxHr) / 100) °C", description: R.string.localizable.smart_watch_s5_max_temp())
-            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(minHr) / 100) °C", description: R.string.localizable.smart_watch_s5_min_temp())
+            self.maxTempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(maxHr) / 100) ", description: R.string.localizable.smart_watch_s5_max_temp())
+            self.mainempLabel.attributedText = self.getNSMutableAttributedString(for: "\(Double(minHr) / 100) ", description: R.string.localizable.smart_watch_s5_min_temp())
             DispatchQueue.main.async {
                 self.setUpYearChartsData(data: data)
             }
@@ -238,8 +240,9 @@ class S5TemperatureChartCollectionViewCell: UICollectionViewCell {
     ///   - description: description string
     /// - Returns: a string with format `description value`
     private func getNSMutableAttributedString(for value: String, description: String) -> NSMutableAttributedString? {
-        let attributeString = NSMutableAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!])
-        attributeString.append(NSAttributedString(string: "\n" + value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.title()!]))
+        let attributeString = NSMutableAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.title()!])
+        attributeString.append(NSAttributedString(string: "\n" + value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 16)!, NSAttributedString.Key.foregroundColor: R.color.mainColor()!]))
+        attributeString.append(NSAttributedString(string: "°C", attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!]))
         return attributeString
     }
 }

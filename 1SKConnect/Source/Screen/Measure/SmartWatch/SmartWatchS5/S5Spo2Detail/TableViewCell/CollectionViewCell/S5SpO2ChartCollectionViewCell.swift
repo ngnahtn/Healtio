@@ -68,6 +68,8 @@ class S5SpO2ChartCollectionViewCell: UICollectionViewCell {
         self.createChart()
         self.icNextImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleNext)))
         self.icPreviousImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handlePrevious)))
+        self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "--% - --%", description: R.string.localizable.smart_watch_s5_max_spO2())
+        self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "--%", description: R.string.localizable.smart_watch_s5_min_spO2())
     }
 
     private func createChart() {
@@ -232,8 +234,7 @@ class S5SpO2ChartCollectionViewCell: UICollectionViewCell {
     ///   - description: description string
     /// - Returns: a string with format `description value`
     private func getNSMutableAttributedString(for value: String, description: String) -> NSMutableAttributedString? {
-        let attributeString = NSMutableAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!])
-        attributeString.append(NSAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.title()!]))
+        let attributeString = NSMutableAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 16)!, NSAttributedString.Key.foregroundColor: R.color.mainColor()!])
         return attributeString
     }
 }

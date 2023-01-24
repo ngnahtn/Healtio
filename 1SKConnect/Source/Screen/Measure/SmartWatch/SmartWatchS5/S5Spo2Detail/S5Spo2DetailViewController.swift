@@ -46,7 +46,7 @@ extension S5Spo2DetailViewController: S5Spo2DetailViewProtocol {
 // MARK: - UITableViewDelegate
 extension S5Spo2DetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 300
     }
 }
 

@@ -68,6 +68,8 @@ class S5HeartRateChartCollectionViewCell: UICollectionViewCell {
         self.createChart()
         self.icNextImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleNext)))
         self.icPreviousImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handlePrevious)))
+        self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
+        self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
     }
 }
 
@@ -101,8 +103,8 @@ extension S5HeartRateChartCollectionViewCell {
         self.dateLabel.text = dateStr
         
         if !model.hrDetail.isEmpty {
-            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.heartRateMax) bpm", description: R.string.localizable.smart_watch_s5_max_hr())
-            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.heartRateMin) bpm", description: R.string.localizable.smart_watch_s5_min_hr())
+            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.heartRateMax) ", description: "bpm")
+            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(model.heartRateMin) ", description: "bpm")
             DispatchQueue.main.async {
                 self.dayLineChartView.xAxis.valueFormatter = TimeValueFormatter(date: model.dateTime.toDate(.ymd)!)
                 self.dayLineChartView.xAxis.axisMinimum = model.dateTime.toDate(.ymd)!.startOfDay.timeIntervalSince1970
@@ -110,8 +112,8 @@ extension S5HeartRateChartCollectionViewCell {
                 self.setDayChartsData(data: model.vitalSigns)
             }
         } else {
-            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- bpm", description: R.string.localizable.smart_watch_s5_max_hr())
-            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- bpm", description: R.string.localizable.smart_watch_s5_min_hr())
+            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
+            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
             DispatchQueue.main.async {
                 self.setDayChartsData(data: [])
             }
@@ -171,9 +173,9 @@ extension S5HeartRateChartCollectionViewCell {
             dateLabel.text = startOfWeek + " - " + endOfWeek
             
             DispatchQueue.main.async {
-                self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMax }.max()!) bpm", description: R.string.localizable.smart_watch_s5_max_hr())
+                self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMax }.max()!) ", description: "bpm")
                 
-                self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMin }.min()!) bpm", description: R.string.localizable.smart_watch_s5_min_hr())
+                self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMin }.min()!) ", description: "bpm")
                 
                 self.weekLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.chartStartOfWeek!.timeIntervalSince1970
                 self.weekLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.chartEndOfWeek!.timeIntervalSince1970
@@ -221,9 +223,9 @@ extension S5HeartRateChartCollectionViewCell {
             dateLabel.text = startOfWeek + " - " + endOfWeek
             
             DispatchQueue.main.async {
-                self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMax }.max()!) bpm", description: R.string.localizable.smart_watch_s5_max_hr())
+                self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMax }.max()!) ", description: "bpm")
 
-                self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMin }.min()!) bpm", description: R.string.localizable.smart_watch_s5_min_hr())
+                self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.map { $0.heartRateMin }.min()!) ", description: "bpm")
          
                 self.monthLineChartView.xAxis.axisMinimum = data[0].dateTime.toDate(.ymd)!.startOfMonth.timeIntervalSince1970
                 self.monthLineChartView.xAxis.axisMaximum = data[0].dateTime.toDate(.ymd)!.endOfMonth.timeIntervalSince1970
@@ -282,8 +284,8 @@ extension S5HeartRateChartCollectionViewCell {
                 }.min()!
             }.min()!
             
-            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(maxHr) bpm", description: R.string.localizable.smart_watch_s5_max_hr())
-            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(minHr) bpm", description: R.string.localizable.smart_watch_s5_min_hr())
+            self.maxHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(maxHr) ", description: "bpm")
+            self.minHrLabel.attributedText = self.getNSMutableAttributedString(for: "\(minHr) ", description: "bpm")
             DispatchQueue.main.async {
                 self.setYearChartsData(data: data)
             }
@@ -504,8 +506,7 @@ extension S5HeartRateChartCollectionViewCell {
     ///   - description: description string
     /// - Returns: a string with format `description value`
     private func getNSMutableAttributedString(for value: String, description: String) -> NSMutableAttributedString? {
-        let attributeString = NSMutableAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!])
-        attributeString.append(NSAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.title()!]))
+        let attributeString = NSMutableAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 16)!, NSAttributedString.Key.foregroundColor: R.color.mainColor()!])
+        attributeString.append(NSAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!]))
         return attributeString
-    }
-}
+    }}
