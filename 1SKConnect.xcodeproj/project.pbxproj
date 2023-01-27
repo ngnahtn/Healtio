@@ -347,6 +347,7 @@
 		24F61A82275F013E00498FF9 /* SmartWatchS5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F61A7C275F013E00498FF9 /* SmartWatchS5ViewController.swift */; };
 		24F61A83275F013E00498FF9 /* SmartWatchS5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F61A7D275F013E00498FF9 /* SmartWatchS5ViewController.xib */; };
 		24F61A84275F013E00498FF9 /* SmartWatchS5Constract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F61A7E275F013E00498FF9 /* SmartWatchS5Constract.swift */; };
+		2C9B08E32983822B00BE2630 /* HeartRateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9B08E22983822B00BE2630 /* HeartRateState.swift */; };
 		2CB569E8294B1A6F0040F7E7 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569E7294B1A6F0040F7E7 /* LocalNotificationManager.swift */; };
 		2CB569EA294B1A7C0040F7E7 /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569E9294B1A7C0040F7E7 /* LocalNotificationModel.swift */; };
 		2CB569FC294C31ED0040F7E7 /* SleepReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB569FA294C31ED0040F7E7 /* SleepReminderTableViewCell.swift */; };
@@ -904,6 +905,7 @@
 		24F61A7D275F013E00498FF9 /* SmartWatchS5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmartWatchS5ViewController.xib; sourceTree = "<group>"; };
 		24F61A7E275F013E00498FF9 /* SmartWatchS5Constract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartWatchS5Constract.swift; sourceTree = "<group>"; };
 		29079375B388C198DBCC6BA3 /* Pods_1SKConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1SKConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C9B08E22983822B00BE2630 /* HeartRateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateState.swift; sourceTree = "<group>"; };
 		2CB569E7294B1A6F0040F7E7 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		2CB569E9294B1A7C0040F7E7 /* LocalNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
 		2CB569FA294C31ED0040F7E7 /* SleepReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepReminderTableViewCell.swift; sourceTree = "<group>"; };
@@ -2327,6 +2329,7 @@
 				24ADB3B02741F7CD00F16F13 /* ScaleDetailsItem.swift */,
 				24ADB3B22741F81000F16F13 /* SpO2DetailsItem.swift */,
 				84EF03FB274B440A007AA759 /* BloodPressureState.swift */,
+				2C9B08E22983822B00BE2630 /* HeartRateState.swift */,
 			);
 			path = DetailItem;
 			sourceTree = "<group>";
@@ -3666,6 +3669,7 @@
 				0B4F991E2623D53100007F62 /* CreateDefautlsProfileConstract.swift in Sources */,
 				FA6A287E26EB4447003A6888 /* StringProtocol+Extension.swift in Sources */,
 				0BEAA38F25C3ECB20022DC39 /* StartConstract.swift in Sources */,
+				2C9B08E32983822B00BE2630 /* HeartRateState.swift in Sources */,
 				0BB60A78261BF73E0002CF70 /* ScaleViewController.swift in Sources */,
 				0B3EC6F625E5E3C8001813A5 /* SettingRouter.swift in Sources */,
 				847E9DC42773821E001FC7AC /* S5SpO2DetailModel.swift in Sources */,
