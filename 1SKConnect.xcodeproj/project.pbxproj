@@ -431,6 +431,7 @@
 		84ED5B7B27707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED5B7927707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.swift */; };
 		84ED5B7C27707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ED5B7A27707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.xib */; };
 		84EF03FC274B440A007AA759 /* BloodPressureState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF03FB274B440A007AA759 /* BloodPressureState.swift */; };
+		84F452FB298456E80073A1DE /* SpO2State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F452FA298456E80073A1DE /* SpO2State.swift */; };
 		FA01B46D27738613003BF452 /* BloodPressureDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01B46C2773830C003BF452 /* BloodPressureDetailModel.swift */; };
 		FA01B46E2773861A003BF452 /* BloodPressureRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01B46B2773830C003BF452 /* BloodPressureRecordModel.swift */; };
 		FA01B46F2773861D003BF452 /* BloodPressureListRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01B46A2773830B003BF452 /* BloodPressureListRecordModel.swift */; };
@@ -992,6 +993,7 @@
 		84ED5B7927707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseDetailWMYTableViewCell.swift; sourceTree = "<group>"; };
 		84ED5B7A27707ED80053AB80 /* ExcerciseDetailWMYTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExcerciseDetailWMYTableViewCell.xib; sourceTree = "<group>"; };
 		84EF03FB274B440A007AA759 /* BloodPressureState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureState.swift; sourceTree = "<group>"; };
+		84F452FA298456E80073A1DE /* SpO2State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpO2State.swift; sourceTree = "<group>"; };
 		FA01B46A2773830B003BF452 /* BloodPressureListRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureListRecordModel.swift; sourceTree = "<group>"; };
 		FA01B46B2773830C003BF452 /* BloodPressureRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureRecordModel.swift; sourceTree = "<group>"; };
 		FA01B46C2773830C003BF452 /* BloodPressureDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureDetailModel.swift; sourceTree = "<group>"; };
@@ -2330,6 +2332,7 @@
 				24ADB3B22741F81000F16F13 /* SpO2DetailsItem.swift */,
 				84EF03FB274B440A007AA759 /* BloodPressureState.swift */,
 				2C9B08E22983822B00BE2630 /* HeartRateState.swift */,
+				84F452FA298456E80073A1DE /* SpO2State.swift */,
 			);
 			path = DetailItem;
 			sourceTree = "<group>";
@@ -3463,6 +3466,7 @@
 				0BA62A4326141FE100FFCFB0 /* HealthProfileDetailsRouter.swift in Sources */,
 				0BB60A7A261BF73E0002CF70 /* ScaleConstract.swift in Sources */,
 				847E9DBC27737480001FC7AC /* S5HeartRateRecordModel.swift in Sources */,
+				84F452FB298456E80073A1DE /* SpO2State.swift in Sources */,
 				848C157C27B4F49000F15CCB /* S5WatchFaceSettingInteractorInput.swift in Sources */,
 				244D5EAE274B514200515E08 /* BloodPressureListModel.swift in Sources */,
 				0B77AE6F26157A330013CF96 /* DevicePresenter.swift in Sources */,

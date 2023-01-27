@@ -26,6 +26,10 @@ class S5SpO2DetailModel: Object {
         self.bO = data.BO
     }
     
+    var state: S5SpO2State {
+        return S5SpO2State(value: bO)
+    }
+    
     override init() {
         super.init()
     }

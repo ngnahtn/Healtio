@@ -27,6 +27,17 @@ class RecentValueTableViewCell: UITableViewCell {
         self.stateLabel.text = data.state.title
     }
     
+    func fetchSpO2Data(with record: S5SpO2DetailModel?) {
+        guard let data = record else {
+            self.valueLabel.attributedText = self.getNSMutableAttributedString(for: "-- %", description: "")
+            self.stateLabel.text = "--"
+            return
+        }
+        
+        self.valueLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.bO) %", description: "")
+        self.stateLabel.text = data.state.status
+    }
+    
     func fetchHrData(with detail: S5HeartRateDetailModel?) {
         guard let data = detail else {
             self.valueLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
