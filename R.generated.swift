@@ -10610,6 +10610,7 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "ic_next_gray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_next_gray' is used in nib 'S5HeartRateChartCollectionViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "subTitle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'subTitle' is used in nib 'S5HeartRateChartCollectionViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "title", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'title' is used in nib 'S5HeartRateChartCollectionViewCell', but couldn't be loaded.") }
         }
       }
 
@@ -10786,6 +10787,7 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "ic_next_gray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_next_gray' is used in nib 'S5SpO2ChartCollectionViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "subTitle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'subTitle' is used in nib 'S5SpO2ChartCollectionViewCell', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "title", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'title' is used in nib 'S5SpO2ChartCollectionViewCell', but couldn't be loaded.") }
         }
       }
 

@@ -26,11 +26,43 @@ class S5HeartRateDetailModel: Object {
         self.heartRate = data.HR
     }
     
+    var state: HeartRateState {
+        let porfileListDAO = GenericDAO<ProfileListModel>()
+        guard let currentProfile = porfileListDAO.getFirstObject()?.currentProfile,
+              let birthday = currentProfile.birthday?.toDate(.ymd) else {
+            return HeartRateState(heartRate, and: 18)
+        }
+        let age = Date().year - birthday.year
+        return HeartRateState(heartRate, and: age)
+    }
+    
+    var hrExerciseModel: HeartRateExerciseModel {
+        let porfileListDAO = GenericDAO<ProfileListModel>()
+        guard let currentProfile = porfileListDAO.getFirstObject()?.currentProfile,
+              let birthday = currentProfile.birthday?.toDate(.ymd) else {
+            return HeartRateExerciseModel(age: 18)
+        }
+        let age = Date().year - birthday.year
+        return HeartRateExerciseModel(age: age)
+    }
+    
     override init() {
         super.init()
     }
 
     override class func primaryKey() -> String? {
         return "id"
+    }
+}
+
+class HeartRateExerciseModel {
+    var maxHr: Int
+    var minHrRateZone: Int
+    var maxHrRateZone: Int
+    
+    init(age: Int) {
+        self.maxHr = 220 - age
+        self.minHrRateZone = maxHr / 2
+        self.maxHrRateZone = Int(Double(maxHr) * 0.85)
     }
 }

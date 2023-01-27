@@ -27,9 +27,20 @@ class RecentValueTableViewCell: UITableViewCell {
         self.stateLabel.text = data.state.title
     }
     
+    func fetchHrData(with detail: S5HeartRateDetailModel?) {
+        guard let data = detail else {
+            self.valueLabel.attributedText = self.getNSMutableAttributedString(for: "-- ", description: "bpm")
+            self.stateLabel.text = "--"
+            return
+        }
+        self.valueLabel.attributedText = self.getNSMutableAttributedString(for: "\(data.heartRate) ", description: "bpm")
+        self.stateLabel.text = data.state.status
+    }
+    
     private func getNSMutableAttributedString(for value: String, description: String) -> NSMutableAttributedString? {
         let attributeString = NSMutableAttributedString(string: value, attributes: [NSAttributedString.Key.font: R.font.robotoMedium(size: 16)!, NSAttributedString.Key.foregroundColor: R.color.mainColor()!])
         attributeString.append(NSAttributedString(string: description, attributes: [NSAttributedString.Key.font: R.font.robotoRegular(size: 14)!, NSAttributedString.Key.foregroundColor: R.color.subTitle()!]))
         return attributeString
     }
 }
+
