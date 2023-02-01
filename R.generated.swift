@@ -971,7 +971,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 97 images.
+  /// This `R.image` struct is generated, and contains static references to 102 images.
   struct image {
     /// Image `1SK-SmartScale68`.
     static let skSmartScale68 = Rswift.ImageResource(bundle: R.hostingBundle, name: "1SK-SmartScale68")
@@ -1039,6 +1039,8 @@ struct R: Rswift.Validatable {
     static let ic_delete_black = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_delete_black")
     /// Image `ic_delete`.
     static let ic_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_delete")
+    /// Image `ic_description_point`.
+    static let ic_description_point = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_description_point")
     /// Image `ic_distance`.
     static let ic_distance = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_distance")
     /// Image `ic_down`.
@@ -1119,14 +1121,22 @@ struct R: Rswift.Validatable {
     static let ic_s5_slider = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_s5_slider")
     /// Image `ic_s5_walk`.
     static let ic_s5_walk = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_s5_walk")
+    /// Image `ic_setting_selected`.
+    static let ic_setting_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_setting_selected")
     /// Image `ic_setting_white`.
     static let ic_setting_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_setting_white")
     /// Image `ic_setting`.
     static let ic_setting = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_setting")
+    /// Image `ic_share_disable`.
+    static let ic_share_disable = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_share_disable")
+    /// Image `ic_share`.
+    static let ic_share = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_share")
     /// Image `ic_sleep`.
     static let ic_sleep = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_sleep")
     /// Image `ic_smart_watch`.
     static let ic_smart_watch = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_smart_watch")
+    /// Image `ic_state_error`.
+    static let ic_state_error = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_state_error")
     /// Image `ic_statistics`.
     static let ic_statistics = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_statistics")
     /// Image `ic_step_count`.
@@ -1396,6 +1406,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ic_delete_black", bundle: ..., traitCollection: ...)`
     static func ic_delete_black(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_delete_black, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_description_point", bundle: ..., traitCollection: ...)`
+    static func ic_description_point(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_description_point, compatibleWith: traitCollection)
     }
     #endif
 
@@ -1687,9 +1704,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_setting_selected", bundle: ..., traitCollection: ...)`
+    static func ic_setting_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_setting_selected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ic_setting_white", bundle: ..., traitCollection: ...)`
     static func ic_setting_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_setting_white, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_share", bundle: ..., traitCollection: ...)`
+    static func ic_share(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_share, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_share_disable", bundle: ..., traitCollection: ...)`
+    static func ic_share_disable(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_share_disable, compatibleWith: traitCollection)
     }
     #endif
 
@@ -1704,6 +1742,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "ic_smart_watch", bundle: ..., traitCollection: ...)`
     static func ic_smart_watch(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ic_smart_watch, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_state_error", bundle: ..., traitCollection: ...)`
+    static func ic_state_error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_state_error, compatibleWith: traitCollection)
     }
     #endif
 
@@ -1880,7 +1925,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 91 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 93 nibs.
   struct nib {
     /// Nib `AddDeviceCollectionViewCell`.
     static let addDeviceCollectionViewCell = _R.nib._AddDeviceCollectionViewCell()
@@ -1900,6 +1945,8 @@ struct R: Rswift.Validatable {
     static let bodyTypeCollecionViewCell = _R.nib._BodyTypeCollecionViewCell()
     /// Nib `CreateDefautlsProfileViewController`.
     static let createDefautlsProfileViewController = _R.nib._CreateDefautlsProfileViewController()
+    /// Nib `DescriptionTableViewCell`.
+    static let descriptionTableViewCell = _R.nib._DescriptionTableViewCell()
     /// Nib `DeviceCollectionViewCell`.
     static let deviceCollectionViewCell = _R.nib._DeviceCollectionViewCell()
     /// Nib `DeviceTableViewCell`.
@@ -1932,6 +1979,8 @@ struct R: Rswift.Validatable {
     static let mainTabbarViewController = _R.nib._MainTabbarViewController()
     /// Nib `MeasurementCollectionViewCell`.
     static let measurementCollectionViewCell = _R.nib._MeasurementCollectionViewCell()
+    /// Nib `MesureAgainTableViewCell`.
+    static let mesureAgainTableViewCell = _R.nib._MesureAgainTableViewCell()
     /// Nib `NotificationTableViewCell`.
     static let notificationTableViewCell = _R.nib._NotificationTableViewCell()
     /// Nib `NotificationViewController`.
@@ -2138,6 +2187,14 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "DescriptionTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.descriptionTableViewCell) instead")
+    static func descriptionTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.descriptionTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "DeviceCollectionViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.deviceCollectionViewCell) instead")
     static func deviceCollectionViewCell(_: Void = ()) -> UIKit.UINib {
@@ -2262,6 +2319,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.measurementCollectionViewCell) instead")
     static func measurementCollectionViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.measurementCollectionViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MesureAgainTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.mesureAgainTableViewCell) instead")
+    static func mesureAgainTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mesureAgainTableViewCell)
     }
     #endif
 
@@ -2829,6 +2894,10 @@ struct R: Rswift.Validatable {
       return R.nib.createDefautlsProfileViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
+    static func descriptionTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DescriptionTableViewCell? {
+      return R.nib.descriptionTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DescriptionTableViewCell
+    }
+
     static func deviceCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DeviceCollectionViewCell? {
       return R.nib.deviceCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DeviceCollectionViewCell
     }
@@ -2891,6 +2960,10 @@ struct R: Rswift.Validatable {
 
     static func measurementCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MeasurementCollectionViewCell? {
       return R.nib.measurementCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MeasurementCollectionViewCell
+    }
+
+    static func mesureAgainTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MesureAgainTableViewCell? {
+      return R.nib.mesureAgainTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MesureAgainTableViewCell
     }
 
     static func notificationTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> NotificationTableViewCell? {
@@ -9774,6 +9847,7 @@ struct _R: Rswift.Validatable {
       try _BloodPressureResultViewController.validate()
       try _BloodPressureViewController.validate()
       try _CreateDefautlsProfileViewController.validate()
+      try _DescriptionTableViewCell.validate()
       try _DeviceCollectionViewCell.validate()
       try _DeviceTableViewCell.validate()
       try _DownloadDataViewController.validate()
@@ -9909,9 +9983,10 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "ic_bp_error_state", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_bp_error_state' is used in nib 'BloodPressureResultViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_close", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_close' is used in nib 'BloodPressureResultViewController', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_love_black", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_love_black' is used in nib 'BloodPressureResultViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_share", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_share' is used in nib 'BloodPressureResultViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_state_error", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_state_error' is used in nib 'BloodPressureResultViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -9969,6 +10044,24 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "darkText", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'darkText' is used in nib 'CreateDefautlsProfileViewController', but couldn't be loaded.") }
           if UIKit.UIColor(named: "title", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'title' is used in nib 'CreateDefautlsProfileViewController', but couldn't be loaded.") }
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _DescriptionTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "DescriptionTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> DescriptionTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? DescriptionTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "ic_description_point", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_description_point' is used in nib 'DescriptionTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "title", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'title' is used in nib 'DescriptionTableViewCell', but couldn't be loaded.") }
         }
       }
 
@@ -10255,6 +10348,17 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MeasurementCollectionViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MeasurementCollectionViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _MesureAgainTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MesureAgainTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MesureAgainTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MesureAgainTableViewCell
       }
 
       fileprivate init() {}

@@ -144,6 +144,13 @@ class BodyFat: Object {
                 } else {
                     items.append(BoneMass.normal(weightOfBone))
                 }
+                
+            } else if range.count == 1 {
+                if weightOfBone < range[0] {
+                    items.append(BoneMass.low(weightOfBone))
+                } else {
+                    items.append(BoneMass.normal(weightOfBone))
+                }
             } else {
                 if !String.isNilOrEmpty(self.weightOfBoneStatus) {
                     items.append(BoneMass(code: self.weightOfMuscleStatus, value: weightOfBone))
@@ -300,28 +307,101 @@ class BodyFat: Object {
         self.bmrRange.append(objectsIn: getRangeList(of: bodyFat.thtBMRRatingList))
         if !hasError {
             self.ratioOfFat.value = fatPercentage * 100
-            if bodyFat.thtSex == .male {
-                self.ratioOfFatRange.append(objectsIn: [8, 19])
-            } else {
-                self.ratioOfFatRange.append(objectsIn: [21, 32])
-            }
             self.ratioOfMuscle.value = bodyFat.thtMusclePercentage.doubleValue
             self.weightOfMuscle.value = bodyFat.thtMuscleKg.doubleValue
-            self.weithOfMuscleRange.append(objectsIn: getRangeList(of: bodyFat.thtMuscleRatingList))
+
+            var muscleRange: [Double] = []
+            var fatRange: [Double] = []
+            var boneRange: [Double] = []
+            
+            if bodyFat.thtSex == .male {
+                switch age {
+                case 18...29:
+                    muscleRange = [49, 73]
+                case 30...39:
+                    muscleRange = [47, 72]
+                case 40...49:
+                    muscleRange = [44, 69]
+                case 50...59:
+                    muscleRange = [39, 63]
+                case 60...69:
+                    muscleRange = [33, 55]
+                case 70...79:
+                    muscleRange = [25, 45]
+                case 80...Int.max:
+                    muscleRange = [21, 39]
+                default:
+                    muscleRange = [49, 73]
+                }
+                
+                fatRange = [8, 19]
+                
+                switch weight {
+                case 0...64:
+                    boneRange = [2.66]
+                case 65...95:
+                    boneRange = [3.29]
+                case 96...Double.infinity:
+                    boneRange = [3.69]
+                default:
+                    boneRange = [2.66]
+                }
+                
+            } else {
+                switch age {
+                case 18...29:
+                    muscleRange = [48, 67]
+                case 30...39:
+                    muscleRange = [48, 69]
+                case 40...49:
+                    muscleRange = [45, 68]
+                case 50...59:
+                    muscleRange = [41, 66]
+                case 60...69:
+                    muscleRange = [34, 60]
+                case 70...79:
+                    muscleRange = [26, 53]
+                case 80...Int.max:
+                    muscleRange = [22, 49]
+                default:
+                    muscleRange = [49, 73]
+                }
+                
+                fatRange = [21, 32]
+                
+                switch weight {
+                case 0...49:
+                    boneRange = [1.95]
+                case 50...70:
+                    boneRange = [2.4]
+                case 71...Double.infinity:
+                    boneRange = [2.95]
+                default:
+                    boneRange = [1.95]
+                }
+            }
+
+            self.ratioOfFatRange.append(objectsIn: fatRange)
+            self.weithOfMuscleRange.append(objectsIn: muscleRange)
+
             self.weightOfBone.value = bodyFat.thtBoneKg.doubleValue
-            self.weightOfBoneRange.append(objectsIn: getRangeList(of: bodyFat.thtBoneRatingList))
+            self.weightOfBoneRange.append(objectsIn: boneRange)
+
             self.ratioOfWater.value = waterPercentage * 100
             self.ratioOfWaterRange.append(objectsIn: getRangeList(of: bodyFat.thtWaterRatingList))
             self.ratioOfProtein.value = bodyFat.thtproteinPercentage.doubleValue
             self.ratioOfProteinRange.append(objectsIn: getRangeList(of: bodyFat.thtproteinRatingList))
             self.levelOfVisceralFat.value = bodyFat.thtVFAL.doubleValue
-            self.levelOfVisceralFatRange.append(objectsIn: getRangeList(of: bodyFat.thtVFALRatingList))
+            
+            self.levelOfVisceralFatRange.append(objectsIn: [10, 14])
             self.ratioOfSubcutaneousFat.value = bodyFat.thtBodySubcutaneousFat.doubleValue
+
             if bodyFat.thtSex == .male {
                 ratioOfSubcutaneousFatRange.append(objectsIn: [8.6, 16.7, 20.7])
             } else {
                 ratioOfSubcutaneousFatRange.append(objectsIn: [18.5, 26.7, 30.8])
             }
+
             self.bodyShape.value = Double(bodyFat.thtBodyScore)
             self.lbw.value = bodyFat.thtBodyLBW.doubleValue
             self.ageOfBody.value = Double(bodyFat.thtBodyAge)
