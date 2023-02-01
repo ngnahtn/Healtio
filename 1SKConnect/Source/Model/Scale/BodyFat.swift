@@ -300,7 +300,11 @@ class BodyFat: Object {
         self.bmrRange.append(objectsIn: getRangeList(of: bodyFat.thtBMRRatingList))
         if !hasError {
             self.ratioOfFat.value = fatPercentage * 100
-            self.ratioOfFatRange.append(objectsIn: getRangeList(of: bodyFat.thtBodyfatRatingList))
+            if bodyFat.thtSex == .male {
+                self.ratioOfFatRange.append(objectsIn: [8, 19])
+            } else {
+                self.ratioOfFatRange.append(objectsIn: [21, 32])
+            }
             self.ratioOfMuscle.value = bodyFat.thtMusclePercentage.doubleValue
             self.weightOfMuscle.value = bodyFat.thtMuscleKg.doubleValue
             self.weithOfMuscleRange.append(objectsIn: getRangeList(of: bodyFat.thtMuscleRatingList))
